@@ -28,19 +28,19 @@ for iType = 1:2
 
     
     isOK = tmp1.iTissue>1 & ~isCloserToAnotherGene;
-    swarmchart(0*tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), 'MarkerEdgeColor', sColours.closeMutation, 'MarkerFaceColor', (1+sColours.closeMutation)/2);
+    mySwarmchart(0*tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.closeMutation, (1+sColours.closeMutation)/2);
     isOK = tmp1.iTissue>1 & isCloserToAnotherGene;
-    swarmchart(0*tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), 'MarkerEdgeColor', sColours.distantMutation, 'MarkerFaceColor', (1+sColours.distantMutation)/2);
+    mySwarmchart(0*tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.distantMutation, (1+sColours.distantMutation)/2);
 
     isOK = tmp1.iTissue>1 & ~isCloserToAnotherGene;
-    swarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), 'MarkerEdgeColor', sColours.closeMutation, 'MarkerFaceColor', (1+sColours.closeMutation)/2);
+    mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.closeMutation, (1+sColours.closeMutation)/2);
     isOK = tmp1.iTissue>1 & isCloserToAnotherGene;
-    swarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), 'MarkerEdgeColor', sColours.distantMutation, 'MarkerFaceColor', (1+sColours.distantMutation)/2);
+    mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.distantMutation, (1+sColours.distantMutation)/2);
 
     isOK = tmp1.iTissue==1 & ~isCloserToAnotherGene;
-    h2 = swarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), 'MarkerEdgeColor', sColours.closeMutation, 'MarkerFaceColor', (1+sColours.closeMutation)/2);
+    h2 = mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.closeMutation, (1+sColours.closeMutation)/2);
     isOK = tmp1.iTissue==1 & isCloserToAnotherGene;
-    h3 = swarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), 'MarkerEdgeColor', sColours.distantMutation, 'MarkerFaceColor', (1+sColours.distantMutation)/2);
+    h3 = mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.distantMutation, (1+sColours.distantMutation)/2);
 
     maxVal = 6.5; yGap = maxVal/30; ylim([0,maxVal]);
     yVal1 = 1.5*yGap + maxVal;

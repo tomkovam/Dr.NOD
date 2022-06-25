@@ -84,11 +84,16 @@ for iDirection = 1:2
 end
 % 68, 314, 52, 144
 
-fontSizeAnnotation = 14;
-dim = [.07 .55 .05 .05]; str = 'TFBS gain'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
-dim = [.07 .40 .05 .05]; str = 'TFBS gain'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
-dim = [.07 .23 .05 .05]; str = 'TFBS break'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
-dim = [.07 .08 .05 .05]; str = 'TFBS break'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+try
+    fontSizeAnnotation = 14;
+    dim = [.07 .55 .05 .05]; str = 'TFBS gain'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+    dim = [.07 .40 .05 .05]; str = 'TFBS gain'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+    dim = [.07 .23 .05 .05]; str = 'TFBS break'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+    dim = [.07 .08 .05 .05]; str = 'TFBS break'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+catch
+    % In Matlab<2022a, class TextBox does not have property Rotation.
+end
+
 
 fontSizeLetters = 26;
 dim = [.005 .99 .01 .01]; str = 'a'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
