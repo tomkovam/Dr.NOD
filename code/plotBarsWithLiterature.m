@@ -57,10 +57,6 @@ for iRow = find(tmpToPlot.literatureEvidenceOncogene>0 | tmpToPlot.literatureEvi
     levelTSG(ismember(levelTSG_orig, [1,2])) = 1;
     levelTSG(ismember(levelTSG_orig, [3,4])) = 2;
 
-    if (levelTSG==2)
-        disp(levelTSG)
-    end
-
     maxLevel = 2;    
     levelTop = NaN;
     levelBottom = NaN;
