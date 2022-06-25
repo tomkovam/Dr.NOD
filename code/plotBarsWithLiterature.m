@@ -29,22 +29,20 @@ hB.CData(:) = repmat(sColours.nonCDG, size(tmpToPlot, 1), 1);
 
 hLeg = zeros(8,1); iLeg = 1;
 
-isUP = yValues>0;
-isDOWN = yValues<0;
-
-fprintf('%d/%d (%.1f%%) upregulated genes have oncogenic tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceOncogene(isUP)>0), sum(isUP), 100*mean(tmpToPlot.literatureEvidenceOncogene(isUP)>0));
-fprintf('%d/%d (%.1f%%) downregulated genes have TSG tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceTSG(isDOWN)>0), sum(isDOWN), 100*mean(tmpToPlot.literatureEvidenceTSG(isDOWN)>0));
-
-
-fprintf('%d/%d (%.1f%%) upregulated genes have strong oncogenic tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceOncogene(isUP)>2), sum(isUP), 100*mean(tmpToPlot.literatureEvidenceOncogene(isUP)>2));
-fprintf('%d/%d (%.1f%%) downregulated genes have strong TSG tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceTSG(isDOWN)>2), sum(isDOWN), 100*mean(tmpToPlot.literatureEvidenceTSG(isDOWN)>2));
-
-for tissue = unique(tmpToPlot.tissuePrint)'
-    isOK = strcmp(tmpToPlot.tissuePrint, tissue{1});
-    isOK2 = isOK & isUP & tmpToPlot.literatureEvidenceOncogene>2;
-    fprintf('UP %s: %d genes, %d strong oncogenes (%.0f%%): %s\n', tissue{1}, sum(isOK & isUP), sum(isOK2), 100*sum(isOK2)/sum(isOK), strjoin(unique(tmpToPlot.geneSymbol(isOK2)), ', '));
+verbose = false;
+if (verbose)
+    isUP = yValues>0;
+    isDOWN = yValues<0;
+    fprintf('%d/%d (%.1f%%) upregulated genes have oncogenic tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceOncogene(isUP)>0), sum(isUP), 100*mean(tmpToPlot.literatureEvidenceOncogene(isUP)>0));
+    fprintf('%d/%d (%.1f%%) downregulated genes have TSG tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceTSG(isDOWN)>0), sum(isDOWN), 100*mean(tmpToPlot.literatureEvidenceTSG(isDOWN)>0));
+    fprintf('%d/%d (%.1f%%) upregulated genes have strong oncogenic tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceOncogene(isUP)>2), sum(isUP), 100*mean(tmpToPlot.literatureEvidenceOncogene(isUP)>2));
+    fprintf('%d/%d (%.1f%%) downregulated genes have strong TSG tissue-specific evidence.\n', sum(tmpToPlot.literatureEvidenceTSG(isDOWN)>2), sum(isDOWN), 100*mean(tmpToPlot.literatureEvidenceTSG(isDOWN)>2));
+    for tissue = unique(tmpToPlot.tissuePrint)'
+        isOK = strcmp(tmpToPlot.tissuePrint, tissue{1});
+        isOK2 = isOK & isUP & tmpToPlot.literatureEvidenceOncogene>2;
+        fprintf('UP %s: %d genes, %d strong oncogenes (%.0f%%): %s\n', tissue{1}, sum(isOK & isUP), sum(isOK2), 100*sum(isOK2)/sum(isOK), strjoin(unique(tmpToPlot.geneSymbol(isOK2)), ', '));
+    end
 end
-
 
 
 for iRow = find(tmpToPlot.literatureEvidenceOncogene>0 | tmpToPlot.literatureEvidenceTSG>0)'   
@@ -63,10 +61,7 @@ for iRow = find(tmpToPlot.literatureEvidenceOncogene>0 | tmpToPlot.literatureEvi
         disp(levelTSG)
     end
 
-    maxLevel = 2;
-    %     levelONC = min([maxLevel,levelONC]);
-    %     levelTSG = min([maxLevel,levelTSG]);
-    
+    maxLevel = 2;    
     levelTop = NaN;
     levelBottom = NaN;
 
@@ -115,22 +110,9 @@ end
 
 
 legValues = {'oncogene weak evidence', 'oncogene strong evidence', 'TSG weak evidence', 'TSG strong evidence'}; 
-% legValues = {'oncogene weak', 'oncogene strong', 'TSG weak', 'TSG strong'}; 
 iLeg = 5;
 xVal = max(xValues) + 2;
 yStep = max(abs(yValues))/30;
-
-% yValuesStar = yValues + sign(yValues) * yStep;
-% yValuesStar = -1*sign(yValues) * yStep;
-
-
-% yValuesStar = yValues - sign(yValues) * yStep;
-% yValuesStar = maxY + 3*stepY + 0*yValues;
-
-% isOK = tmpToPlot.pValuePrognostic_tissueMatched<alphaPrognostic & tmpToPlot.isFavorable_tissueMatched==1;
-% text(xValues(isOK), yValuesStar(isOK), 'h', 'Color', sColours.TSG, 'MarkerFaceColor', 'w', 'MarkerSize', markerSizeStar, 'LineWidth', 1.5);
-% isOK = tmpToPlot.pValuePrognostic_tissueMatched<alphaPrognostic & tmpToPlot.isFavorable_tissueMatched==0;
-% text(xValues(isOK), yValuesStar(isOK), 'h', 'Color', sColours.ONCOGENE, 'MarkerFaceColor', 'w', 'MarkerSize', markerSizeStar, 'LineWidth', 1.5);
 
 
 %%
@@ -215,8 +197,6 @@ text(xValues(isOK), yValuesText(isOK), labelsTissue(isOK), 'Color', 'w', 'Rotati
 isOK = yValues < 0;
 text(xValues(isOK), yValuesText(isOK), labelsTissue(isOK), 'Color', 'w', 'Rotation', 90, 'HorizontalAlignment', 'right', 'VerticalAlignment', 'middle', 'FontSize', fontSizeTissues);
 %%
-
-
 fontSizeLabels = 14;
 set(gca, 'FontSize', fontSizeLabels, 'XTick', [], 'XColor', 'none', 'TickLength', [0 0]);
 
