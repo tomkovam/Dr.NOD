@@ -18,3 +18,7 @@ data/per_base_territories_20kb_line_numbers.bed.txt
 save/dataPCAWG_fpkm_uq.mat
 save/genes.mat
 *.asv
+data/genes/CGC_Census_allTue Aug 10 20_28_04 2021.txt
+data/genes/PCAWG_TableS1_compendium_mutational_drivers_formatted.xlsx
+data/genes/TableS3_panorama_driver_mutations_ICGC_samples.controlled.txt
+data/FunSeq2/annotatedPCAWG/intersectedB.*.motif.FunSeq2.bed.txt
