@@ -1,4 +1,11 @@
-data
+data/AnnotatedEnhancers
+data/CADD
+data/DepMap
+data/FunSeq2
+data/genes
+data/Nasser2021
+data/PCAWG
+data/QuickGO
 save/annotatedEnhancers
 save/dataCancer
 save/dataMutations
