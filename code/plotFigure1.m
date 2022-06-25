@@ -32,3 +32,5 @@ for iTissue = 1:nTissues
     plotTissueScatter(sColours, sResults, iTissue, fontSize, showMoreLabels, doPlotXLabel, doPlotYLabel, doPlotLegend, lstGenesStrongSupport);
 end
 mySaveAs(fig, imagesPath, 'Fig1.png', true, true);
+savefig([imagesPath, 'Fig1.fig']);
+

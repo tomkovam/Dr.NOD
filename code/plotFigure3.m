@@ -1,6 +1,5 @@
 function plotFigure3(imagesPath, sColours, tableMutations_candidate, tableTissues_data1, sResults, sProperties)
 
-%%
 tissueName = 'bloodLymphoid'; tissuePrint = 'blood';
 iTissue = find(strcmp(tableTissues_data1.tissue, tissueName));
 %%
@@ -58,5 +57,5 @@ dim = [.727 .68 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'Fon
 
 
 mySaveAs(fig, imagesPath, 'Fig3.png', false, true);
-return
-%%
+savefig([imagesPath, 'Fig3.fig']);
+

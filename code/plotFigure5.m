@@ -98,6 +98,7 @@ dim = [.005 .66 .01 .01]; str = 'd'; annotation('textbox',dim,'String',str, 'Fon
 dim = [.005 .35 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 
 mySaveAs(fig, imagesPath, 'Fig5', false, true);
+savefig([imagesPath, 'Fig5.fig']);
 %%
     function yAltRelative = plotTFBS_logos(tableMutations_candidate, tableMotifs, iRow, isMOTIFG, geneName)
         %lstCols = {'candidateGenes', 'MOTIFG_scoreDiff', 'MOTIFG_motifNamePrefix', 'tissuePrint', 'expressionMedianWT', 'expressionThisMut', 'gene', 'MOTIFG_motifName', 'MOTIFG_scoreAlt', 'MOTIFG_scoreRef', 'isHighCADD', 'VAF', 'qtlVAF'};

@@ -1,7 +1,7 @@
 function [tableGencodeGenes, tableTissuesWithPancancer, sResults, tableMutations_candidate, matGeneGencodeIsCandidateMut, tableTissues] = loadData1()
 %% Loads the main data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/data/data1.mat';
+saveFileData = 'save/main/data1.mat';
 if (~exist(saveFileData, 'file'))
     tic
     %% 

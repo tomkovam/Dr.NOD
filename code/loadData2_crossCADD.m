@@ -1,7 +1,7 @@
 function [sResCrossCADD, sResPanCancerCrossCADD, lstMinCADD_PHRED, tableTissues] = loadData2_crossCADD()
 %% Loads the cross-CADD analysis data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/data/data2_crossCADD.mat';
+saveFileData = 'save/main/data2_crossCADD.mat';
 if (~exist(saveFileData, 'file'))
     tic
     %%

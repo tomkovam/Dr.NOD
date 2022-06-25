@@ -31,6 +31,7 @@ dim = [.007 .27 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'Fon
 
 
 mySaveAs(fig, imagesPath, 'ExtDataFig2.png', false, true);
+savefig([imagesPath, 'ExtDataFig2.fig']);
 %%
     function plotDepMap_boxplots(positionVector, iTypeMetric)
         nTissues = length(dataDepMap.sResults);

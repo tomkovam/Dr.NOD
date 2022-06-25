@@ -79,8 +79,4 @@ dim = [.740 .42 .01 .01]; str = 'f'; annotation('textbox',dim,'String',str, 'Fon
 
 
 mySaveAs(fig, imagesPath, 'Fig4.png', false, true);
-
-%%
-
-%         tissueName = 'brain'; geneName = 'MED12';
-%         tissueName = 'liver'; geneName = 'STOML2';
+savefig([imagesPath, 'Fig4.fig']);

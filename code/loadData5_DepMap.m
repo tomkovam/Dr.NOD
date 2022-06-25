@@ -8,7 +8,7 @@ if (~exist('datasetDepMap', 'var'))
     datasetDepMap = 'Achilles_gene_dependency';
 end
 %%
-saveFileData = ['save/data/data5_DepMap_',datasetDepMap,'.mat'];
+saveFileData = ['save/main/data5_DepMap_',datasetDepMap,'.mat'];
 if (~exist(saveFileData, 'file')) 
     tic
     fprintf('Computing %s...\n', saveFileData);

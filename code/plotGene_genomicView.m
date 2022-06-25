@@ -3,8 +3,6 @@ function plotGene_genomicView(tissueName, biosampleABC, geneName, sColours, plot
 % Created in saveForOneGeneVisualisation.m
 load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'expressionPerSample', 'sampleGroup',  ...
     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'isMutPerEnhancer', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');
-% load(['save/oneGene_', tissueName, biosampleABC, geneName], 'gene_pM', 'gene_pE', 'gene_FDR', 'isMutatedSample', 'expressionPerSample', 'CNVperSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression', ...
-%     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'isMutPerEnhancer', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');
 
 %%
 % gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr8" && $5>=128600000 && $4<=129400000) {print}}' > data/genes/MYC.gencode.v19.annotation.gtf.txt
@@ -20,19 +18,12 @@ tableGenes.transcript_id = regexp(tableGenes.tags, '(?<=transcript_id ")[^";]*',
 tableGenes.transcript_name = regexp(tableGenes.tags, '(?<=transcript_name ")[^";]*', 'once', 'match');
 tableGenes.transcript_type = regexp(tableGenes.tags, '(?<=transcript_type ")[^";]*', 'once', 'match');
 tableGenes.isTagBasic = contains(tableGenes.tags, 'tag "basic";');
-tableGenes.isCanonicalTranscript = tableGenes.isTagBasic; %contains(tableGenes.transcript_id, 'ENST00000320356') | contains(tableGenes.transcript_id, 'ENST00000652332') | contains(tableGenes.transcript_id, 'ENST00000494652') | ...
-%     contains(tableGenes.transcript_id, 'ENST00000365658') | contains(tableGenes.transcript_id, 'ENST00000515903') | contains(tableGenes.transcript_id, 'ENST00000364228') | contains(tableGenes.transcript_id, 'ENST00000365484') | ...
-%     contains(tableGenes.transcript_id, 'ENST00000516507') | contains(tableGenes.transcript_id, 'ENST00000516501') | contains(tableGenes.transcript_id, 'ENST00000286091'); % ENST00000652332 would be better
-% unique(tableGenes(tableGenes.isCanonicalTranscript, {'gene_name', 'transcript_name', 'transcript_type'})) % misc_RNA
+tableGenes.isCanonicalTranscript = tableGenes.isTagBasic; 
 tableGenes = tableGenes(tableGenes.isCanonicalTranscript & ismember(tableGenes.featureType,{'CDS', 'UTR'}),:);
 %%
 fontSize = 12;
 fontSizeSmaller = fontSize - 4;
 hold on;
-
-% tableUniqueEnhancers_oneGene
-% tableUE_annotations_hyperUE_oneGene
-% yValues = log2(1+expressionPerSample);
 
 tableMutationsThisGene.yValues = tableMutationsThisGene.expression;
 yValues = expressionPerSample;
@@ -41,12 +32,10 @@ maxVal = max(yValues)*1.5;
 minVal = 0; %min(yValues)*0.9;
 cmap = lines(gene_nUEs);
 
-x1 = sort([gene_pos0, gene_pos1]);
 
 lstMarkers = {'o', 's', 'd', 'h'};
 %%
 
-% tableUE_annotations_hyperUE_oneGene
 if (plotOnlyMutatedEnhancers)
     minFC = 2^10;
     if (strcmp(geneName, 'RFTN1'))
@@ -55,15 +44,11 @@ if (plotOnlyMutatedEnhancers)
     isMutatedUE = tableUE_annotations_hyperUE_oneGene.foldChangeScoreM>minFC;
     x2 = [min(tableUniqueEnhancers_oneGene.min_pos0(isMutatedUE)), max(tableUniqueEnhancers_oneGene.max_pos1(isMutatedUE))];
     margin = (x2(2) - x2(1))/50;
-    %margin= 1e3;
     xLimVal = x2 + margin*[-1,1];
     %
     lstGenes = unique(tableGenes.gene_name);
     [~, tableGenes.iGene] = ismember(tableGenes.gene_name, lstGenes);
-
-    %     isMutatedUE = tableUE_annotations_hyperUE_oneGene.foldChangeScoreM>5;
-    %     xMin = min(tableUniqueEnhancers_oneGene.min_pos0(isMutatedUE));
-    %     xMax = max(tableUniqueEnhancers_oneGene.max_pos1(isMutatedUE));
+    
     
     xMin = xLimVal(1);
     xMax = xLimVal(2);
@@ -110,41 +95,21 @@ if (plotOnlyMutatedEnhancers)
     end
 end
 
-% if (strcmp(lstGenes{iGene}, 'MYC'))
-%     tableUE_annotations_hyperUE_oneGene.foldChangeScoreM
-%     x2
-% end
-%
 
 
 hLeg = []; hLegText = {'TSS'};
-% hLeg(1) = plot(gene_TSS*[1,1], [minVal, maxVal], '-', 'LineWidth', 2, 'Color', 'y');
-% if (strcmp(gene_strand, '+'))
-%     text(gene_TSS, 0.95*maxVal, sprintf(' >> %s >>  >>  >>  >> ', geneName), 'Color', 'y', 'HorizontalAlignment', 'left');
-% else
-%     text(gene_TSS, 0.95*maxVal, sprintf(' <<  <<  <<  << %s << ', geneName), 'Color', 'y', 'HorizontalAlignment', 'right');
-% end
 
 y_b = minVal*[1,1];
 y_t = maxVal_enhancer*[1,1];
 
 for jUE = 1:gene_nUEs
     colour = cmap(jUE, :);
-    %     iUE = lst_iUE(iColour);
-    %     isOK = tableMutationsThisGene.iUniqueEnhancer == iUE;
     isOK = isMutPerEnhancer(:,jUE);
     plot(tableMutationsThisGene.pos1(isOK), tableMutationsThisGene.yValues(isOK), lstMarkers{2}, 'MarkerFaceColor', colour, 'Color', (colour+1)/2);
 
     x2 = [tableUniqueEnhancers_oneGene.min_pos0(jUE), tableUniqueEnhancers_oneGene.max_pos1(jUE)];
     h = patch([x2, fliplr(x2)], [y_b, fliplr(y_t)], colour, 'EdgeColor', colour);    set(h, 'FaceAlpha', 0.1);
-
-    %         th = linspace( pi/2, -pi/2, 100);
-    %         R = 1;  %or whatever radius you want
-    %         x = R*cos(th) + 5;
-    %         y = R*sin(th) + 4;
-    %         plot(x,y);
-
-    % BETTER BUT NOT COMPUTED ATM: label = {sprintf('%s, p=%s, mut=%d', tableUniqueEnhancers.name{iUE}, getPValueAsText(tableUniqueEnhancers.pBinomTestRight_SNVs_highCADD(iUE)), sum(isOK))};
+    
     label = {sprintf('%s, mut=%d, FC:%.1fx', tableUniqueEnhancers_oneGene.name{jUE}, sum(isOK), tableUE_annotations_hyperUE_oneGene.foldChangeScoreM(jUE))};
     hLeg = [hLeg, h]; hLegText = [hLegText, label];
 end
@@ -174,33 +139,17 @@ end
 
 yLimVal = [minVal, maxVal]; clear h
 for iMut = find(isnan(tableMutationsThisGene.yValues))'
-    % OLD: [~, jUE] = ismember(tableMutationsThisGene.iUniqueEnhancer(iMut), lst_iUE); 
     jUE = find(isMutPerEnhancer(iMut,:));
     if (length(jUE)>1)
         error('One mutation in multiple enhancers!');
     end
-    %if (tmp2_mutations.isIndel(iMut)), marker = lstMarkers{3};
-    %elseif (tmp2_mutations.isHighCADD(iMut)), marker = lstMarkers{4}; else, marker = lstMarkers{2}; end [marker, ':']
     h = plot(tableMutationsThisGene.pos1(iMut)*[1,1], yLimVal, ':', 'Color', cmap(jUE,:));
 end
 if (exist('h', 'var'))
     hLeg = [hLeg, h]; hLegText = [hLegText, {'sample without expression'}];
 end
 
-%OLD legend([{'TSS'}; tableUniqueEnhancers.name(lst_iUE); {'high CADD'; 'known driver'; 'median WT'}], 'Location', 'EastOutside');
-
-
-% text(tableMutationsThisGene.pos1, tableMutationsThisGene.yValues, tableMutationsThisGene.patternName);
 ylim(yLimVal);
-
-
-% scaleLength = 20e3;
-% %xStart = scaleLength*round(((minPos+maxPos)/2 - scaleLength/2)/scaleLength); yMiddle = yLimVal(2)*0.8; plot(xStart + [0,scaleLength], yMiddle*[1,1], '-k', 'LineWidth', 2);
-% xStart = gene_TSS; yMiddle = yLimVal(2)*0.8; plot(xStart + [0,scaleLength], yMiddle*[1,1], '-k', 'LineWidth', 2);
-% text(xStart, yMiddle*1.01, {sprintf('%d kbp', scaleLength/1e3), ''}, 'HorizontalAlignment', 'center');
-
-% xTickVal = get(gca, 'XTick');
-% set(gca, 'XTickLabel', strcat(num2sepNumStr(round(xTickVal/1e3)), 'k'));
 
 if (plotOnlyMutatedEnhancers)
     xlim(xLimVal);
@@ -210,33 +159,18 @@ set(gca, 'XTick', xTickValue, 'XTickLabel', arrayfun(@num2sepNumStr, xTickValue,
 
 
 
-% xLimVal = get(gca, 'XLim');
-
-% h = patch([x1, fliplr(x1)], [0.90*maxVal*[1,1], fliplr(0.92*maxVal*[1,1])], [1,1,0], 'EdgeColor', 'none');    set(h, 'FaceAlpha', 0.5);   drawnow;
-%text(mean(x1), yLimVal(2)*.99, getPValueAsText(tableUniqueEnhancers.min_pBinomTestRight(iUE)), 'HorizontalAlignment', 'center', 'Rotation', 90);
-
-% xlim(xLimVal);
-
 h = plot(get(gca, 'XLim'), median(yValues(sampleGroup == 1), 'omitnan')*[1,1], '--', 'Color', sColours.WT);
 hLeg = [hLeg, h]; hLegText = [hLegText, {'median WT expression'}];
 
 
-
-
-% set(gca, 'FontSize', fontSize);
-ax = gca;
 ax.XAxis.FontSize = fontSizeSmaller;
 ax.YAxis.FontSize = fontSize;
 ylabel('Expression'); xlabel(sprintf('Chr%d', tableMutationsThisGene.chrNumeric(1))); % , 'FontSize', fontSize
-% legend(hLeg, hLegText, 'Location', 'EastOutside');
-% mySaveAs(fig, imagesPath, [tissueName, '_', geneName,biosampleABC,'.png']);
-% title(sprintf('%s in %s\n\\color[rgb]{0.5,0.5,0.5}{\\itp_M = %s}', geneName, tissueName, getPValueAsTextShort(gene_pM)));
 
 if (printTissue)
     titleText = sprintf('%s in %s', geneName, tissueName);
 else
     titleText = geneName;
 end
-% title(sprintf('%s\n\\color[rgb]{0.5,0.5,0.5}{\\itp_M = %s}', titleText, getPValueAsTextShort(gene_pM)));
 title(sprintf('%s\n\\fontsize{8}\\color[rgb]{0.5,0.5,0.5}{\\itp_M = %s}', titleText, getPValueAsTextTimes(gene_pM)), 'FontSize', fontSize);
 

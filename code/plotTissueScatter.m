@@ -4,20 +4,15 @@ if (~exist('lstGenesToPrint', 'var'))
     lstGenesToPrint = {};
 end
     tissuePrint = sResults{iTissue}.tissuePrint;
-    biosampleABC = sResults{iTissue}.biosampleABC;
     pM = sResults{iTissue}.pM;
     pE = sResults{iTissue}.pE;
-    pCombined = sResults{iTissue}.pCombined;
     qCombined = sResults{iTissue}.qCombined;
     isUP = sResults{iTissue}.isUP;
     isCandidate = sResults{iTissue}.isCandidate;
     isDriver = sResults{iTissue}.isDriver;
-    isONCOGENE = sResults{iTissue}.isONCOGENE;
-    isTSG = sResults{iTissue}.isTSG;
     geneName = sResults{iTissue}.geneName;
 
-
-    nGenes = length(pM);
+    
     pM(isnan(pM)) = 1; % Not mutated genes have NaN p-value
     pE(isnan(pE)) = 1; % Not mutated genes have NaN p-value
     maxValue = 16;
@@ -38,10 +33,8 @@ end
     isWithinLimits = (yValues <= maxShown_yValue) & (xValues <= maxShown_xValue); % & isM;
     plot(xValues(isWithinLimits), yValues(isWithinLimits), '.');
 
-    %xLimVal = get(gca, 'XLim'); yLimVal = get(gca, 'YLim');
     xLimVal = [0, maxShown_xValue]; 
     yLimVal = [0, maxShown_yValue]; 
-    lineWidth = [1,1,2];
     alphas = [0.001, 0.01, 0.05];
     for iAlpha = 3 %1:3
         alpha = alphas(iAlpha);
@@ -50,8 +43,6 @@ end
         plot(logAlpha*[1,1], yLimVal, ':k'); % , 'LineWidth', lineWidth(iAlpha) text(logAlpha, yLimVal(2)*1.02, sprintf('{\\itp=%g}', alpha), 'HorizontalAlignment', 'center', 'Color', 'k', 'FontSize', fontSize);
     end
 
-%     textLeg = {'driver-upregulated', 'driver-downregulated', 'cancer driver genes', 'other genes'}; hLeg = zeros(length(textLeg), 1);
-    %textLeg = {'upregulated', 'downregulated', 'CDG', 'other'}; 
     textLeg = {'up', 'down', 'CDG', 'other'}; 
     
     hLeg = zeros(length(textLeg), 1);
@@ -122,9 +113,6 @@ end
     end
 
     isOK2 = isDriver(isShownText);
-    isSigX = pM(isShownText) < 0.05;
-    isUp = isUP(isShownText);
-
     isToTheRight = xValuesText>xValues(isShownText);
     isOK3 = isOK2 & isToTheRight;
     text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'r', 'FontSize', fontSize, 'HorizontalAlignment', 'left');

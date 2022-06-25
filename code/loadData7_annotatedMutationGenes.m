@@ -1,7 +1,7 @@
-function [tableGencodeGenesCandidates, tableMutationGenePairs, tableGencodeGenes, lstGenesStrongSupport, tableMutations_candidate, lstColGenes, lstColGenesBlood, lstColTissues, lstColsMutationGenePairs] = annotateGenes(tableGencodeGenes, tableMutations_candidate, matGeneGencodeIsCandidateMut, dataDepMap, sProperties)
+function [dataSupTables, tableGencodeGenes, tableMutations_candidate] = loadData7_annotatedMutationGenes(tableGencodeGenes, tableMutations_candidate, matGeneGencodeIsCandidateMut, dataDepMap, sProperties)
 %% Annotates genes and candidate mutations with literature, closest gene per candidate mutation, promoter/close/distant candidate mutations etc.
 
-saveFileData = 'save/data/data7_annotatedGenes.mat';
+saveFileData = 'save/main/data7_annotatedMutationGenes.mat';
 if (~exist(saveFileData, 'file'))
     tic
     %%
@@ -192,42 +192,49 @@ if (~exist(saveFileData, 'file'))
     lstColsMutationGenePairs = {'chr', 'pos0', 'pos1', 'ref', 'alt', 'tissue', 'geneSymbol_thisGene', 'distance_thisGene', 'distance_closestGene', 'distance_closestProteinCodingGene', 'isCloserToAnotherGene', 'isCloserToAnotherProteinCodingGene', ...
     'isHighCADD', 'CADD_PHRED', 'context', 'isPlusStrand', 'isInFunSeq2', 'isMOTIFBR', 'isMOTIFG'}; 
     %%
+    dataSupTables.tableGencodeGenesCandidates = tableGencodeGenesCandidates;
+    dataSupTables.tableMutationGenePairs = tableMutationGenePairs;
+    dataSupTables.lstGenesStrongSupport = lstGenesStrongSupport;
+    dataSupTables.lstColGenes = lstColGenes;
+    dataSupTables.lstColGenesBlood = lstColGenesBlood;
+    dataSupTables.lstColTissues = lstColTissues;
+    dataSupTables.lstColsMutationGenePairs = lstColsMutationGenePairs;
+    %%
     toc
     %myPrintMemory
     createDir(fileparts(saveFileData));
-    save(saveFileData, 'tableMutationGenePairs', 'tableGencodeGenes', 'tableLiterature', 'lstGenesStrongSupport', 'tableMutations_candidate', 'lstColGenes', 'lstColGenesBlood', 'lstColTissues');
+    save(saveFileData, 'dataSupTables', 'tableGencodeGenes', 'tableMutations_candidate');
 else
     fprintf('Loading data from %s...\n', saveFileData);
-    load(saveFileData, 'tableMutationGenePairs', 'tableGencodeGenes', 'tableLiterature', 'lstGenesStrongSupport', 'tableMutations_candidate', 'lstColGenes', 'lstColGenesBlood', 'lstColTissues');
+    load(saveFileData, 'dataSupTables', 'tableGencodeGenes', 'tableMutations_candidate');
 end
-
 %%
-if (false)
-    tableMutationGenePairs.iSample = tableMutations_candidate.iSample(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.tissue = tableTissues_data1.tissuePrint(tableMutationGenePairs.iTissue);
-    tableMutationGenePairs.iPattern = tableMutations_candidate.iPattern(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.VAF = tableMutations_candidate.VAF(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.isPlusStrand = tableMutations_candidate.isPlusStrand(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.ref = tableMutations_candidate.ref(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.alt = tableMutations_candidate.alt(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.context = tableMutations_candidate.context(tableMutationGenePairs.iMutationCandidate);
-    tableMutationGenePairs.context3 = tableMutationGenePairs.context;
-    isOK = tableMutationGenePairs.iPattern>0 & tableMutationGenePairs.iPattern<97;
-    tableMutationGenePairs.context3(isOK) = cellfun(@(x) x(8:10), tableMutationGenePairs.context(isOK), 'UniformOutput', false);
-
-    tmp1 = tableMutationGenePairs(tableMutationGenePairs.iTissue>1 & tableMutationGenePairs.isHighCADD & ~tableMutationGenePairs.isExcluded,:);
-    tmp2 = grpstats(tmp1(:,{'iSample', 'tissue', 'geneSymbol_thisGene'}), {'iSample', 'tissue', 'geneSymbol_thisGene'});
-    tmp2(tmp2.GroupCount>1,:)
-    writetable(tmp2(tmp2.GroupCount>1,:), 'multipleMutationsPerSamplePerGene.xlsx');
-    tmp1a = tableMutations_candidate(tableMutations_candidate.iSample == 38 & tableMutations_candidate.iTissue==4 & tableMutations_candidate.chrNumeric==20,:);
-    cellfun(@(x) x(8:10), tmp1a.context(1:end-1), 'UniformOutput', false)
-    tmp1a = tableMutations_candidate(tableMutations_candidate.iSample == 185 & tableMutations_candidate.iTissue==3 & tableMutations_candidate.chrNumeric>0,:);
-    cellfun(@(x) x(8:10), tmp1a.context, 'UniformOutput', false)
-
-    %
-    tmp1.id = strrep(strcat(num2str(tmp1.iSample), '_', tmp1.tissue, '_', tmp1.geneSymbol_thisGene), ' ', '');
-    tmp3 = tmp1(ismember(tmp1.id, tmp2.Row(tmp2.GroupCount>1)),:);
-    fig = createMaximisedFigure(1);
-    histogram(tmp3.iPattern, 1:97);
-    %%
-end
+% if (false)
+%     tableMutationGenePairs.iSample = tableMutations_candidate.iSample(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.tissue = tableTissues_data1.tissuePrint(tableMutationGenePairs.iTissue);
+%     tableMutationGenePairs.iPattern = tableMutations_candidate.iPattern(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.VAF = tableMutations_candidate.VAF(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.isPlusStrand = tableMutations_candidate.isPlusStrand(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.ref = tableMutations_candidate.ref(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.alt = tableMutations_candidate.alt(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.context = tableMutations_candidate.context(tableMutationGenePairs.iMutationCandidate);
+%     tableMutationGenePairs.context3 = tableMutationGenePairs.context;
+%     isOK = tableMutationGenePairs.iPattern>0 & tableMutationGenePairs.iPattern<97;
+%     tableMutationGenePairs.context3(isOK) = cellfun(@(x) x(8:10), tableMutationGenePairs.context(isOK), 'UniformOutput', false);
+% 
+%     tmp1 = tableMutationGenePairs(tableMutationGenePairs.iTissue>1 & tableMutationGenePairs.isHighCADD & ~tableMutationGenePairs.isExcluded,:);
+%     tmp2 = grpstats(tmp1(:,{'iSample', 'tissue', 'geneSymbol_thisGene'}), {'iSample', 'tissue', 'geneSymbol_thisGene'});
+%     tmp2(tmp2.GroupCount>1,:)
+%     writetable(tmp2(tmp2.GroupCount>1,:), 'multipleMutationsPerSamplePerGene.xlsx');
+%     tmp1a = tableMutations_candidate(tableMutations_candidate.iSample == 38 & tableMutations_candidate.iTissue==4 & tableMutations_candidate.chrNumeric==20,:);
+%     cellfun(@(x) x(8:10), tmp1a.context(1:end-1), 'UniformOutput', false)
+%     tmp1a = tableMutations_candidate(tableMutations_candidate.iSample == 185 & tableMutations_candidate.iTissue==3 & tableMutations_candidate.chrNumeric>0,:);
+%     cellfun(@(x) x(8:10), tmp1a.context, 'UniformOutput', false)
+% 
+%     %
+%     tmp1.id = strrep(strcat(num2str(tmp1.iSample), '_', tmp1.tissue, '_', tmp1.geneSymbol_thisGene), ' ', '');
+%     tmp3 = tmp1(ismember(tmp1.id, tmp2.Row(tmp2.GroupCount>1)),:);
+%     fig = createMaximisedFigure(1);
+%     histogram(tmp3.iPattern, 1:97);
+%     %%
+% end

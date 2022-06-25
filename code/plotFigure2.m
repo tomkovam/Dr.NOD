@@ -41,9 +41,9 @@ dim = [.007 .58 .01 .01]; str = 'c'; annotation('textbox',dim,'String',str, 'Fon
 dim = [.505 .58 .01 .01]; str = 'd'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 dim = [.007 .23 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 
-
-
 mySaveAs(fig, imagesPath, 'Fig2', false, true);
+savefig([imagesPath, 'Fig2.fig']);
+
 %%
     function plotCrossCADD_pancancer(sResPanCancerCrossCADD, lstMinCADD_PHRED)
         iRow = 3; typeName = 'Pan-cancer'; 
@@ -107,7 +107,7 @@ mySaveAs(fig, imagesPath, 'Fig2', false, true);
                 plot(x, y, 'k', 'LineWidth', 2, 'Color', colour);
 
                 [r,p] = corr(xValues', yValues, 'type', 'Pearson');
-                fprintf('%s: r = %.1g, p = %s\n', lstLabels{iTissue}, r, getPValueAsTextShort(p));
+%                 fprintf('%s: r = %.1g, p = %s\n', lstLabels{iTissue}, r, getPValueAsTextShort(p));
         %                 if (sum(~isnan(yValues))>2)
         %                     p = linearModel.coefTest;
         %                 else

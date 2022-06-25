@@ -1,7 +1,7 @@
 function [tableMutations_candidate, tableTissues, tableTissuesWithPancancer] = loadData4_TFBS(tableMutations_candidate)
 %% Loads the TFBS analysis data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/data/data4_TFBS.mat';
+saveFileData = 'save/main/data4_TFBS.mat';
 if (~exist(saveFileData, 'file'))
     tic
     %% 

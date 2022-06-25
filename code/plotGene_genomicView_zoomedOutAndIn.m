@@ -1,7 +1,5 @@
 function [x_mutatedUE_relative, colour] = plotGene_genomicView_zoomedOutAndIn(tissueName, biosampleABC, geneName, sColours, plotOnlyMutatedEnhancers, sProperties)
 
-rng(1);
-
 % Created in saveForOneGeneVisualisation.m
 load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'gene_qCombined', ...
     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');
@@ -21,23 +19,18 @@ tableEZH2.isTagBasic = contains(tableEZH2.tags, 'tag "basic";');
 tableEZH2.isCanonicalTranscript = contains(tableEZH2.transcript_id, 'ENST00000320356') | contains(tableEZH2.transcript_id, 'ENST00000652332') | contains(tableEZH2.transcript_id, 'ENST00000494652') | ...
     contains(tableEZH2.transcript_id, 'ENST00000365658') | contains(tableEZH2.transcript_id, 'ENST00000515903') | contains(tableEZH2.transcript_id, 'ENST00000364228') | contains(tableEZH2.transcript_id, 'ENST00000365484') | ...
     contains(tableEZH2.transcript_id, 'ENST00000516507') | contains(tableEZH2.transcript_id, 'ENST00000516501') | contains(tableEZH2.transcript_id, 'ENST00000286091'); % ENST00000652332 would be better
-% unique(tableEZH2(tableEZH2.isCanonicalTranscript, {'gene_name', 'transcript_name', 'transcript_type'})) % misc_RNA
 tableEZH2 = tableEZH2(tableEZH2.isCanonicalTranscript & ismember(tableEZH2.featureType,{'exon', 'CDS', 'UTR'}),:);
 %%
+rng(1);
+
 xMin = min(tableUniqueEnhancers_oneGene.min_pos0) - 1e3;
 xMax = max(tableUniqueEnhancers_oneGene.max_pos1) + 1e3; % 65e3 to see PDIA4 ENSG00000155660
-% tableEZH2 = tableEZH2(tableEZH2.pos1 >= xMin & tableEZH2.pos0 <= xMax,:);
-%%
-% isInside = strcmp(tableGencodeGenes.chromosome, tableUniqueEnhancers_oneGene.chr{1}) & tableGencodeGenes.pos1 >= gene_pos0 & tableGencodeGenes.pos0 <= gene_pos1;
-% tableGencodeGenes(isInside,:)
-
 %%
 hold on;
 lineWidth = 1.5;
 minVal = 0;
 maxVal = 1;
 maxVal2 = maxVal/4;
-% yValGenes = 0.95*maxVal;
 
 cmap = lines(gene_nUEs);
 
@@ -87,21 +80,6 @@ if (~plotOnlyMutatedEnhancers)
 end
 
 
-% x1 = sort([gene_pos0, gene_pos1]);
-
-
-
-
-
-
-% plot(gene_TSS*[1,1], [maxVal*.75, maxVal], '-', 'LineWidth', 2, 'Color', 'k');
-
-% if (strcmp(gene_strand, '+'))
-%     text(gene_TSS, 0.95*maxVal, sprintf(' >> %s >>  >>  >>  >> ', geneName), 'Color', 'k', 'HorizontalAlignment', 'left');
-% else
-%     text(gene_TSS, 0.95*maxVal, sprintf(' <<  <<  <<  << %s << ', geneName), 'Color', 'k', 'HorizontalAlignment', 'right');
-% end
-
 y_b = minVal*[1,1];
 y_t = maxVal2*[1,1];
 
@@ -113,8 +91,6 @@ for jUE = 1:gene_nUEs
     plotCurve(gene_TSS, mean(x2), mean(y_t), maxVal, 1, colour, lineWidth);
 end
 
-% h = patch([x1, fliplr(x1)], [0.90*maxVal*[1,1], fliplr(0.92*maxVal*[1,1])], [1,1,0], 'EdgeColor', 'none');    set(h, 'FaceAlpha', 0.5);   drawnow;
-
 isMutatedUE = tableUE_annotations_hyperUE_oneGene.foldChangeScoreM>5;
 x_mutatedUE = [min(tableUniqueEnhancers_oneGene.min_pos0(isMutatedUE)), max(tableUniqueEnhancers_oneGene.max_pos1(isMutatedUE))];
 
@@ -124,14 +100,10 @@ if (plotOnlyMutatedEnhancers)
     isOK = tableMutationsThisGene.isHighCADD;
     if (sum(isOK)>0)
         xValues = tableMutationsThisGene.pos1(isOK);
-        %[~, perm] = sort(xValues);
         yValues_basic = linspace(0, maxVal2, length(xValues));
         yValues = yValues_basic(randperm(length(xValues)));
-        %yValues = rand(length(xValues), 1)/(1/maxVal2);
         plot(xValues, yValues, 'h', 'MarkerSize', 7, 'Color', sColours.mutated, 'MarkerFaceColor', (1+sColours.mutated)/2);
         plot((xValues*[1,1])', repmat([0, maxVal2], length(xValues), 1)', ':', 'Color', sColours.mutated);
-        %hLeg = [hLeg, h]; hLegText = [hLegText, {'high CADD'}];
-        %tableMutationsThisGene(isOK,:)
     end
 
     margin = (x_mutatedUE(2) - x_mutatedUE(1))/100;

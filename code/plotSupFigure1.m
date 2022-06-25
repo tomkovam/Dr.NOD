@@ -32,3 +32,4 @@ for iType = 1:nTypes
     title(lstPrintNames{iType}); drawnow;
 end
 mySaveAs(fig, imagesPath, 'ExtDataFig1.png', false, true);
+savefig([imagesPath, 'ExtDataFig1.fig']);
