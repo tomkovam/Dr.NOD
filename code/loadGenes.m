@@ -1,5 +1,5 @@
 function [tableGenesNasser, tableGencodeGenes, tableChrSizes, tableCGC, tableDriverGenesPCAWG] = loadGenes(runAgain, sProperties, tableDriverMutationsPCAWG)
-% Here we load all the relevant gene lists, including various cancer driver gene (CDG) definitions, and map them together.
+%% Here we load all the relevant gene lists, including various cancer driver gene (CDG) definitions, and map them together.
 % Later on, we will work with tableGenesNasser, which is the list of all target genes of ABC enhancers in the Nasser2021 data. 
 % We will further restrict this to only genes expressed in the given tissue and with at least one non-coding enhancer.
 % The tableGencodeGenes is the list of all genes for which there is PCAWG expression calls.
@@ -179,6 +179,7 @@ if (runAgain || ~exist(saveFileData, 'file'))
     %%
     toc
     myPrintMemory
+    createDir(fileparts(saveFileData));
     save(saveFileData, 'tableGenesNasser', 'tableGencodeGenes', 'tableChrSizes', 'tableCGC', 'tableDriverGenesPCAWG'); %, 'tableIntOGen');
 else
     fprintf('Loading data from %s...\n', saveFileData);

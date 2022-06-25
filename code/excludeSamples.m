@@ -1,6 +1,7 @@
 function [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType, tableSamples, tableMutations, tissueName, biosampleABC, verbose)
+% Annotated exclued samples (such as POLE-MUT and MSI/MMRd samples) and mutations and annotates high-CADD mutations.
 
-saveFileData = ['save/tableSamples_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
+saveFileData = ['save/samples/tableSamples_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     tic
     %%
@@ -20,13 +21,12 @@ if (runAgain || ~exist(saveFileData, 'file'))
     tableMutations.isHighCADD = tableMutations.CADD_PHRED >= minCADD_PHRED; % OLD: tableSNVs.isHighCADD = tableSNVs.iBinCADD >= minBinCADD;
     if (verbose)
         fprintf('\n\n\n%s: %d non-unique samples (multiple per donor)\n', tissueName, sum(~tableSamples.isUsedOnePerDonor));
-        %     fprintf('%s %s: %s enhancers, %s enhancer-gene pairs, %d median enhancer length, %d WGS samples (%d with RNA), %s enhancer mutations.\n', ...
-        %         tissueName, biosampleABC, num2sepNumStr(size(tableUniqueEnhancers, 1)), num2sepNumStr(size(tableEnhancers, 1)), median(tableUniqueEnhancers.nPositions), ...
-        %         nSamples, sum(tableSamples.has_RNA), num2sepNumStr(sum(tableMutations.iUniqueEnhancer>0)));
         fprintf('%s %s: CODING DRIVER MUTATIONS: %d mutations (%d in enhancers).\n', tissueName, biosampleABC, sum(tableMutations.isPCAWGDriver), sum(tableMutations.isPCAWGDriver & tableMutations.iUniqueEnhancer>0));
         fprintf('%d included samples vs %d excluded samples (%.1f%%).\n', sum(~tableSamples.isExcluded), sum(tableSamples.isExcluded), 100*mean(tableSamples.isExcluded));
     end
-
+    %%
+    toc
+    createDir(fileparts(saveFileData));
     save(saveFileData, 'tableSamples', 'tableMutations');
 else
     fprintf('Loading data from %s...\n', saveFileData);

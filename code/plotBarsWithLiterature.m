@@ -1,31 +1,14 @@
 function plotBarsWithLiterature(sColours, tableGencodeGenes)
 
-% lstTypes = {'sizeEffectExpression_woBlood', 'sizeEffectExpression_onlyBlood', 'sizeEffectExpression_withBlood'};
-% iType = 1;
-% yValueText = lstTypes{iType}; %'sizeEffectExpression_woBlood';
-% tmpToPlot = tableGencodeGenes(tableGencodeGenes.isCandidate & ~isnan(tableGencodeGenes.(yValueText)),:);
-
 yValueText = 'sizeEffectE';
-
 tmpToPlot = tableGencodeGenes(tableGencodeGenes.isCandidateSolid,:);
-% yValueText = 'sign_pValueExpression_woBlood';
-% tmpToPlot.(yValueText) = sign(tmpToPlot.sizeEffectExpression_woBlood).* -log10(tmpToPlot.pValueExpression_woBlood);
-
-
-% tmpToPlot.yValue = sign(tmpToPlot.(yValueText)).*-log10(tmpToPlot.candidate_FDR);
-% yValueText = 'yValue';
-
 tmpToPlot = sortrows(tmpToPlot,yValueText,'ascend');
 
 
 xValues = (1:size(tmpToPlot, 1))';
 yValues = tmpToPlot.(yValueText);
-% if (sum(~isnan(yValues))>0)
-%     fig = createMaximisedFigure(2, [0 0 35 15]);
-%     axes('Position', [0.13 0.05 0.85 0.9]);
+
 hold on; 
-alphaPrognostic = 0.01; 
-alphaPrognosticStrict = 0.001;
 
 alphaPrognostic = 0.05; 
 alphaPrognosticStrict = 0.01;
@@ -38,27 +21,11 @@ labelsTissue(abs(yValues)<0.5 & strcmp(labelsTissue, 'Colorectal')) = {'Color.'}
 labelsTissue(abs(yValues)<0.5 & strcmp(labelsTissue, 'Pancreas')) = {'Panc.'};
 labelsTissue(abs(yValues)<0.4 & strcmp(labelsTissue, 'Breast')) = {'Bre.'};
 
-% if (iType == 1)
-%     labelsTissue = strrep(labelsTissue, 'Blood|', ''); % Here, we do not show blood results
-% end
-
-
-%     hLeg = [];
 
 hB = bar(yValues);
 hB.EdgeColor = 'none';
 hB.FaceColor = 'flat';
 hB.CData(:) = repmat(sColours.nonCDG, size(tmpToPlot, 1), 1);
-% hB.CData(tmpToPlot.isDriver,:) = repmat(sColours.fusion, sum(tmpToPlot.isDriver), 1);
-% hB.CData(tmpToPlot.isTSG,:) = repmat(sColours.TSG, sum(tmpToPlot.isTSG), 1);
-% hB.CData(tmpToPlot.isONCOGENE,:) = repmat(sColours.ONCOGENE, sum(tmpToPlot.isONCOGENE), 1);
-% hB.CData(tmpToPlot.literatureEvidenceOncogene>0 & yValues>0,:) = repmat(sColours.ONCOGENE, sum(tmpToPlot.literatureEvidenceOncogene>0 & yValues>0), 1);
-% hB.CData(tmpToPlot.literatureEvidenceTSG>0 & yValues<0,:) = repmat(sColours.TSG, sum(tmpToPlot.literatureEvidenceTSG>0 & yValues<0), 1);
-% hB.CData(tmpToPlot.literatureEvidenceOncogene>tmpToPlot.literatureEvidenceTSG,:) = repmat(sColours.ONCOGENE, sum(tmpToPlot.literatureEvidenceOncogene>tmpToPlot.literatureEvidenceTSG), 1);
-% hB.CData(tmpToPlot.literatureEvidenceOncogene<tmpToPlot.literatureEvidenceTSG,:) = repmat(sColours.TSG, sum(tmpToPlot.literatureEvidenceOncogene<tmpToPlot.literatureEvidenceTSG), 1);
-
-% maxY = max(abs(yValues));
-% stepY = maxY/7;
 
 hLeg = zeros(8,1); iLeg = 1;
 

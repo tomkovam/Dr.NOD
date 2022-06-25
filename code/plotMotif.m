@@ -1,9 +1,5 @@
 function yAltRelative = plotMotif(matFrequency, fontSize, lineWidth, sequence_ref, sequence_alt, motifName, iPosMutation)
 
-%%
-% matFrequency = tableMotifs.motifMatrix{1}';
-% fig = createMaximisedFigure(1); hold on;
-%%
 
 sColours.A = [18,151,72]/256; %[0,1,0];
 sColours.C = [32,98,156]/256; %[0,0,1];

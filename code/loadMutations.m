@@ -1,11 +1,12 @@
 function [tableMutations, tableSamples] = loadMutations(runAgain, sProperties, tissueName, tableSamplesPCAWG, tableDriverMutationsPCAWG)
+%% Loads the mutation data
 
 if (~exist('tableSamplesPCAWG', 'var'))
     [tableSamplesPCAWG, ~, ~, ~, ~, ~, tableDriverMutationsPCAWG] = loadDataPCAWG();
 end
-DIR_INTERSECTED_MUT=sProperties.PCAWG_MUTATIONS_DIR; %[DIR_DATA_NEW, 'out03_inEnhancersPromoters_250bp/'];
+DIR_INTERSECTED_MUT=sProperties.PCAWG_MUTATIONS_DIR; % 'data/PCAWG/out03_inEnhancersPromoters_250bp/'
 %%
-saveFileData = ['save/dataMutations_',tissueName,'.mat'];
+saveFileData = ['save/dataMutations/dataMutations_',tissueName,'.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     tic
     %% Files were copied from cluster, gunzipped using files = gunzip('*.gz');, only the unzipped ones were kept, and .bedlike --> .txt were renamed in TotalCommander.
@@ -140,6 +141,7 @@ if (runAgain || ~exist(saveFileData, 'file'))
     %%
     toc
     %myPrintMemory
+    createDir(fileparts(saveFileData));
     save(saveFileData, 'tableMutations', 'tableSamples', '-v7.3'); %
 else
     fprintf('Loading data from %s...\n', saveFileData);

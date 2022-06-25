@@ -1,4 +1,5 @@
 function [pM, stats] = compute_pM_GLM_geneLevel(nMutSamplesInEnhancersPerGene, tableGenes_annotations, tableGenes_mean_trinucleotides, nUsedSamples, univariableCutoff, verbose)
+%% Computes the pM p-values (for scoreM) for each gene, i.e., whether the regulatory space of the gene is more mutated than expected (taking high-CADD mutations into consideration only)
 
 if (~exist('univariableCutoff', 'var'))
     univariableCutoff = 0.001;
@@ -6,14 +7,10 @@ end
 if (~exist('verbose', 'var'))
     verbose = false;
 end
-% runEnhancerLevel = false;
-% if (runEnhancerLevel)
-%     tableUE_annotations.mutationFrequency = tableUniqueEnhancers.nMutSamples_SNVs_highCADD./tableUE_annotations.nTheoreticalMutations_PHRED_geqCUTOFF;
-%     tableDataForBMM = [tableUE_mean_trinucleotdies, tableUE_annotations(:,{'mfInFlanks', 'nPositions', 'mean_GC', 'mean_replicationTiming', 'activity_base', 'mutationFrequency'})]; % The last column is the response variable
-% else
+
 tableGenes_annotations.mutationFrequency = nMutSamplesInEnhancersPerGene./tableGenes_annotations.nTheoreticalMutations_PHRED_geqCUTOFF;
 tableDataForBMM = [tableGenes_mean_trinucleotides, tableGenes_annotations(:,{'mean_mfInFlanks', 'nPositionsInEnhancers', 'mean_GC', 'mean_replicationTiming', 'mean_baseActivity', 'mutationFrequency'})]; % The last column is the response variable
-% end
+
 
 if (ismember("mean_replicationTiming", tableDataForBMM.Properties.VariableNames)) % The zero means a missing value in this data set
     tableDataForBMM.mean_replicationTiming(tableDataForBMM.mean_replicationTiming==0) = NaN;
@@ -34,8 +31,6 @@ for iCol = 1:nPredictors
         warning('PROBLEM in column %s', tablePredictors.predictor{iCol});
     end
 end
-% tablePredictors.univariablePValue(end) = 0; % We always need the last column, as that will be the response variable
-
 
 try
     mdl =  fitglm(tableDataForBMM(:,tablePredictors.univariablePValue<univariableCutoff), 'linear', 'Distribution', 'poisson', 'DispersionFlag', true);
@@ -46,21 +41,6 @@ try
     end
     expected_mf = predict(mdl, tableDataForBMM(:,1:end-1));
 
-    % if (runEnhancerLevel)
-    %     ypredEnhancerLevel_nMutSamples = ypred.*tableUE_annotations.nTheoreticalMutations_PHRED_geqCUTOFF;
-    %     ypred = NaN*tableGenes_annotations.nPositionsInEnhancers;
-    %     tmp = NaN*tableGenes_annotations.nPositionsInEnhancers;
-    %     tmp2 = NaN*tableGenes_annotations.nPositionsInEnhancers;
-    %     for iGene = 1:nGenes
-    %         ypred(iGene,:) = sum(ypredEnhancerLevel_nMutSamples(matUniqueEnhancersGenes(:,iGene), :), 1);
-    %         tmp(iGene,:) = sum(tableUE_annotations.nTheoreticalMutations_PHRED_geqCUTOFF(matUniqueEnhancersGenes(:,iGene), :), 1);
-    %         tmp2(iGene,:) = sum(tableUE_annotations.nPositions(matUniqueEnhancersGenes(:,iGene), :), 1);
-    %     end
-    %     ypred = ypred./tableGenes_annotations.nTheoreticalMutations_PHRED_geqCUTOFF;
-    %     if (max(abs(tableGenes_annotations.nTheoreticalMutations_PHRED_geqCUTOFF-tmp))>0 || max(abs(tableGenes_annotations.nPositionsInEnhancers-tmp2))), error('ERROR: nPositionsInEnhancers or nTheoreticalMutations_PHRED_geqCUTOFF do not match.'); end
-    % end
-    %%
-    % OLD pM = myBinomTestRightSided(nMutSamplesInEnhancersPerGene, tableGenes_annotations.nTheoreticalMutations_PHRED_geqCUTOFF*nUsedSamples, expected_mf/nUsedSamples, 'one'); % myBinomTestRightSided(n, k*s, p, 'one')
     %% BinomTest(n, k, 1 - (1-p)^s, ’one’)
     n = nMutSamplesInEnhancersPerGene;
     k = nUsedSamples;
@@ -80,7 +60,7 @@ try
     stats.foldChange = (stats.observed_mf./stats.expected_mf);
     stats.log2FC = log2(stats.observed_mf./stats.expected_mf);
     stats.univariableCutoff = univariableCutoff;
-    %stats.mdl = mdl;
+    %stats.mdl = mdl; % Too large
 catch
     warning('Badly scaled data or some other issues.');
 end

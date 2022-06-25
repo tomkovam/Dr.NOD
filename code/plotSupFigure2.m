@@ -18,17 +18,9 @@ plotDepMap_barPlot();
 myGeneralSubplot(nR,nC,iS,xS,yS,xB,yB,xM,yM); iS = iS + 1; hold on;
 plotDepMap_crossTissue(); 
 
-% iS = iS + nC;
 myGeneralSubplot(nR,nC,iS,.95+xS,.7,xB,yB,xM,yM); iS = iS + nC; 
 plotDepMap_heatmapBreast(); 
 
-% axPos1 = get(gca, 'Position');
-% xa = (axPos1(1) + axPos1(3)*0.9333)*[1,1];
-% ya = [axPos1(2), axPos1(2) + axPos1(4)];
-% annotation('line',xa,ya, 'Color', 'k', 'LineWidth', 2);
-
-% positionVector = myGeneralSubplot(nR,nC,iS,.9+xS,yS,xB,yB,xM,yM, false); iS = iS + nC; 
-% plotDepMap_heatmapBoxplot(dataDepMap, positionVector); 
 
 fontSizeLetters = 26;
 dim = [.007 .99 .01 .01]; str = 'a'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');

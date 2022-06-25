@@ -32,19 +32,3 @@ for iType = 1:nTypes
     title(lstPrintNames{iType}); drawnow;
 end
 mySaveAs(fig, imagesPath, 'ExtDataFig1.png', false, true);
-%%
-% fig = createMaximisedFigure(3, [0 0 35 20]); 
-% cmap = flipud(lbmap(600,'RedBlue')); cmap(290:310,:) = 1; colormap([.5*[1,1,1]; cmap]);
-% colormap([.5*[1,1,1]; flipud(lbmap(600,'RedBlue'))]);
-% nR = round(sqrt(nTypes)); nC = ceil(nTypes/nR); xS = 0.8; yS = 0.8; xB = 0.05; yB = 0.08; xM = -0.02; yM = -0.02;
-% 
-% for iType = 1:nTypes
-%     myGeneralSubplot(nR,nC,iType,xS,yS,xB,yB,xM,yM);
-%     matToPlot = (squeeze(sResPanCancer.enrichmentCDG(iType,:,:)))';
-%     imagesc(matToPlot); hBar = colorbar; title(hBar, 'CDG enr.'); 
-%     set(gca, 'YTick', 1:nCutoffPE, 'YTickLabel', lstCutoffsPEText, 'XTick', 1:nCutoffPM, 'XTickLabel', lstCutoffsPMText, 'TickLength', [0 0], 'XTickLabelRotation', 45, 'FontSize', 7);
-%     if (iType > nTypes-nC), xlabel('{\itp_M} cutoff'); end
-%     ylabel('{\itp_E} cutoff');
-%     title(lstPrintNames{iType}); drawnow;
-% end
-% mySaveAs(fig, imagesPath, 'SFig_cutoffs1.png', false, true);

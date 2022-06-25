@@ -167,15 +167,6 @@ mySaveAs(fig, imagesPath, 'Fig2', false, true);
         %cmap = myColourGradient([1,1,1], sColours.darkRed, 100);
         colormap(cmap);
 
-        % Just the order of the row-normalized p-values
-        %         for iTissue = 1:nTissues
-        %             for iABC = 1:nABC
-        %                 matToPlot(iTissue,iABC) = sum(matNormalized(iTissue, :)>matNormalized(iTissue, iABC)) + 1;
-        %             end
-        %         end
-%         cmap = (lbmap(nABC+4, 'RedBlue')); colormap(cmap([1,4,7,8:end],:));
-%         barTitleText = 'Row-normalized p-value order';
-        
         imagesc(matToPlot); h = colorbar;
         set(h, 'Ticks', [0, 1], 'FontSize', fontSize);
         h.Label.String = barTitleText;
@@ -186,11 +177,8 @@ mySaveAs(fig, imagesPath, 'Fig2', false, true);
             text(mean(lstABC), 0.18, tableTissues.tissuePrint{iTissue}, 'HorizontalAlignment','left', 'FontSize', fontSize, 'Rotation', 45);
             text(0.2, iTissue, tableTissues.tissuePrint{iTissue}, 'HorizontalAlignment','right', 'FontSize', fontSize);
         end
-%         text(-2.4, nTissues/2, 'Cancer Data', 'Rotation', 90, 'HorizontalAlignment', 'center', 'FontSize', fontSize+2);
-%         text(nABC/2, -1.8, 'Enhancer Data', 'HorizontalAlignment', 'center', 'FontSize', fontSize+2);
         xlabel('Enhancer Data'); ylabel('Cancer Data'); set(gca, 'YAxisLocation', 'right')
         set(gca, 'XTick', []);
-        %box off; 
         set(gca, 'YTick', []);
         set(gca, 'FontSize', fontSize, 'XTickLabelRotation', 45, 'TickLength', [0,0]);
     end
@@ -230,12 +218,9 @@ mySaveAs(fig, imagesPath, 'Fig2', false, true);
         tmp_tableTissues = tableTissuesWithPancancer;
         iType = 1;
         if (iType == 1)
-            %         matValues = [tmp_tableTissues.enrichmentCDG, tmp_tableTissues.onlyP_M_enrichmentCDG, tmp_tableTissues.onlyFDR_M_enrichmentCDG];
-            %         legendValues = {'{\itp_M} < 0.05 & {\itp_E} < 0.05', '{\itp_M} < 0.05', '{\itFDR_M} < 1.5'};
             matValues = [tmp_tableTissues.enrichmentCDG, tmp_tableTissues.onlyP_M_enrichmentCDG];
             starsValues1 = arrayfun(@getPValueStarsAsText, tmp_tableTissues.pFisherCDG, 'UniformOutput', false);
             starsValues2 = arrayfun(@getPValueStarsAsText, tmp_tableTissues.onlyP_M_pFisherCDG, 'UniformOutput', false); 
-            %legendValues = {'{\itp_M} < 0.05 & {\itp_E} < 0.05', '{\itp_M} < 0.05'};
             legendValues = {'{\itscore_M} & {\itscore_E}', '{\itscore_M} only'};
         else
             matValues = [tmp_tableTissues.pE_FDR_M_enrichmentCDG, tmp_tableTissues.onlyFDR_M_enrichmentCDG];
@@ -244,21 +229,11 @@ mySaveAs(fig, imagesPath, 'Fig2', false, true);
         xValues = (1:size(tmp_tableTissues, 1))';
         yValues = max(matValues, [], 2);
 
-        %axes('Position', [0.1 0.2 0.9 0.7]);
-        %subplot(2,1,iType);
         plot([0, nRows+1], [1,1], ':', 'Color', .5*[1,1,1], 'LineWidth', 2);
 
         b = bar(matValues, 'EdgeColor', 'flat', 'FaceColor', 'flat');
         b(1).CData = sColours.darkRed;
         b(2).CData = sColours.lightRed;
-        %     b(1).FaceColor = [0.6350 0.0780 0.1840];
-        %     b(2).FaceColor = (1+b(1).FaceColor)/2; %[0.1840 0.6350 0.0780];
-        % b.CData(1,:) = [0.6350 0.0780 0.1840];
-        % b.CData(2,:) = [0.1840 0.6350 0.0780];
-        % text(xValues, 1 + yValues, tmp_tableTissues.onlyP_M_pFisherCDG_text, 'HorizontalAlignment', 'center', 'FontSize', 14);
-        % text(xValues,  + yValues, strcat({'FC: '}, num2str(tableTissuesWithPancancer.enrichmentCDG, '%-.1f')), 'HorizontalAlignment', 'center', 'FontSize', 14, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
-        % text(xValues, .5 + yValues, strcat({'n = '}, num2str(tmp_tableTissues.nSamplesWGSandRNA, '%-d')), 'HorizontalAlignment', 'center', 'FontSize', 12, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
-
         xOffset = .15; yOffset = .3; isOK = sum(matValues, 2)>0;
         text(xValues(isOK) - xOffset, yOffset + matValues(isOK,1), num2str(matValues(isOK,1), '%.1fx'), 'HorizontalAlignment', 'center', 'FontSize', fontSize-6, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
         text(xValues(isOK) + xOffset/2, yOffset + matValues(isOK,2), num2str(matValues(isOK,2), '%.1fx'), 'HorizontalAlignment', 'left', 'FontSize', fontSize-6, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
@@ -266,14 +241,12 @@ mySaveAs(fig, imagesPath, 'Fig2', false, true);
         text(xValues(isOK) - xOffset, 2*yOffset + matValues(isOK,1), starsValues1, 'HorizontalAlignment', 'center', 'FontSize', fontSize-6, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
         text(xValues(isOK) + xOffset/2, 2*yOffset + matValues(isOK,2), starsValues2, 'HorizontalAlignment', 'left', 'FontSize', fontSize-6, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
 
-        %yLimVal = get(gca, 'YLim');
         yVal = 1.1*max(yValues);
         ylim([0, yVal]);
         yVal = 1.2*max(yValues);
         text(xValues(isOK), yVal+0*xValues(isOK), num2str(matValues(isOK,1)./matValues(isOK,2), '%.1f'), 'HorizontalAlignment', 'center', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
         text(0, yVal, 'ratio', 'HorizontalAlignment', 'center', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
 
-        %median(matValues, 1, 'omitnan')
         ylabel({'CDG enrichment'});
         set(gca, 'XTick', xValues, 'XTickLabel', strrep(tmp_tableTissues.tissuePrint, 'wo Blood', 'Solid'), 'XTickLabelRotation', 45, 'FontSize', fontSize, 'TickLength', [0 0]);
         legend(b, legendValues, 'Location', 'NorthWest', 'FontSize', fontSize-4); legend boxoff %title(strrep(yTestName, '_', ' '));

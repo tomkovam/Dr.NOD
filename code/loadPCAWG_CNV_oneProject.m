@@ -1,6 +1,7 @@
 function [matCNV_genesSamples, sample_has_CNV] = loadPCAWG_CNV_oneProject(runAgain, suffix, tissueName, biosampleABC, tableGenesNasserExpressed, tableGencodeGenes, tableSamples, sProperties, doSave)
+%% Loads copy number variation (CNV) data
 
-saveFileData = ['save/PCAWG_CNV_',suffix,'.mat'];
+saveFileData = ['save/PCAWG/PCAWG_CNV_',suffix,'.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     %% 
     fprintf('Computing %s...\n', saveFileData);    
@@ -44,6 +45,7 @@ if (runAgain || ~exist(saveFileData, 'file'))
     %% We save the results into saveFileData.
     %myPrintMemory
     if (doSave)
+        createDir(fileparts(saveFileData));
         save(saveFileData, 'matCNV_genesSamples', 'sample_has_CNV');
     end
 else

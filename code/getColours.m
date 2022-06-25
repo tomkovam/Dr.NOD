@@ -21,8 +21,6 @@ sColours.WT = sColours.gray;
 sColours.highExpression = [227,170,224]/256; %.2*[1,1,1];
 sColours.lowExpression = [64,119,190]/256; %.7*[1,1,1];
 sColours.crossTissueColour = [0    0.4470    0.7410];
-
-% https://www.google.com/imgres?imgurl=https%3A%2F%2Fwww.itakeyou.co.uk%2Fwp-content%2Fuploads%2F2020%2F08%2Fcolor-hex-3.jpg&imgrefurl=https%3A%2F%2Fwww.itakeyou.co.uk%2Femerald-green-and-salmon-colour-scheme%2F&tbnid=U_PpsYTopoCZKM&vet=12ahUKEwi27M7lvZT4AhU0JH0KHdnaBwIQMygTegUIARC1Ag..i&docid=6X6SDAQmsAHOVM&w=757&h=1050&q=colour%20pairs%20teal&ved=2ahUKEwi27M7lvZT4AhU0JH0KHdnaBwIQMygTegUIARC1Ag
 sColours.closeMutation = [0,112,116]/256; %[3,76,83]/256; %'#034C52'; 
 sColours.distantMutation = [243,140,121]/256; %'#F48D79';
 sColours.distanceBackground = (1 + .5*[1,1,1] + sColours.closeMutation)/3;

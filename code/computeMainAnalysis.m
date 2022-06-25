@@ -4,7 +4,9 @@ function [tableGenesNasserExpressed, tableGenes_pValues, stats, tableSamples, ta
     tableDriverMutations, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL, tableUE_annotations, tableUE_mean_trinucleotdies, matUESamplesIsMut_SNVs_highCADD_hyperUE, tableUE_annotations_hyperUE, matGenesSamplesNMut_SNVs] = ... % levelOutputArguments = 3
     computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV)
 
-% One mutation in tableMutations can be in >1 UE (when neighbouring enhancers are overlapping). Working with matMutationsEnhancers is recommended. This will not cause any double-counting, since we always count max 1 mutation per sample in every computation.
+% Computes the main analysis from the input data.
+% This function is called from all the high-level functions loadData1.m, loadData2_crossCADD.m, loadData3_crossTissue.m, loadData4_TFBS.m, and loadData6_cutoffs.m
+% Note that one mutation in tableMutations can be in >1 UE (when neighbouring enhancers are overlapping). Working with matMutationsEnhancers is recommended. This will not cause any double-counting, since we always count max 1 mutation per sample in every computation.
 
 enhancerAnalysis = sProperties.enhancerAnalysis;
 minCADD_PHRED = sProperties.minCADD_PHRED;
@@ -16,7 +18,7 @@ levelOutputArgumentsOrig = levelOutputArguments;
 if (levelOutputArguments <= 2) % To speed it up, we first try to read directly from the precomputed files, assuming that they already exist.
     try
         [tableGenes_pValues, stats] = computePValuePerGene(runAgain, suffix, minCADD_PHRED, exclusionType);
-        saveFileData = ['save/dataCancer_',suffix,'.mat'];
+        saveFileData = ['save/dataCancer/dataCancer_',suffix,'.mat'];
         load(saveFileData, 'tableGenesNasserExpressed', 'tableGencodeGenes');
         [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType);
     catch
@@ -27,7 +29,7 @@ end
 if (levelOutputArguments == 2) % To speed it up, we first try to read directly from the precomputed files, assuming that they already exist.
     try
         [tableGenes_pValues_hyperUE, stats_hyperUE] = computePValuePerGene_hypermutatedEnhancersOnly(runAgain, suffix, minCADD_PHRED, exclusionType);
-        saveFileData = ['save/dataCancer_',suffix,'.mat'];
+        saveFileData = ['save/dataCancer/dataCancer_',suffix,'.mat'];
         load(saveFileData, 'matMutationsEnhancers', 'matUniqueEnhancersGenes', 'matExpressionGenesSamples');
     catch
         levelOutputArguments = 3;

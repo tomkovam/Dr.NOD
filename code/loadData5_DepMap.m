@@ -1,4 +1,5 @@
 function dataDepMap = loadData5_DepMap(tableTissues_data1, sResults, tableGencodeGenes, sProperties)
+%% Loads the DepMap analysis data (and runs the analysis if not precomputed).
 
 rng(1);
 nPermutations = 10000;

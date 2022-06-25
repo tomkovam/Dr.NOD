@@ -1,7 +1,7 @@
 function [xAltRelative, yAltRelative] = plotGene_boxplot_forLogos(tissueName, biosampleABC, geneName, sColours, iSampleMutated)
 
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
+load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
 
 %%
 colors.n = .5*[1,1,1];

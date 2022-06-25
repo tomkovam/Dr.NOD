@@ -1,6 +1,6 @@
 function pCombined = combinePValues_EBM(p1,p2)
-% Expects column vectors of the same length
-% p1 = pM; p2 = pE;
+%% Computes the Empirical Brown's method of combining p-values
+% Expects column vectors of the same length (p1 = pM; p2 = pE)
 
 % Resources:
 % https://github.com/broadinstitute/getzlab-PCAWG-pvalue_combination/tree/master/pvalue_combination
@@ -39,7 +39,6 @@ end
 pCombined(isOK) = pCombined_clean;
 
 %% From https://github.com/IlyaLab/CombiningDependentPvaluesUsingEBM/blob/master/Matlab/EmpiricalBrownsMethod.m
-%Calculate Covariances
     function covar_matrix = CalculateCovariances(data_matrix)
         m = size(data_matrix, 1);
         transformed_data_matrix = NaN(size(data_matrix));
@@ -49,7 +48,6 @@ pCombined(isOK) = pCombined_clean;
         covar_matrix = cov(transformed_data_matrix',0,'omitrows');
     end
 
-% Transform data
     function transformed_data_vector = TransformData(data_vector)
         isOK2 = ~isnan(data_vector);
         data_vector_clean = data_vector(isOK2);

@@ -1,7 +1,8 @@
 function [tableGenes_annotations, tableGenes_mean_trinucleotdies, nSamplesInFlanks, tableUE_annotations, tableUE_mean_trinucleotdies] = ...
     annotateEnhancersByGenomicFeatures(runAgain, suffix, minCADD_PHRED, biosampleABC, enhancerAnalysis, tableSamples, tableUniqueEnhancers, tableGenesNasserExpressed, matUniqueEnhancersGenes, sProperties)
+%% Prepares predictors for the background mutagenesis model. In particular, annotates enhancers with a number of genomic features, including GC content, replication timing, theoretical CADD mutations with PHRED at least minCADD_PHRED etc.
 
-fileNameBMM = ['save/annotatedEnhancers_', suffix, '_', num2str(minCADD_PHRED),'.mat'];
+fileNameBMM = ['save/annotatedEnhancers/annotatedEnhancers_', suffix, '_', num2str(minCADD_PHRED),'.mat'];
 if (~runAgain && exist(fileNameBMM, 'file'))
     fprintf('Loading %s...\n', fileNameBMM);
     load(fileNameBMM, 'tableGenes_annotations', 'tableGenes_mean_trinucleotdies', 'nSamplesInFlanks', 'tableUE_annotations', 'tableUE_mean_trinucleotdies'); 
@@ -20,8 +21,7 @@ else
     tableAnnotatedEnhancers.Properties.VariableNames = {'chr', 'pos0', 'pos1', 'name', 'baseActivity', 'biosample', 'replicationTiming', 'GC', 'blacklisted'};
     %% We load annotations of the theoretical number of CADD mutations with PHRED >= minCADD_PHRED
     % This file was created in mixMT\singer2\ mapCADDtoNasser2021.sh and mapCADD_bin_toAllABC.sh
-    % OLD: inFile = [DIR_DATA_ORIG, 'AnnotatedEnhancers\AnnotatedByCADD\',enhancerAnalysis,'Predictions.together.6cols.CADD.geq',num2str(minCADD_PHRED),'.txt'];
-    inFile = [sProperties.CADD_DIRECTORY,enhancerAnalysis,'Predictions.together.6cols.CADD.geq',num2str(minCADD_PHRED),'.txt'];
+    inFile = [sProperties.CADD_DIRECTORY,enhancerAnalysis,'Predictions.together.6cols.CADD.geq',num2str(minCADD_PHRED),'.txt']; % AnnotatedEnhancers\AnnotatedByCADD\
     tableUE_annotatedCADD = readtable(inFile);
     tableUE_annotatedCADD.Properties.VariableNames = {'chr', 'pos0', 'pos1', 'name', 'baseActivity', 'biosample', 'nMutations_PHRED_geqCUTOFF'};
     if (~isequal(tableUE_annotatedCADD(:,1:6), tableAnnotatedEnhancers(:,1:6))), error('ERROR: Columns 1-6 in tableUE_annotatedCADD and tableAnnotatedEnhancers do not match.'); end
@@ -135,6 +135,7 @@ else
     tableGenes_mean_trinucleotdies = array2table(matGenes_sum_trinucleotides./tableGenes_annotations.nPositionsInEnhancers);
     tableGenes_mean_trinucleotdies.Properties.VariableNames = lstTrinucleotides;
     %% Finally, we save the resulting file
+    createDir(fileparts(fileNameBMM));
     save(fileNameBMM, 'tableGenes_annotations', 'tableGenes_mean_trinucleotdies', 'nSamplesInFlanks', 'tableUE_annotations', 'tableUE_mean_trinucleotdies');
 end
 %%

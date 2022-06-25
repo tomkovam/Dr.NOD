@@ -1,5 +1,5 @@
 function [tableSamplesPCAWG, tableDonorsPCAWG, nSamplesPCAWG, tableExpressionGenes, matExpressionGenesSamplesPCAWG, sSignatures, tableDriverMutationsPCAWG] = loadDataPCAWG(runAgain, expressionType, sProperties)
-% Here we load all PCAWG WGS samples, link them to their RNA aliquot IDs, load expression and mutational signatures data
+%% Here we load all PCAWG WGS samples, link them to their RNA aliquot IDs, load expression and mutational signatures data
 
 if (~exist('runAgain', 'var'))
     runAgain = false;
@@ -161,6 +161,7 @@ if (runAgain || ~exist(saveFileData, 'file'))
     fprintf('%d donors, %d have multiple samples, %d samples in total in these donors\n', nDonors, sum(tableDonorsPCAWG.nSamplesTumourWGS>1), sum(tableDonorsPCAWG.nSamplesTumourWGS(tableDonorsPCAWG.nSamplesTumourWGS>1))); % 2834 donors, 63 have multiple samples, 184 samples in total in these donors
     %%
     toc
+    createDir(fileparts(saveFileData));
     save(saveFileData, 'tableSamplesPCAWG', 'tableDonorsPCAWG', 'nSamplesPCAWG', 'tableExpressionGenes', 'matExpressionGenesSamplesPCAWG', 'sSignatures', 'nGenesPCAWG', 'tableDriverMutationsPCAWG');
 else
     fprintf('Loading data from %s...\n', saveFileData);

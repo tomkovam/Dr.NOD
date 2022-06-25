@@ -3,22 +3,6 @@ function [hLeg, textLeg] = plotTissueScatter(sColours, sResults, iTissue, fontSi
 if (~exist('lstGenesToPrint', 'var'))
     lstGenesToPrint = {};
 end
-    %     sResults{iTissue}.tissueName = tissueName;
-    %     sResults{iTissue}.biosampleABC = biosampleABC;
-    %     sResults{iTissue}.pM = pM;
-    %     sResults{iTissue}.pE = pE;
-    %     sResults{iTissue}.pCombined = pCombined;
-    %     sResults{iTissue}.qCombined = qCombined;
-    %     sResults{iTissue}.sizeEffectE = sizeEffectE;
-    %     sResults{iTissue}.sizeEffectM = sizeEffectM;
-    %     sResults{iTissue}.isUP = tableGenesNasserExpressed.isUP;
-    %     sResults{iTissue}.isCandidate = isCandidate;
-    %     sResults{iTissue}.isDriver = isDriver;
-    %     sResults{iTissue}.isONCOGENE = isONCOGENE;
-    %     sResults{iTissue}.isTSG = isTSG;
-    %     sResults{iTissue}.geneName = tableGenesNasserExpressed.geneName;
-
-    %tissueName = strrep(sResults{iTissue}.tissueName, 'bloodLymphoid', 'blood');
     tissuePrint = sResults{iTissue}.tissuePrint;
     biosampleABC = sResults{iTissue}.biosampleABC;
     pM = sResults{iTissue}.pM;
@@ -185,15 +169,4 @@ end
         h = legend(hLeg(hLeg>0), textLeg(hLeg>0), 'Location', 'NorthEast', 'FontSize', fontSize-2);
         h.Position(2) = h.Position(2) - h.Position(4);
     end
-    %     M2 = [sum(isCandidate & isDriver), sum(isCandidate & ~isDriver); sum(~isCandidate & isDriver), sum(~isCandidate & ~isDriver)];
-    %     [~, p_xP_yP] = fishertest(M2, 'Tail', 'right');
-    %     enrichment = (sum(isCandidate & isDriver)/sum(isCandidate)) / mean(isDriver);
-    %     if (plotUpDown)
-    %         titleText = sprintf('%s %s: %d samples (%d with RNA), %d/%d, enrichment %.1f, {\\itp=%s}\n%s %s %s xqCombined<%g&yP<0.05: %.1f, {\\itp=%s}\n\n', ...
-    %             tissueName, strrep(biosampleABC, '_', '\_'), sum(~tableSamples.isExcluded), sum(tableSamples.has_RNA & ~tableSamples.isExcluded), ...
-    %             sum(isCandidate & isDriver), sum(isCandidate), enrichment, getPValueAsText(p_xP_yP), ...
-    %             strrep(xTestName, '_', '\_'), strrep(yTestName, '_', '\_'), strrep(lstMutTypes{iType}, '_', '\_'), alphaqCombined, enrichmentqCombined, getPValueAsText(p_xqCombined_yP));
-    %         title(titleText);
-    %         disp(strrep(titleText, '\', ''));
-    %     end
     title(tissuePrint, 'FontSize', fontSize+4);

@@ -1,5 +1,5 @@
 function [tableEnhancers, tableGenesNasserExpressed, tableUniqueEnhancers, tableUniqueEnhancers_regions, matUniqueEnhancersGenes, nUniqueEnhancers] = loadDataEnhancers(biosampleABC, enhancerAnalysis, tableGenesNasser, verbose, sProperties)
-% Here we load the ABC enhancer data of the given type (enhancerAnalysis, such as non-coding regions only), create a list of unique enhancers (just
+%% Here we load the ABC enhancer data of the given type (enhancerAnalysis, such as non-coding regions only), create a list of unique enhancers (just
 % the regions, without the TargetGene information) and their discontinuous regions (when coding parts are subracted), create enhancer-gene matrix etc.
 
 % enhancerAnalysis = 'Slop250bpNoncoding';

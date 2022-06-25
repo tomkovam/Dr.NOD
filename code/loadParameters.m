@@ -1,4 +1,5 @@
 function [tableTissues, sProperties] = loadParameters()
+%% Loads main parameters of the entire analysis
 
 sProperties = readPropertiesFile('inputParameters.properties');
 sProperties.datasetDepMap = 'Achilles_gene_dependency';
@@ -12,5 +13,6 @@ sProperties.nGencodeGenes = 57820;
 sProperties.runAgain = false; 
 sProperties.doSave = true; 
 sProperties.tailDirection = 'both'; 
+sProperties.expressionType = 'fpkm_uq';
 
 tableTissues = readtable(sProperties.TABLE_TISSUES); % 'data/tableTissues.xlsx'

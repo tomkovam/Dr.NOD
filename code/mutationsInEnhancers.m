@@ -1,5 +1,5 @@
 function [tableMutations, matMutationsEnhancers] = mutationsInEnhancers(tableMutations, tableUniqueEnhancers_regions, tableChrSizes)
-
+%% Here, we intersect the mutation list with the enhancer list and create a mapping between them.
 % The input tableMutations needs to have these columns: chrNumeric, pos0, pos1
 % For every mutation, we annotate it with iUniqueEnhancer.
 % We go through the rows in tableUniqueEnhancers_regions and for each row we look at which iUniqueEnhancer it belongs to and we annotate all mutations in that region that they fall into iUniqueEnhancer.

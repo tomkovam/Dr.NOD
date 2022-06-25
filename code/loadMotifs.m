@@ -1,4 +1,5 @@
 function [dataTFBS, tableMutations_candidate] = loadMotifs(tableMutations_candidate, tableTissues_data4, sProperties)
+%% Loads the TFBS motif data
 
 tableDataMotifs = readtable(sProperties.FUNSEQ2_ENCODE_MOTIFS, 'ReadVariableNames', false, 'NumHeaderLines', 0); % 'data/FunSeq2/ENCODE_motifs.txt' From http://compbio.mit.edu/encode-motifs/ | http://compbio.mit.edu/encode-motifs/motifs.txt
 tableDataMotifs.Properties.VariableNames = {'consensus', 'A', 'C', 'G', 'T'};
@@ -129,27 +130,6 @@ for iTissue = 1:nTissues
     matTissuesMotifPrefix_MOTIFG_UP(iTissue,:) = sum(tmp2_MOTIFG(tmp.iTissue==iTissue & tmp.isMOTIFG==1 & tmp.isCandidateDriverUP,:), 1);
     matTissuesMotifPrefix_MOTIFBR_DOWN(iTissue,:) = sum(tmp2_MOTIFBR(tmp.iTissue==iTissue & tmp.isMOTIFBR==1 & ~tmp.isCandidateDriverUP,:), 1);
     matTissuesMotifPrefix_MOTIFG_DOWN(iTissue,:) = sum(tmp2_MOTIFG(tmp.iTissue==iTissue & tmp.isMOTIFG==1 & ~tmp.isCandidateDriverUP,:), 1);
-end
-%%
-if (false)
-    %%
-    fig = createMaximisedFigure(3); nTissues = size(matTissuesMotifPrefix_MOTIFBR_UP, 1);
-    subplot(2,2,1);
-    isOK = tableMotifPrefix.nMOTIFBR_UP>3;
-    imagesc(matTissuesMotifPrefix_MOTIFBR_UP(2:nTissues,isOK)); colorbar;
-    set(gca, 'XTick', 1:sum(isOK), 'XTickLabel', tableMotifPrefix.motifPrefix(isOK), 'YTick', 1:nTissues-1, 'YTickLabel', tableTissues_data4.tissuePrint(2:nTissues));
-    subplot(2,2,2);
-    isOK = tableMotifPrefix.nMOTIFG_UP>1;
-    imagesc(matTissuesMotifPrefix_MOTIFG_UP(2:nTissues,isOK)); colorbar;
-    set(gca, 'XTick', 1:sum(isOK), 'XTickLabel', tableMotifPrefix.motifPrefix(isOK), 'YTick', 1:nTissues-1, 'YTickLabel', tableTissues_data4.tissuePrint(2:nTissues));
-    subplot(2,2,3);
-    isOK = tableMotifPrefix.nMOTIFBR_DOWN>0;
-    imagesc(matTissuesMotifPrefix_MOTIFBR_DOWN(2:nTissues,isOK)); colorbar;
-    set(gca, 'XTick', 1:sum(isOK), 'XTickLabel', tableMotifPrefix.motifPrefix(isOK), 'YTick', 1:nTissues-1, 'YTickLabel', tableTissues_data4.tissuePrint(2:nTissues));
-    subplot(2,2,4);
-    isOK = tableMotifPrefix.nMOTIFG_DOWN>0;
-    imagesc(matTissuesMotifPrefix_MOTIFG_DOWN(2:nTissues,isOK)); colorbar;
-    set(gca, 'XTick', 1:sum(isOK), 'XTickLabel', tableMotifPrefix.motifPrefix(isOK), 'YTick', 1:nTissues-1, 'YTickLabel', tableTissues_data4.tissuePrint(2:nTissues));
 end
 %% UNUSED (most are both positive and negative regulators)
 if (false)

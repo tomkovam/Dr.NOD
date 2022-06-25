@@ -1,4 +1,4 @@
-% scriptPlotFigures
+% scriptRunAnalysis
 clear; clc; close all; addpath(genpath('code/')); rng(1);
 imagesPath = 'results/mainFigures/'; createDir(imagesPath);
 %% Loading data

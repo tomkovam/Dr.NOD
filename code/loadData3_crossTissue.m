@@ -1,4 +1,5 @@
 function [tableABC, sResTissues, tableTissues] = loadData3_crossTissue()
+%% Loads the cross-tissue analysis data (and runs the analysis if not precomputed).
 
 saveFileData = 'save/data/data3_crossTissue.mat';
 if (~exist(saveFileData, 'file'))

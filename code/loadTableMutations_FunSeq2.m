@@ -1,11 +1,11 @@
 function [tableMutations_FunSeq2] = loadTableMutations_FunSeq2(runAgain, tissueName, biosampleABC, tableMutations, tableSamples, sProperties)
-% Originally: evaluateTFBS_FunSeq2
+%% Annotates the SNV mutations with FunSeq2 predictions of altered TFBS
 
 enhancerAnalysis = sProperties.enhancerAnalysis;
 minCADD_PHRED = sProperties.minCADD_PHRED;
 exclusionType = sProperties.exclusionType;
 
-saveFileData = ['save/tableMutations_FunSeq2_',tissueName,'_', biosampleABC, '_', enhancerAnalysis, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
+saveFileData = ['save/tableMutations_FunSeq2/tableMutations_FunSeq2_',tissueName,'_', biosampleABC, '_', enhancerAnalysis, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     t0 = tic;
     %% 
@@ -111,6 +111,7 @@ if (runAgain || ~exist(saveFileData, 'file'))
     tableMutations_FunSeq2 = tableMutationsAnnotatedFunSeq2(:,lstCols3);
     %%
     toc(t0)
+    createDir(fileparts(saveFileData));
     save(saveFileData, 'tableMutations_FunSeq2');
 else
     fprintf('Loading data from %s...\n', saveFileData);

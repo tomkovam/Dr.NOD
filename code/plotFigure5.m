@@ -2,25 +2,8 @@ function plotFigure5(imagesPath, sColours, tableTissuesWithPancancer_data4, tabl
 
 
 tableMotifs = dataTFBS.tableMotifs;
-% tableMutations_candidate = dataTFBS.tableMutations_candidate;
-
 tableMutations_candidate.tissuePrint = tableTissues_data4.tissuePrint(tableMutations_candidate.iTissue);
 
-% tmp = tableMutations_candidate(tableMutations_candidate.isOK,:);
-% tmp.iRow = (1:size(tmp, 1))';
-% tmp = sortrows(tmp,'MOTIFG_scoreDiff','descend');
-% % tmp.tissuePrint = tableTissues_data4.tissuePrint(tmp.iTissue);
-% % tmp(~isnan(tmp.MOTIFG_scoreDiff), {'candidateGenes', 'tissuePrint', 'isHighCADD', 'VAF', 'qtlVAF', 'isCandidateDriverUP', 'expressionMedianWT', 'expressionThisMut', 'MOTIFG', 'MOTIFG_motifName', 'MOTIFG_motifNamePrefix', 'MOTIFG_scoreAlt', 'MOTIFG_scoreRef', 'MOTIFG_scoreDiff'})
-% % tmp(contains(tmp.MOTIFG, 'GATA'),:)
-% lstCols = {'iRow', 'candidateGenes', 'MOTIFG_scoreDiff', 'MOTIFG_motifNamePrefix', 'QBiC_TF_increased', 'QBiC_minPValue_increased', 'tissuePrint', 'expressionMedianWT', 'expressionThisMut', 'gene', 'MOTIFG_motifName', 'MOTIFG_scoreAlt', 'MOTIFG_scoreRef', 'isHighCADD', 'VAF', 'qtlVAF'};
-% tmp(~isnan(tmp.MOTIFG_scoreDiff) & tmp.isHighCADD & (tmp.expressionThisMut./tmp.expressionMedianWT)>2, lstCols)
-% 
-% lstCols = {'iRow', 'candidateGenes', 'MOTIFBR_scoreDiff', 'MOTIFBR_motifNamePrefix', 'QBiC_TF_increased', 'QBiC_minPValue_increased', 'tissuePrint', 'expressionMedianWT', 'expressionThisMut', 'gene', 'MOTIFBR_motifName', 'MOTIFBR_scoreAlt', 'MOTIFBR_scoreRef', 'isHighCADD', 'VAF', 'qtlVAF'};
-% tmp = sortrows(tmp,'MOTIFBR_scoreDiff','descend');
-% tmp(~isnan(tmp.MOTIFBR_scoreDiff) & tmp.isHighCADD & (tmp.expressionThisMut./tmp.expressionMedianWT)>2, lstCols)
-
-% tmp(tmp.isCandidateDriverDOWN & tmp.isMOTIFG, lstCols)
-% tmp(tmp.isCandidateDriverDOWN & tmp.isMOTIFBR, lstCols)
 %%
 isOK = ~tableMutations_candidate.isIndel & ~tableMutations_candidate.isExcluded & tableMutations_candidate.iTissue>1;
 tableMutations_candidate = tableMutations_candidate(isOK,:);

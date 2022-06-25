@@ -2,14 +2,16 @@ function [tableMutations, tableSamples, tableGenesNasserExpressed, tableGencodeG
     tableEnhancers, tableUniqueEnhancers, tableUniqueEnhancers_regions, matUniqueEnhancersGenes, ...
     matExpressionGenesSamples, matSamplesSignatures, signatureNames, matMutationsEnhancers, matCNV_genesSamples, matSV_genesSamples_minDistance, matSV_genesSamples_nameSVs] = ...
     loadCancerData(runAgain, tissueName, biosampleABC, enhancerAnalysis, doSave, verbose, tissueNameSV, sProperties)
+%% This is the main low-level function that loads the cancer PCAWG mutation&expression&CNV data, gene data, and enhancer data, and links them together.
 
 if (~ismember(enhancerAnalysis, {'All', 'Noncoding', 'Slop250bpAll', 'Slop250bpNoncoding'}))
     error('Allowed values for enhancerAnalysis are: All or Noncoding, while %s was used.\n', enhancerAnalysis);
 end
 
-expressionType = 'fpkm_uq'; % This is fixed atm, as I did not want to have the save names too long
+expressionType = sProperties.expressionType; % 'fpkm_uq'; Note that this parameter is not part of the save-names (.mat files), so when changed, it needs to be saved to new files.
+
 suffix = [tissueName, '_', biosampleABC, '_', enhancerAnalysis];
-saveFileData = ['save/dataCancer_',suffix,'.mat'];
+saveFileData = ['save/dataCancer/dataCancer_',suffix,'.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     t1 = tic;
     %%
@@ -53,6 +55,7 @@ if (runAgain || ~exist(saveFileData, 'file'))
     %% Save
     toc(t1)
     if (doSave)
+        createDir(fileparts(saveFileData));
         save(saveFileData, 'tableMutations', 'tableSamples', 'tableGenesNasser', 'tableGencodeGenes', 'tableCGC', 'tableDriverMutationsPCAWG', 'tableDriverGenesPCAWG', ...
         'tableEnhancers', 'tableGenesNasserExpressed', 'tableUniqueEnhancers', 'tableUniqueEnhancers_regions', 'matUniqueEnhancersGenes', ...
         'matExpressionGenesSamples', 'matSamplesSignatures', 'signatureNames', 'matMutationsEnhancers', 'matCNV_genesSamples', 'matSV_genesSamples_minDistance', 'matSV_genesSamples_nameSVs');

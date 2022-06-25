@@ -1,8 +1,9 @@
 function [tableGenes_pValues, stats] = computePValuePerGene(runAgain, suffix, minCADD_PHRED, exclusionType, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, matGenesSamplesNMut_INDEL, matCNV_genesSamples, ...
     matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotdies, tableSamples, tableUniqueEnhancers, verbose)
-% Computes p-value that enhancers of that gene are being more mutated than expected and p-value of expression being different between samples with a mutation in one of the enhancers vs. WT
+% Computes p-value that enhancers of that gene are being more mutated than expected and p-value of expression being different between samples with a
+% mutation in one of the enhancers vs WT.
 
-fileNamePValuePerGene = ['save/pValuePerGene_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat']; 
+fileNamePValuePerGene = ['save/pValuePerGene/pValuePerGene_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat']; 
 if (~runAgain && exist(fileNamePValuePerGene, 'file'))
     fprintf('Loading %s...\n', fileNamePValuePerGene);
     load(fileNamePValuePerGene, 'tableGenes_pValues', 'stats');
@@ -99,11 +100,6 @@ else
         end
     end
     %%
-    %     isequal(tableGenes_pValues.nMutSamplesInEnhancers_SNVs_highCADD, tableGenes_pValues.nMutSamplesInEnhancers2_SNVs_highCADD)
-    %     isequal(tableGenes_pValues.nMutSamplesInEnhancers_SNVs_highCADD_INDELs, tableGenes_pValues.nMutSamplesInEnhancers2_SNVs_highCADD_INDELs)
-    %     isequal(tableGenes_pValues.nMutSamplesInEnhancers_hasRNA_SNVs_highCADD, tableGenes_pValues.nMutSamplesInEnhancers2_hasRNA_SNVs_highCADD)
-    %     isequal(tableGenes_pValues.nMutSamplesInEnhancers_hasRNA_SNVs_highCADD_INDELs, tableGenes_pValues.nMutSamplesInEnhancers_hasRNA_SNVs_highCADD_INDELs)
-    %%
     stats = struct();
     for iType = lstSelTypesMuts
         typeName = lstMutTypes{iType};
@@ -125,76 +121,10 @@ else
     end
     %%
     toc(t1)
+    createDir(fileparts(fileNamePValuePerGene));
     save(fileNamePValuePerGene, 'tableGenes_pValues', 'stats');
-    %         sum(tableGenes_pValues.nMutSamplesInEnhancers_SNVs_highCADD)        % 1886 correct vs 17412 wrong
-    %     sum(tableGenes_pValues.nMutSamplesInEnhancers2_SNVs_highCADD)        % 1886 correct vs 17412 wrong
-    %     save(['save/workspace2_debug_PValuePerGene_',suffix,'.mat']); % TODO REMOVE
 end
 %%
 if (exist('tableGenesNasserExpressed', 'var'))
     if (~isequal(tableGenesNasserExpressed.geneName, tableGenes_pValues.geneName)), error('ERROR geneNames do not match.'); end
 end
-
-%%
-% %%
-% % if (~doNotSave)
-% %     for iType = lstSelTypesMuts % 1:nTypes
-% %         typeName = lstTypes{iType};
-% %         [~, ~, ~, tableGenesNasser.(['FDR_pM_basic_', typeName])] = fdr_bh(tableGenesNasser.(['pM_basic_', typeName])); %mafdr ,'lambda',lambdaValue); lambdaValue = 0.15;
-% %         if (sum(sum(~isnan(matExpressionFull)))>0)
-% %             [~, ~, ~, tableGenesNasser.(['FDR_pRanksumExpression_', typeName])] = fdr_bh(tableGenesNasser.(['pRanksumExpression_', typeName])); %mafdr ,'lambda',lambdaValue);
-% %             [~, ~, ~, tableGenesNasser.(['FDR_pTTestExpression_', typeName])] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])); %mafdr ,'lambda',lambdaValue);
-% %             [~, ~, ~, tableGenesNasser.(['FDR_pGLM_normal_expression_', typeName])] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])); %mafdr ,'lambda',lambdaValue);
-% %             [~, ~, ~, tableGenesNasser.(['FDR_pE_normalLog2_', typeName])] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])); %mafdr ,'lambda',lambdaValue);
-% %             [~, ~, ~, tableGenesNasser.(['FDR_pE_poisson_', typeName])] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])); %mafdr ,'lambda',lambdaValue);
-% %             isOK = tableGenesNasser.(['nMutSamplesInEnhancers_hasRNA_', typeName])>=minMutSamples; % Only genes with at least minMutSamples samples with expression in the mutated group
-% %             if (sum(isOK)>0)
-% %                 [~, ~, ~, tableGenesNasser.(['FDR2_pM_basic_', typeName])(isOK)] = fdr_bh(tableGenesNasser.(['pM_basic_', typeName])(isOK)); %mafdr ,'lambda',lambdaValue);
-% %                 [~, ~, ~, tableGenesNasser.(['FDR2_pRanksumExpression_', typeName])(isOK)] = fdr_bh(tableGenesNasser.(['pRanksumExpression_', typeName])(isOK)); %mafdr ,'lambda',lambdaValue);
-% %                 [~, ~, ~, tableGenesNasser.(['FDR2_pTTestExpression_', typeName])(isOK)] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])(isOK)); %mafdr ,'lambda',lambdaValue);
-% %                 [~, ~, ~, tableGenesNasser.(['FDR2_pGLM_normal_expression_', typeName])(isOK)] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])(isOK)); %mafdr ,'lambda',lambdaValue);
-% %                 [~, ~, ~, tableGenesNasser.(['FDR2_pE_normalLog2_', typeName])(isOK)] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])(isOK)); %mafdr ,'lambda',lambdaValue);
-% %                 [~, ~, ~, tableGenesNasser.(['FDR2_pE_poisson_', typeName])(isOK)] = fdr_bh(tableGenesNasser.(['pTTestExpression_', typeName])(isOK)); %mafdr ,'lambda',lambdaValue);
-% %                 %                 isOK2 = tableGenesNasser.(['FDR2_pRanksumExpression_', typeName])<0.2; % | tableGenesNasser.(['FDR2_pTTestExpression_', typeName])<0.2;
-% %                 %                 isOK3 = tableGenesNasser.(['FDR2_pM_basic_', typeName])<0.2;
-% %                 %                 fprintf('FDR2_pExpression_%s<0.05: %d genes (%d also mut FDR)\n', typeName, sum(isOK2), sum(isOK2 & isOK3));
-% %                 %                 if (sum(isOK2 & isOK3)>0)
-% %                 %                     tableGenesNasser(isOK2 & isOK3, :)
-% %                 %                 end
-% %             end
-% %         end
-% %     end
-% % end
-% % %%
-% % %
-% % for iType = lstSelTypesMuts %1:nTypes
-% %     typeName = lstTypes{iType};
-% %     if (sum(sum(~isnan(matExpressionFull)))>0)
-% %         isOK = tableGenesNasser.(['nMutSamplesInEnhancers_hasRNA_', typeName])>=minMutSamples; % Only genes with at least 2 samples with expression in the mutated group
-% %         isOK2 = tableGenesNasser.(['FDR2_pRanksumExpression_', typeName])<0.2; % | tableGenesNasser.(['FDR2_pTTestExpression_', typeName])<0.2;
-% %         isOK3 = tableGenesNasser.(['FDR2_pM_basic_', typeName])<0.2;
-% %         fprintf('%s %d genes with at least %d mutated samples, FDR2_pRanksumExpression_%s<0.05: %d genes (%d also mut FDR)\n', typeName, sum(isOK), minMutSamples, typeName, sum(isOK2), sum(isOK2 & isOK3));
-% %         if (sum(isOK2 & isOK3)>0)
-% %             head(tableGenesNasser(isOK2 & isOK3, {'geneName', ['nMutSamplesInEnhancers_', typeName], ['pRanksumExpression_', typeName], ['pM_basic_', typeName], ['FDR2_pRanksumExpression_', typeName], ['FDR2_pM_basic_', typeName]}))
-% %         end
-% %     end
-% % end
-% % %%
-% % if (sum(sum(~isnan(matExpressionFull)))>0)
-% %     lstTypes = {'SNVs', 'INDELs', 'SNVs_highCADD', 'SNVs_INDELs', 'SNVs_highCADD_INDELs'};  nTypes = length(lstTypes);
-% %     lstTests = {'RanksumExpression', 'TTestExpression', 'BinomTestRight', 'GLM_poisson_expression', 'GLM_normal_expression', 'GLM_normal_log2expression'};
-% %     for iType = lstSelTypesMuts %1:nTypes
-% %         typeName = lstTypes{iType};
-% %         isOK = tableGenesNasser.(['nMutSamplesInEnhancers_hasRNA_', typeName])>=minMutSamples; % Only genes with at least minMutSamples samples with expression in the mutated group
-% %         for jType = 1:length(lstTests)
-% %             testTypeName = lstTests{jType};
-% %             tableGenesNasser.(['FDR3_',testTypeName,'_', typeName]) = mafdr(tableGenesNasser.(['p',testTypeName,'_', typeName]), 'BHFDR', true);
-% %             tableGenesNasser.(['FDR4_',testTypeName,'_', typeName]) = NaN*ones(nGenes, 1);
-% %             tableGenesNasser.(['FDR4_',testTypeName,'_', typeName])(isOK) = mafdr(tableGenesNasser.(['p',testTypeName,'_', typeName])(isOK), 'BHFDR', true);
-% %             %             isOK = tableGenesNasserResults.(['FDR_',testTypeName,'_', typeName])<0.2;
-% %             %             if (sum(isOK)>0)
-% %             %                 fprintf('%s_%s: %d genes with FDR<0.2\n', testTypeName, typeName, sum(isOK));
-% %             %             end
-% %         end
-% %     end
-% % end

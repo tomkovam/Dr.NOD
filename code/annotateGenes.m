@@ -1,14 +1,15 @@
 function [tableGencodeGenesCandidates, tableMutationGenePairs, tableGencodeGenes, lstGenesStrongSupport, tableMutations_candidate, lstColGenes, lstColGenesBlood, lstColTissues, lstColsMutationGenePairs] = annotateGenes(tableGencodeGenes, tableMutations_candidate, matGeneGencodeIsCandidateMut, dataDepMap, sProperties)
+%% Annotates genes and candidate mutations with literature, closest gene per candidate mutation, promoter/close/distant candidate mutations etc.
 
 saveFileData = 'save/data/data7_annotatedGenes.mat';
-if (true || ~exist(saveFileData, 'file'))
+if (~exist(saveFileData, 'file'))
     tic
     %%
     fprintf('Computing %s...\n', saveFileData);
     %%
     tableGencodeGenes.isCandidateSolid = tableGencodeGenes.iTissue > 1;
     nGenes = size(tableGencodeGenes, 1);
-    tableLiterature = readtable(sProperties.TABLE_LITERATURE); % 'data\targetGenes_of_candidateRegulatoryDrivers_formatted.xlsx'
+    tableLiterature = readtable(sProperties.TABLE_LITERATURE); 
     lstGenesStrongSupport = tableLiterature.geneSymbol(tableLiterature.literatureEvidenceOncogene>2 | tableLiterature.literatureEvidenceTSG>1);
     [isOK, indexLiterature] = ismember(tableGencodeGenes.geneSymbol, tableLiterature.geneSymbol);
     tableGencodeGenes.literatureEvidenceOncogene = NaN*ones(nGenes, 1);
@@ -107,9 +108,8 @@ if (true || ~exist(saveFileData, 'file'))
     tableMutationGenePairs.isMOTIFG = tableMutations_candidate.isMOTIFG(tableMutationGenePairs.iMutationCandidate);    
     tableMutationGenePairs.tissue = dataDepMap.tableTissuesWithPancancer_DepMap.tissuePrint(tableMutationGenePairs.iTissue);
     %%
-    tableGencodeGenes.nMutSamples_v2 = NaN*ones(nGenes, 1); %(lstGencodeCandidates) = sum(matGenesSamplesNMut_SNVs(isCandidate, ~tableSamples.isExcluded)>0, 2);
-    tableGencodeGenes.nMutSamplesHighCADD_v2 = NaN*ones(nGenes, 1); %(lstGencodeCandidates) = sum(matGenesSamplesNMut_SNVs_highCADD(isCandidate, ~tableSamples.isExcluded)>0, 2);
-
+    tableGencodeGenes.nMutSamples_v2 = NaN*ones(nGenes, 1); 
+    tableGencodeGenes.nMutSamplesHighCADD_v2 = NaN*ones(nGenes, 1); 
 
     tableGencodeGenes.nMutations = NaN*ones(nGenes, 1);
     tableGencodeGenes.nMutationsHighCADD = NaN*ones(nGenes, 1);
@@ -153,8 +153,6 @@ if (true || ~exist(saveFileData, 'file'))
             if (sum(isDepMapThisGene)==1)
                 tableGencodeGenes.DepMap_meanDependencyTissueMatched(iGene) = dataDepMap.matDepMatGenesTissues_average(isDepMapThisGene,iTissue);
                 tableGencodeGenes.DepMap_pDependentTissueMatched(iGene) = dataDepMap.matDepMatGenesTissues_pAbove50(isDepMapThisGene,iTissue);
-                %         elseif (strcmp(tableGencodeGenes.geneType2{iGene}, 'protein_coding'))
-                %             warning('DepMap data for candidate gene %s (%s) not found.\n', geneSymbol, tableGencodeGenes.geneType2{iGene});
             end
         end
 
@@ -177,15 +175,10 @@ if (true || ~exist(saveFileData, 'file'))
     %% Check that mutatedSample counts match
     isOK = tableGencodeGenes.isCandidate;
     tableGencodeGenesCandidates = tableGencodeGenes(isOK,:);
-    % tableGencodeGenesCandidates = sortrows(tableGencodeGenesCandidates,'tissuePrint','ascend');
     if (max(abs(tableGencodeGenesCandidates.nMutSamples - tableGencodeGenesCandidates.nMutSamples_v2))>0), error('Mutated sample counts do not match.'); end
     if (max(abs(tableGencodeGenesCandidates.nMutSamplesHighCADD - tableGencodeGenesCandidates.nMutSamplesHighCADD_v2))>0), error('Mutated sample counts do not match.'); end
     tableGencodeGenesCandidates.nMutSamples_v2 = [];
     tableGencodeGenesCandidates.nMutSamplesHighCADD_v2 = [];
-    %%
-    %%
-    % median(tableMutationGenePairs.distance_thisGene(~tableMutationGenePairs.isExcluded & tableMutationGenePairs.isHighCADD & tableMutationGenePairs.iTissue>1))
-    % median(tableMutationGenePairs.distance_thisGene(~tableMutationGenePairs.isExcluded & tableMutationGenePairs.isHighCADD & tableMutationGenePairs.iTissue==1))
     %%
     lstColGenes = {'chromosome', 'pos0', 'pos1', 'geneSymbol', 'geneNameGencode', 'strand', 'tissuePrint', 'isUP', 'pM', 'pE', 'qCombined', 'sizeEffectM', 'sizeEffectE', ...
         'nMutSamples', 'nMutSamplesHighCADD', 'nMutSamplesHighCADD_hasRNA', 'nMutations', 'nMutationsHighCADD', 'pMutationsHighCADD_promoter', 'pMutationsHighCADD_distant', 'pMutationsHighCADD_isCloserToAnotherGene', ...
@@ -197,29 +190,11 @@ if (true || ~exist(saveFileData, 'file'))
     lstColTissues = {'iTissue', 'tissuePrint', 'biosampleABC', 'tissuePrognostic', 'nSamplesWGS', 'nSamplesWGSandRNA', 'PCAWG_projects', 'nUniqueEnhancers', 'nEnhancerGenePairs', ...
         'nUsedGenes', 'nDriverUpregulatedGenes', 'nDriverDownregulatedGenes', 'nCandidates', 'nCandidates_CDG_observed', 'nCandidates_CDG_expected', 'enrichmentCDG', 'pFisherCDG'};
     lstColsMutationGenePairs = {'chr', 'pos0', 'pos1', 'ref', 'alt', 'tissue', 'geneSymbol_thisGene', 'distance_thisGene', 'distance_closestGene', 'distance_closestProteinCodingGene', 'isCloserToAnotherGene', 'isCloserToAnotherProteinCodingGene', ...
-    'isHighCADD', 'CADD_PHRED', 'context', 'isPlusStrand', 'isInFunSeq2', 'isMOTIFBR', 'isMOTIFG'}; % , 'geneSymbol_closestGene', 'geneSymbol_closestProteinCodingGene'
-    % lstColTissues(~ismember(lstColTissues, tableTissuesWithPancancer.Properties.VariableNames))'
-    % lstColGenes = {'chromosome', 'pos0', 'pos1', 'geneSymbol', 'geneNameGencode', 'strand', 'tissues_candidate', 'isDOWN', 'candidate_pM', 'candidate_pE', 'candidate_qCombined', 'candidate_eM', 'candidate_eE', ...
-    %     'nMutated', 'nMutated_hasRNA', 'nMutations', 'nMutationsHighCADD', 'pMutationsHighCADD_promoter', 'pMutationsHighCADD_distant', 'pMutationsHighCADD_isCloserToAnotherGene', ...
-    %     'isDriver', 'isONCOGENE', 'isTSG', 'typePrognostic_tissueMatched', 'pValuePrognostic_tissueMatched', 'literatureEvidenceOncogene', 'literatureEvidenceTSG', ...
-    %     'DepMap_meanDependencyTissueMatched', 'DepMap_pDependentTissueMatched', 'FunSeq2_pMutSamplesTFBS', 'FunSeq2_pMutSamplesTFBS_break', 'FunSeq2_pMutSamplesTFBS_gain'};
-    %         tableTissues.nExpressedCDGs(iRow) = sum(isDriver);
-    %         tableTissues.nExpressedONCOGENEs(iRow) = sum(isONCOGENE);
-    %         tableTissues.nExpressedTSGs(iRow) = sum(isTSG);
-    % tableGencodeGenes.nMutSamples = sum(matGenesSamplesNMut_SNVs(:, ~tableSamples.isExcluded)>0, 2);
-    %         tableGencodeGenes.nMutSamplesHighCADD = sum(matGenesSamplesNMut_SNVs_highCADD(:, ~tableSamples.isExcluded)>0, 2);
-    %         tableGencodeGenes.nMutSamplesHighCADD_hasRNA = sum(matGenesSamplesNMut_SNVs_highCADD(:, tableSamples.has_RNA & ~tableSamples.isExcluded)>0, 2);
-    %%
-    % lstColGenes = {'chromosome', 'pos0', 'pos1', 'geneSymbol', 'geneNameGencode', 'strand', 'tissues_candidate', 'isDOWN', 'candidate_pM', 'candidate_pE', 'candidate_qCombined', 'candidate_eM', 'candidate_eE', ...
-    %     'nMutated', 'nMutated_hasRNA', 'nMutations_v2', 'nMutationsHighCADD_v2', 'pMutationsHighCADD_promoter', 'pMutationsHighCADD_distant', 'pMutationsHighCADD_isCloserToAnotherGene', ...
-    %     'isDriver', 'isONCOGENE', 'isTSG', 'typePrognostic_tissueMatched', 'pValuePrognostic_tissueMatched', 'literatureEvidenceOncogene', 'literatureEvidenceTSG', ...
-    %     'DepMap_meanDependencyTissueMatched', 'DepMap_pDependentTissueMatched', 'FunSeq2_pMutSamplesTFBS', 'FunSeq2_pMutSamplesTFBS_break', 'FunSeq2_pMutSamplesTFBS_gain'};
-    % lstColTissues = {'iTissue', 'tissuePrint', 'biosampleABC', 'tissuePrognostic', 'nSamplesWGS', 'nSamplesWGSandRNA', 'enrichmentCDG', 'pFisherCDG'};
-    % % lstColGenes(~ismember(lstColGenes, tableGencodeGenes.Properties.VariableNames))'
-    % % lstColTissues(~ismember(lstColTissues, tableTissuesWithPancancer.Properties.VariableNames))'
+    'isHighCADD', 'CADD_PHRED', 'context', 'isPlusStrand', 'isInFunSeq2', 'isMOTIFBR', 'isMOTIFG'}; 
     %%
     toc
     %myPrintMemory
+    createDir(fileparts(saveFileData));
     save(saveFileData, 'tableMutationGenePairs', 'tableGencodeGenes', 'tableLiterature', 'lstGenesStrongSupport', 'tableMutations_candidate', 'lstColGenes', 'lstColGenesBlood', 'lstColTissues');
 else
     fprintf('Loading data from %s...\n', saveFileData);

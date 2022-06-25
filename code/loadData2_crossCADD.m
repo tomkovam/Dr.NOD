@@ -1,4 +1,5 @@
 function [sResCrossCADD, sResPanCancerCrossCADD, lstMinCADD_PHRED, tableTissues] = loadData2_crossCADD()
+%% Loads the cross-CADD analysis data (and runs the analysis if not precomputed).
 
 saveFileData = 'save/data/data2_crossCADD.mat';
 if (~exist(saveFileData, 'file'))
@@ -30,6 +31,7 @@ if (~exist(saveFileData, 'file'))
         for iBinCADD = 1:nBinCADD
             minCADD_PHRED = lstMinCADD_PHRED(iBinCADD);
             fprintf('\n=================== %s %d ===================\n', tissueName, minCADD_PHRED);
+            sProperties.minCADD_PHRED = minCADD_PHRED;
             levelOutputArguments = 1; % We require only the minimal number of output arguments, to speed everything up.
             [tableGenesNasserExpressed, tableGenes_pValues] = ...
                 computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV);

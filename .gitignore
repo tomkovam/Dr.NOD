@@ -1,2 +1,11 @@
 data
-save
+save/annotatedEnhancers
+save/dataCancer
+save/dataMutations
+save/mutationsMatrices
+save/PCAWG
+save/pValuePerGene
+save/samples
+save/tableMutations_FunSeq2
+results
+
