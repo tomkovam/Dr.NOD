@@ -34,5 +34,5 @@ plotFigure6(dataSupTables.tableMutationGenePairs, imagesPath, sColours, tableTis
 plotSupFigure1(imagesPath, dataCutoffs);
 plotSupFigure2(imagesPath, sColours, dataDepMap);
 %% List of used matlab code/function files
-% [fList,pList] = matlab.codetools.requiredFilesAndProducts('scriptPlotFigures.m');
+% [fList,pList] = matlab.codetools.requiredFilesAndProducts('scriptRunAnalysis.m');
 % writetable(cell2table(fList'), 'usedFiles2.txt');

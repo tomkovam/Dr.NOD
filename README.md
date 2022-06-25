@@ -5,4 +5,4 @@ The framework detects non-coding cis-regulatory candidate driver mutations that 
 
 The entire framework runs from scriptRunAnalysis.m. It will use the precomputed files from directory save/data. For running from scratch, all the input data files are described in inputParameters.properties.
 
-Requirements: Matlab 2022a
+Requirements: Matlab 2022a, Statistics and Machine Learning Toolbox, Bioinformatics Toolbox
