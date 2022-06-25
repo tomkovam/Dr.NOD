@@ -16,3 +16,7 @@ save/samples
 save/tableMutations_FunSeq2
 results
 
+data/per_base_territories_20kb_line_numbers.bed.txt
+save/dataPCAWG_fpkm_uq.mat
+save/genes.mat
+*.asv
