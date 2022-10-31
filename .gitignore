@@ -12,6 +12,17 @@ save/PCAWG
 save/pValuePerGene
 save/samples
 save/tableMutations_FunSeq2
+save/evaluateBMM
+save/evaluateBMM_genes
+save/evaluateBMM_genes999
+save/evaluateBMM_max1kbp
+save/evaluateBMM_maxInf
+save/evaluateBMM_maxInf_mfInf
+save/evaluateModel
+save/mainORIGINAL
+save/TODELETE2evaluateBMM
+save/TODELETEevaluateBMM
+
 results
 
 data/per_base_territories_20kb_line_numbers.bed.txt

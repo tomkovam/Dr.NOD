@@ -1,4 +1,4 @@
-function plotMutationalSignatures_dotplot(tableMutations_candidate, tableTissues, sProperties)
+function plotMutationalSignatures_dotplot(tableMutations_candidate, tableTissues, sProperties, doNormaliseTrinucleotides, cTrinucleotides)
 
 nTissues = size(tableTissues, 1);
 
@@ -14,15 +14,33 @@ if (~isequal(tableSignaturesCOSMIC.patternName, tableTrinucleotides.patternName)
 tableSignaturesCOSMIC = tableSignaturesCOSMIC(:,2:end-4);
 lstSignatures = tableSignaturesCOSMIC.Properties.VariableNames;
 nSignatures = length(lstSignatures);
+%% The COSMIC signatures are scaled to the whole-genome trinucleotide counts. 
+if (doNormaliseTrinucleotides)
+    vecTrinucleotidesWGS = tableTrinucleotides.genome';
+    for iSignature = 1:nSignatures
+        tableSignaturesCOSMIC.(lstSignatures{iSignature}) = tableSignaturesCOSMIC.(lstSignatures{iSignature})./vecTrinucleotidesWGS';
+        tableSignaturesCOSMIC.(lstSignatures{iSignature}) = tableSignaturesCOSMIC.(lstSignatures{iSignature})/sum(tableSignaturesCOSMIC.(lstSignatures{iSignature}));
+    end
+    [~, indexTrinucleotide] = ismember(tableTrinucleotides.type, cTrinucleotides{1}.tableGenes_mean_trinucleotides.Properties.VariableNames);
+end
 %%
-
 matSimilarityTissuesSignatures = zeros(nTissues, nSignatures);
 
 for iTissue = 1:nTissues
     isOK = tableMutations_candidate.iTissue == iTissue & ~tableMutations_candidate.isExcluded & tableMutations_candidate.isHighCADD;
     catalogue = histcounts(tableMutations_candidate.iPattern(isOK), 1:nPatterns+1);
-
-    matSimilarityTissuesSignatures(iTissue,:) = computeSimilarityWithSignatures(tableSignaturesCOSMIC, catalogue');    
+    if (doNormaliseTrinucleotides)
+        isGene = cTrinucleotides{iTissue}.tableGenesNasserExpressed.isCandidate;
+        matGenesTrinucleotides = table2array(cTrinucleotides{iTissue}.tableGenes_mean_trinucleotides(isGene,:)).*cTrinucleotides{iTissue}.tableGenes_annotations.nPositionsInEnhancers(isGene); % tableGenes_mean_trinucleotdies = array2table(matGenes_sum_trinucleotides./tableGenes_annotations.nPositionsInEnhancers);
+        matGenesTrinucleotides = matGenesTrinucleotides(:, indexTrinucleotide); % Rescale from 32 to 96 channels
+        vecTrinucleotidesCandidateDrivers = sum(matGenesTrinucleotides, 1);
+        %vecTrinucleotideFrequencyCandidateDrivers = vecTrinucleotidesCandidateDrivers/sum(vecTrinucleotidesCandidateDrivers); % Frequency of each trinucleotide in all regulatory regions of all regulatory driver candidates in this tissue
+        catalogueRescaled = (catalogue./vecTrinucleotidesCandidateDrivers); % Mutation frequency per trinucleotide (normalised by trinucelotide counts)
+        catalogueRescaled = catalogueRescaled/sum(catalogueRescaled);
+        matSimilarityTissuesSignatures(iTissue,:) = computeSimilarityWithSignatures(tableSignaturesCOSMIC, catalogueRescaled');
+    else
+        matSimilarityTissuesSignatures(iTissue,:) = computeSimilarityWithSignatures(tableSignaturesCOSMIC, catalogue');
+    end
 end
 
 isSignAbove50 = max(matSimilarityTissuesSignatures, [], 1)>0.5;

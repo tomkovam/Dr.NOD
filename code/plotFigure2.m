@@ -1,4 +1,4 @@
-function plotFigure2(imagesPath, sColours, tableTissuesWithPancancer, tableTissues_data3, tableABC, sResCrossTissues, sResCrossCADD, sResPanCancerCrossCADD, tableMutations_candidate, lstMinCADD_PHRED, sProperties)
+function plotFigure2(imagesPath, sColours, tableTissuesWithPancancer, tableTissues_data3, tableABC, sResCrossTissues, sResCrossCADD, sResPanCancerCrossCADD, tableMutations_candidate, lstMinCADD_PHRED, sProperties, cTrinucleotides)
 
 tableTissuesWithPancancer = tableTissuesWithPancancer([end,end-1,1:end-2],:);
 
@@ -16,7 +16,8 @@ myGeneralSubplot(nR,nC,2,xS,yS,xB,yB,xM,yM); hold on;
 plotEffectOfExpression(tableTissuesWithPancancer, sColours, nRows);
 axPos2 = get(gca, 'Position');
 
-axes('Position', [axPos1(1), 0.26, axPos1(3), 0.28]);
+x = .02;
+axes('Position', [axPos1(1)+x, 0.26, axPos1(3)-x, 0.28 - .03]);
 plotCrossTissue(tableTissues_data3, tableABC, sResCrossTissues);
 
 matCrossCADD = [sResCrossCADD.enrichmentCDG; sResPanCancerCrossCADD.enrichmentCDG(2:3,:)];
@@ -31,7 +32,7 @@ axes('Position', [x, 0.26+y, axPos2(1)+axPos2(3)-x, 0.28-y]); hold on;
 plotCrossCADD_pancancer(sResPanCancerCrossCADD, lstMinCADD_PHRED);
 
 axes('Position', [axPos1(1), 0.05, axPos2(1)+axPos2(3)-axPos1(1), 0.15]);
-plotMutationalSignatures_dotplot(tableMutations_candidate, tableTissues_data3, sProperties);
+plotMutationalSignatures_dotplot(tableMutations_candidate, tableTissues_data3, sProperties, true, cTrinucleotides);
 
 
 fontSizeLetters = 26;
@@ -41,7 +42,7 @@ dim = [.007 .58 .01 .01]; str = 'c'; annotation('textbox',dim,'String',str, 'Fon
 dim = [.505 .58 .01 .01]; str = 'd'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 dim = [.007 .23 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 
-mySaveAs(fig, imagesPath, 'Fig2', false, true);
+mySaveAs(fig, imagesPath, 'Fig2', true, true);
 savefig([imagesPath, 'Fig2.fig']);
 
 %%
@@ -59,7 +60,7 @@ savefig([imagesPath, 'Fig2.fig']);
         
         colour = .1*[1,1,1];
         plot(xValues, yValues, 'o', 'MarkerSize', 5, 'MarkerFaceColor', (1+colour)/2, 'Color', colour);
-
+        
         linearModel = fitlm(xValues, yValues); 
         x = [lstMinCADD_PHRED(1); lstMinCADD_PHRED(nBinCADD)];
         y = predict(linearModel,x);
@@ -99,22 +100,20 @@ savefig([imagesPath, 'Fig2.fig']);
             yValues = matToPlot_log(:,iTissue);
             colour = cmapTissues((iTissue),:);
             hLeg(iTissue) = plot(xValues, yValues, 'o', 'MarkerSize', 5, 'MarkerFaceColor', (1+colour)/2, 'Color', colour);
+            linearModel = fitlm(xValues, yValues);
+            x = [lstMinCADD_PHRED(1); lstMinCADD_PHRED(nBinCADD)];
+            y = predict(linearModel,x);
+            plot(x, y, 'k', 'LineWidth', 2, 'Color', colour);
 
-            %try
-                linearModel = fitlm(xValues, yValues);
-                x = [lstMinCADD_PHRED(1); lstMinCADD_PHRED(nBinCADD)];
-                y = predict(linearModel,x);
-                plot(x, y, 'k', 'LineWidth', 2, 'Color', colour);
-
-                [r,p] = corr(xValues', yValues, 'type', 'Pearson');
-%                 fprintf('%s: r = %.1g, p = %s\n', lstLabels{iTissue}, r, getPValueAsTextShort(p));
-        %                 if (sum(~isnan(yValues))>2)
-        %                     p = linearModel.coefTest;
-        %                 else
-        %                     p = NaN;
-        %                 end
-        %                 fprintf('{\\bf%s}: {\\itslope=%.1f, p=%s}\n', lstLabels{iTissue}, linearModel.Coefficients.Estimate(2), getPValueAsTextShort(p));
-                drawnow
+            [r,p] = corr(xValues', yValues, 'type', 'Pearson');
+            %                 fprintf('%s: r = %.1g, p = %s\n', lstLabels{iTissue}, r, getPValueAsTextShort(p));
+            %                 if (sum(~isnan(yValues))>2)
+            %                     p = linearModel.coefTest;
+            %                 else
+            %                     p = NaN;
+            %                 end
+            %                 fprintf('{\\bf%s}: {\\itslope=%.1f, p=%s}\n', lstLabels{iTissue}, linearModel.Coefficients.Estimate(2), getPValueAsTextShort(p));
+            drawnow
         end
         legend(hLeg, lstLabels, 'Location', 'SouthEastOutside');
         xlim(xLimVal);  grid on; grid minor;
@@ -177,7 +176,9 @@ savefig([imagesPath, 'Fig2.fig']);
             text(mean(lstABC), 0.18, tableTissues.tissuePrint{iTissue}, 'HorizontalAlignment','left', 'FontSize', fontSize, 'Rotation', 45);
             text(0.2, iTissue, tableTissues.tissuePrint{iTissue}, 'HorizontalAlignment','right', 'FontSize', fontSize);
         end
-        xlabel('Enhancer Data'); ylabel('Cancer Data'); set(gca, 'YAxisLocation', 'right')
+        %xlabel('Enhancer Data'); ylabel('Cancer Data'); set(gca, 'YAxisLocation', 'right'); % set(gca, 'XAxisLocation', 'top'); %
+        text(nTissues/2, -1.8, 'Enhancer Data', 'HorizontalAlignment', 'center', 'FontSize', fontSize+1);
+        text(-1.8, nTissues/2, 'Cancer Data', 'HorizontalAlignment', 'center', 'Rotation', 90, 'FontSize', fontSize+1);
         set(gca, 'XTick', []);
         set(gca, 'YTick', []);
         set(gca, 'FontSize', fontSize, 'XTickLabelRotation', 45, 'TickLength', [0,0]);

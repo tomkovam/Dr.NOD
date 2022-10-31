@@ -1,7 +1,7 @@
 function [dataSupTables, tableGencodeGenes, tableMutations_candidate] = loadData7_annotatedMutationGenes(tableGencodeGenes, tableMutations_candidate, matGeneGencodeIsCandidateMut, dataDepMap, sProperties)
 %% Annotates genes and candidate mutations with literature, closest gene per candidate mutation, promoter/close/distant candidate mutations etc.
 
-saveFileData = 'save/main/data7_annotatedMutationGenes.mat';
+saveFileData = ['save/main/data7_annotatedMutationGenes_',sProperties.exclusionType,'.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %%
@@ -187,6 +187,9 @@ if (~exist(saveFileData, 'file'))
     lstColGenesBlood = {'chromosome', 'pos0', 'pos1', 'geneSymbol', 'geneNameGencode', 'strand', 'tissuePrint', 'isUP', 'pM', 'pE', 'qCombined', 'sizeEffectM', 'sizeEffectE', ...
         'nMutSamples', 'nMutSamplesHighCADD', 'nMutSamplesHighCADD_hasRNA', 'nMutations', 'nMutationsHighCADD', 'pMutationsHighCADD_promoter', 'pMutationsHighCADD_distant', 'pMutationsHighCADD_isCloserToAnotherGene', ...
         'isDriver', 'isONCOGENE', 'isTSG', 'DepMap_meanDependencyTissueMatched', 'DepMap_pDependentTissueMatched'};
+    lstColGenesDLBCL = {'chromosome', 'pos0', 'pos1', 'geneSymbol', 'geneNameGencode', 'strand', 'tissuePrint', 'isUP', 'pM', 'pE', 'qCombined', 'sizeEffectM', 'sizeEffectE', ...
+        'nMutSamples', 'nMutSamplesHighCADD', 'nMutSamplesHighCADD_hasRNA', 'nMutations', 'nMutationsHighCADD', 'pMutationsHighCADD_promoter', 'pMutationsHighCADD_distant', 'pMutationsHighCADD_isCloserToAnotherGene', ...
+        'isDriver', 'isONCOGENE', 'isTSG'}; % , 'DepMap_meanDependencyTissueMatched', 'DepMap_pDependentTissueMatched'
     lstColTissues = {'iTissue', 'tissuePrint', 'biosampleABC', 'tissuePrognostic', 'nSamplesWGS', 'nSamplesWGSandRNA', 'PCAWG_projects', 'nUniqueEnhancers', 'nEnhancerGenePairs', ...
         'nUsedGenes', 'nDriverUpregulatedGenes', 'nDriverDownregulatedGenes', 'nCandidates', 'nCandidates_CDG_observed', 'nCandidates_CDG_expected', 'enrichmentCDG', 'pFisherCDG'};
     lstColsMutationGenePairs = {'chr', 'pos0', 'pos1', 'ref', 'alt', 'tissue', 'geneSymbol_thisGene', 'distance_thisGene', 'distance_closestGene', 'distance_closestProteinCodingGene', 'isCloserToAnotherGene', 'isCloserToAnotherProteinCodingGene', ...
@@ -197,6 +200,7 @@ if (~exist(saveFileData, 'file'))
     dataSupTables.lstGenesStrongSupport = lstGenesStrongSupport;
     dataSupTables.lstColGenes = lstColGenes;
     dataSupTables.lstColGenesBlood = lstColGenesBlood;
+    dataSupTables.lstColGenesDLBCL = lstColGenesDLBCL;
     dataSupTables.lstColTissues = lstColTissues;
     dataSupTables.lstColsMutationGenePairs = lstColsMutationGenePairs;
     %%

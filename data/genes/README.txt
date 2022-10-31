@@ -1,0 +1,9 @@
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr7" && $4>=148560000 && $5<=148640000) {print}}' > data/genes/EZH2.gencode.v19.annotation.gtf.txt
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr6" && $5>=132700000 && $4<=134500000) {print}}' > data/genes/SGK1.gencode.v19.annotation.gtf.txt
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr3" && $5>=16300000 && $4<=16590000) {print}}' > data/genes/RFTN1.gencode.v19.annotation.gtf.txt
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr6" && $5>=36940000 && $4<=37060000) {print}}' > data/genes/PIM2.gencode.v19.annotation.gtf.txt
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr6" && $5>=36940000 && $4<=37141000) {print}}' > data/genes/PIM1.gencode.v19.annotation.gtf.txt
+
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr3" && $5>=186780000 && $4<=187690000) {print}}' > data/genes/BCL6.gencode.v19.annotation.gtf.txt
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr2" && $5>=135490000 && $4<=136970000) {print}}' > data/genes/CXCR4.gencode.v19.annotation.gtf.txt
+gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr18" && $5>=60000000 && $4<=61000000) {print}}' > data/genes/BCL2.gencode.v19.annotation.gtf.txt

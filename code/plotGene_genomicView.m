@@ -1,7 +1,14 @@
-function plotGene_genomicView(tissueName, biosampleABC, geneName, sColours, plotOnlyMutatedEnhancers, printTissue, sProperties)
+function plotGene_genomicView(tissueName, biosampleABC, geneName, sColours, plotOnlyMutatedEnhancers, printTissue, sProperties, exclusionType)
 
+
+if (~exist('exclusionType', 'var') || strcmp(exclusionType, 'excludePOLE_MSI'))
+    suffix = '';
+else
+    suffix = ['_', exclusionType];
+end
+%%
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'expressionPerSample', 'sampleGroup',  ...
+load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'expressionPerSample', 'sampleGroup',  ...
     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'isMutPerEnhancer', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');
 
 %%
@@ -9,8 +16,17 @@ load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'g
 % gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr6" && $5>=132700000 && $4<=134500000) {print}}' > data/genes/SGK1.gencode.v19.annotation.gtf.txt
 % gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr3" && $5>=16300000 && $4<=16590000) {print}}' > data/genes/RFTN1.gencode.v19.annotation.gtf.txt
 % gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr6" && $5>=36940000 && $4<=37141000) {print}}' > data/genes/PIM1.gencode.v19.annotation.gtf.txt
-tableGenes = readtable([sProperties.GENES_EXAMPLE_DIR,geneName,'.gencode.v19.annotation.gtf.txt'], 'Delimiter', '\t'); % {'\t', ';', ' '}
-tableGenes.Properties.VariableNames = {'chr', 'source', 'featureType', 'pos0', 'pos1', 'score', 'strand', 'phase', 'tags'};
+% gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | grep 'tag "basic";' > data/genes/tag.basic.gencode.v19.annotation.gtf.txt
+
+inFileOneGene = [sProperties.GENES_EXAMPLE_DIR,geneName,'.gencode.v19.annotation.gtf.extended.txt'];
+if (exist(inFileOneGene, 'file'))
+    inFile = inFileOneGene;
+else
+    inFile = [sProperties.GENES_EXAMPLE_DIR,'tag.basic.gencode.v19.annotation.gtf.txt'];
+end
+tableGenes = readtable(inFile, 'Delimiter', '\t'); % {'\t', ';', ' '}
+lstCols = {'chr', 'source', 'featureType', 'pos0', 'pos1', 'score', 'strand', 'phase', 'tags'};
+tableGenes.Properties.VariableNames = lstCols;
 tableGenes.pos0 = tableGenes.pos0 - 1;
 tableGenes.gene_name = regexp(tableGenes.tags, '(?<=gene_name ")[^";]*', 'once', 'match');
 tableGenes.gene_type = regexp(tableGenes.tags, '(?<=gene_type ")[^";]*', 'once', 'match');
@@ -20,6 +36,14 @@ tableGenes.transcript_type = regexp(tableGenes.tags, '(?<=transcript_type ")[^";
 tableGenes.isTagBasic = contains(tableGenes.tags, 'tag "basic";');
 tableGenes.isCanonicalTranscript = tableGenes.isTagBasic; 
 tableGenes = tableGenes(tableGenes.isCanonicalTranscript & ismember(tableGenes.featureType,{'CDS', 'UTR'}),:);
+minPos = min(tableUniqueEnhancers_oneGene.min_pos0);
+maxPos = max(tableUniqueEnhancers_oneGene.max_pos1);
+chr = tableUniqueEnhancers_oneGene.chr{1};
+isOK = strcmp(tableGenes.gene_name, geneName) | (strcmp(tableGenes.chr, chr) & tableGenes.pos0 <= maxPos & tableGenes.pos1 >= minPos);
+tableGenes = tableGenes(isOK,:);
+if (~exist(inFileOneGene, 'file'))
+    writetable(tableGenes(:,lstCols), inFileOneGene, 'Delimiter', '\t');
+end
 %%
 fontSize = 12;
 fontSizeSmaller = fontSize - 4;
@@ -35,13 +59,24 @@ cmap = lines(gene_nUEs);
 
 lstMarkers = {'o', 's', 'd', 'h'};
 %%
-
+% tableUE_annotations_hyperUE_oneGene(:,{'name', 'foldChangeScoreM'})
+% tableUniqueEnhancers_oneGene
 if (plotOnlyMutatedEnhancers)
     minFC = 2^10;
     if (strcmp(geneName, 'RFTN1'))
         minFC = 2^7;
     end
+    if (strcmp(geneName, 'BCL2'))
+        minFC = 1e7;
+    end
+    if (strcmp(geneName, 'EBF1'))
+        minFC = 50;
+    end
+    if (ismember(geneName, {'HIST1H2BG', ''}))
+        minFC = 0;
+    end
     isMutatedUE = tableUE_annotations_hyperUE_oneGene.foldChangeScoreM>minFC;
+    %tableUE_annotations_hyperUE_oneGene(isMutatedUE,:)
     x2 = [min(tableUniqueEnhancers_oneGene.min_pos0(isMutatedUE)), max(tableUniqueEnhancers_oneGene.max_pos1(isMutatedUE))];
     margin = (x2(2) - x2(1))/50;
     xLimVal = x2 + margin*[-1,1];

@@ -9,7 +9,7 @@ fontSize = 12;
 for iType = 1:2
     if (iType == 1)
         isCloserToAnotherGene = tmp1.isCloserToAnotherProteinCodingGene;
-        saveName = 'Fig6';
+        saveName = 'Fig7';
     else
         isCloserToAnotherGene = tmp1.isCloserToAnotherGene;
         saveName = 'ExtDataFig3';
@@ -67,7 +67,7 @@ for iType = 1:2
     text(-1, yVal1, 'median distance (kbp)', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
     text(-1, yVal2, '\leq 250 bp', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
     text(-1, yVal3, '> 20 kbp', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-    text(-1, yVal4, 'differnt closest', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', sColours.distantMutation);
+    text(-1, yVal4, 'different closest', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', sColours.distantMutation);
 
 
     % text(xValues+.3, yVal+0*xValues, num2str(tableTissuesWithPancancer.nSamplesWGSandRNA, '%d'), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
@@ -98,6 +98,6 @@ for iType = 1:2
 
 
     ylabel('Distance between gene {\itG} and mutation {\itM}'); % {'Distance between gene {\itG} and mutation {\itM}', 'of non-coding regulatory driver candidates'} 'Distance from high-CADD SNV to TSS'
-    mySaveAs(fig, imagesPath, [saveName, '.png']);
+    mySaveAs(fig, imagesPath, saveName, true, true);
     savefig([imagesPath, saveName, '.fig']);
 end

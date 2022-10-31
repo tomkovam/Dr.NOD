@@ -7,7 +7,7 @@ if (~exist(saveFileData, 'file'))
     %%
     fprintf('Computing %s...\n', saveFileData);
     [tableTissues, sProperties] = loadParameters;
-    runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; 
+    runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; 
     %%
     nTissues = size(tableTissues, 1);
     tableABC = tableTissues(:,{'iTissue', 'biosampleABC'});
@@ -26,19 +26,21 @@ if (~exist(saveFileData, 'file'))
         tissueNameSV = tableTissues.tissueSV{iTissue};
         for iABC =  1:nABC
             biosampleABC = tableABC.biosampleABC{iABC};
-            levelOutputArguments = 1; % We require only the minimal number of output arguments, to speed everything up.
+            levelOutputArguments = 3; % We require only the minimal number of output arguments, to speed everything up.
             [tableGenesNasserExpressed, tableGenes_pValues] = ...
                 computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV);
-            pM = tableGenes_pValues.(['p',xTestName,'_SNVs_highCADD']);
-            pE = tableGenes_pValues.(['p',yTestName,'_SNVs_highCADD']);
-            pCombined = combinePValues_EBM(pM,pE);
-            qCombined = mafdr(pCombined, 'BHFDR', true);
-
-            P_cutoff = 0.05;
-            Q_cutoff = 0.15;
-            isCandidate = pE < P_cutoff & pM < P_cutoff & qCombined < Q_cutoff;
-
-            isDriver = tableGenesNasserExpressed.isDriver;
+            %             pM = tableGenes_pValues.(['p',xTestName,'_SNVs_highCADD']);
+            %             pE = tableGenes_pValues.(['p',yTestName,'_SNVs_highCADD']);
+            %             pCombined = combinePValues_EBM(pM,pE);
+            %             qCombined = mafdr(pCombined, 'BHFDR', true);
+            %
+            %             P_cutoff = 0.05;
+            %             Q_cutoff = 0.15;
+            %             isCandidate = pE < P_cutoff & pM < P_cutoff & qCombined < Q_cutoff;
+            %
+            %             isDriver = tableGenesNasserExpressed.isDriver;
+            [isCandidate, isDriver] = computeCandidateDrivers(tableGenesNasserExpressed, tableGenes_pValues, sProperties, xTestName, yTestName, mutTypeName);
+            %
             [p, enrichment, nObserved, nExpected] = myFisherTest(isCandidate, isDriver, tailDirection, false);
             sResTissues.pFisherCDG(iTissue, iABC) = p;
             sResTissues.pFisherCDG_text{iTissue, iABC} = getPValueAsText(p);

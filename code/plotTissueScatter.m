@@ -115,13 +115,13 @@ end
     isOK2 = isDriver(isShownText);
     isToTheRight = xValuesText>xValues(isShownText);
     isOK3 = isOK2 & isToTheRight;
-    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'r', 'FontSize', fontSize, 'HorizontalAlignment', 'left');
+    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'r', 'FontSize', fontSize, 'HorizontalAlignment', 'left', 'FontAngle', 'italic');
     isOK3 = isOK2 & ~isToTheRight;
-    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'r', 'FontSize', fontSize, 'HorizontalAlignment', 'right');
+    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'r', 'FontSize', fontSize, 'HorizontalAlignment', 'right', 'FontAngle', 'italic');
     isOK3 = ~isOK2 & isToTheRight;
-    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'k', 'FontSize', fontSize, 'HorizontalAlignment', 'left');
+    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'k', 'FontSize', fontSize, 'HorizontalAlignment', 'left', 'FontAngle', 'italic');
     isOK3 = ~isOK2 & ~isToTheRight;
-    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'k', 'FontSize', fontSize, 'HorizontalAlignment', 'right');
+    text(xValuesText(isOK3), yValuesText(isOK3), labels(isOK3), 'Color', 'k', 'FontSize', fontSize, 'HorizontalAlignment', 'right', 'FontAngle', 'italic');
 
 
 

@@ -1,4 +1,4 @@
-function [tableTissues, sProperties] = loadParameters()
+function [tableTissues, sProperties, nTissues] = loadParameters()
 %% Loads main parameters of the entire analysis
 
 sProperties = readPropertiesFile('inputParameters.properties');
@@ -14,5 +14,8 @@ sProperties.runAgain = false;
 sProperties.doSave = true; 
 sProperties.tailDirection = 'both'; 
 sProperties.expressionType = 'fpkm_uq';
+sProperties.P_cutoff = 0.05;
+sProperties.Q_cutoff = 0.15;
 
 tableTissues = readtable(sProperties.TABLE_TISSUES); % 'data/tableTissues.xlsx'
+nTissues = size(tableTissues, 1);

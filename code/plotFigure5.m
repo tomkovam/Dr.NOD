@@ -26,8 +26,14 @@ end
 nR = 6; nC = 9; iS = 2*nC + 1; yS = 0.7;  xM = -0.03;
 
 cListRows = cell(2,1);
-cListRows{1} = [143, 89, 336, 218, 119, 283]; % GAIN-UP | 119 TRIM41 breast (nice and ok upregulation) | ID3: 331 (nice but no expression) | 62 (nice but not as impressive upregulation) | 42 MRRF breast (nice but not well knonw) | 68 PRKACA (alt in motif) | 314 BCAR1 ovary (alt in motif) | 90 SLC20A1 breast (alt in motif) | 144 IER3 CRC (alt in motif)
-cListRows{2} = [103, 147, 283, 301, 68, 267]; % BREAK-UP | 314, 147, 263, 103, 145 (nice but outside context) | 263 CCND1 not great match, not great upregulation | 145 IKBKB good match, not huge upregulation
+% cListRows{1} = [143, 89, 336, 218, 119, 283]; % GAIN-UP | 119 TRIM41 breast (nice and ok upregulation) | ID3: 331 (nice but no expression) | 62 (nice but not as impressive upregulation) | 42 MRRF breast (nice but not well knonw) | 68 PRKACA (alt in motif) | 314 BCAR1 ovary (alt in motif) | 90 SLC20A1 breast (alt in motif) | 144 IER3 CRC (alt in motif)
+% cListRows{2} = [103, 147, 283, 301, 68, 267]; % BREAK-UP | 314, 147, 263, 103, 145 (nice but outside context) | 263 CCND1 not great match, not great upregulation | 145 IKBKB good match, not huge upregulation
+
+cListRows{1} = [143, 336, 301, 89, 218, 119]; % GAIN-UP | 62-PPM1D | 119 TRIM41 breast (nice and ok upregulation) | ID3: 331 (nice but no expression) | 62 (nice but not as impressive upregulation) | 42 MRRF breast (nice but not well knonw) | 68 PRKACA (alt in motif) | 314 BCAR1 ovary (alt in motif) | 90 SLC20A1 breast (alt in motif) | 144 IER3 CRC (alt in motif)
+cListRows{2} = [256, 147, 283, 103, 68, 267]; % BREAK-UP | 314, 147, 263, 103, 145 (nice but outside context) | 263 CCND1 not great match, not great upregulation | 145 IKBKB good match, not huge upregulation
+
+
+
 % cListRows{2} = [6, 164, 185, 345, 3, 226]; 
 % cListRows{2} = [68, 257, 229, 288, 99]; 
 % Good: 68 PRKACA, 229 ACD, 6 CDON, 345 ZNF37BP ovary, 
@@ -102,71 +108,8 @@ dim = [.67 .99 .01 .01]; str = 'c'; annotation('textbox',dim,'String',str, 'Font
 dim = [.005 .66 .01 .01]; str = 'd'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 dim = [.005 .35 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 
-mySaveAs(fig, imagesPath, 'Fig5', false, true);
-savefig([imagesPath, 'Fig5.fig']);
-%%
-    function yAltRelative = plotTFBS_logos(tableMutations_candidate, tableMotifs, iRow, isMOTIFG, geneName)
-        %lstCols = {'candidateGenes', 'MOTIFG_scoreDiff', 'MOTIFG_motifNamePrefix', 'tissuePrint', 'expressionMedianWT', 'expressionThisMut', 'gene', 'MOTIFG_motifName', 'MOTIFG_scoreAlt', 'MOTIFG_scoreRef', 'isHighCADD', 'VAF', 'qtlVAF'};
-        %tableMutations_candidate(iRow,lstCols)
-        %% 19
-        if (isMOTIFG)
-            motifName = tableMutations_candidate.MOTIFG_motifName{iRow};
-            motifStart = tableMutations_candidate.MOTIFG_motifStart(iRow);
-            motifEnd = tableMutations_candidate.MOTIFG_motifEnd(iRow);
-            positionMutation = tableMutations_candidate.MOTIFG_positionMutation(iRow);
-            isMinusStrand = tableMutations_candidate.MOTIFG_isMinusStrand(iRow);
-        else
-            % 49
-            motifName = tableMutations_candidate.MOTIFBR_motifName{iRow};
-            motifStart = tableMutations_candidate.MOTIFBR_motifStart(iRow);
-            motifEnd = tableMutations_candidate.MOTIFBR_motifEnd(iRow);
-            positionMutation = tableMutations_candidate.MOTIFBR_positionMutation(iRow);
-            isMinusStrand = tableMutations_candidate.MOTIFBR_isMinusStrand(iRow);
-        end
-        %
-        context_ref = upper(tableMutations_candidate.context50bp{iRow});
-        lengthContext = length(context_ref);
-        iPosMutation = ceil(lengthContext/2);
-        if (~strcmp(context_ref(iPosMutation), tableMutations_candidate.ref{iRow})), error('Ref bases do not match.'); end
-        context_alt = context_ref; context_alt(iPosMutation) = tableMutations_candidate.alt{iRow};
-        x1 = motifStart-tableMutations_candidate.pos1(iRow)+1;    % iPosMutation + x1 >= 1 --> x1 >= 1-iPosMutation
-        x2 = motifEnd-tableMutations_candidate.pos1(iRow);        % iPosMutation + x2 <= lengthContext --> x2 <= lengthContext-iPosMutation = iPosMutation-1
-        if ((x1 < 1-iPosMutation) || (x2 > iPosMutation-1))
-            error('Motif outside our context');
-        end
-        % context_ref(iPosMutation + (x1:x2))
-        sequence_ref = context_ref(iPosMutation + (x1:x2));
-        sequence_alt = context_alt(iPosMutation + (x1:x2));
-        % positionMutation = x2 + 1;
-        if (isMinusStrand)
-            sequence_ref = seqrcomplement(sequence_ref);
-            sequence_alt = seqrcomplement(sequence_alt);
-        end
-        %
-
-        % strsplit(tableMotifs.motifName{1877}, '→')
-
-        iMotif = find(contains(tableMotifs.motifName, ['>', motifName]));
-        if (isempty(iMotif))
-            error('Motif not found.')
-        elseif (length(iMotif)>1)
-            warning('Multiple motif matches')
-            iMotif = iMotif(1);
-        end
-
-        % iMotif = find(strcmp(cellfun(@(x) x(2:length(motifName)), tableMotifs.motifName), ['>', motifName]));
-        % tmp2 = cellfun(@(x) x(2:min([end, length(motifName)+1])), tableMotifs.motifName, 'UniformOutput', false);
-        % iMotif = find(strcmp(tmp2, motifName));
-        % if (length(iMotif)~=1)
-        %     error('Motif not found.')
-        % end
-        
-        yAltRelative = plotMotif(tableMotifs.motifMatrix{iMotif}', 10, 2, sequence_ref, sequence_alt, motifName, positionMutation);
-        title(sprintf('%s in %s\n%s:%s', geneName, tableMutations_candidate.tissuePrint{iRow}, ...
-            tableMutations_candidate.chr{iRow}, num2sepNumStr(tableMutations_candidate.pos1(iRow))));
-        %         title(sprintf('%s %s\n%s:%s %s>%s', tableMutations_candidate.candidateGenes{iRow}, tableMutations_candidate.tissuePrint{iRow}, ...
-        %             tableMutations_candidate.chr{iRow}, num2sepNumStr(tableMutations_candidate.pos1(iRow)), tableMutations_candidate.ref{iRow}, tableMutations_candidate.alt{iRow}));
-    end
+mySaveAs(fig, imagesPath, 'Fig6', true, true);
+savefig([imagesPath, 'Fig6.fig']);
 %%
     function plotTFBS_barPlot(tableTissuesWithPancancer, motifType, motifTypePrint)
         matValues = [tableTissuesWithPancancer.(['pControlMutations_motifChange_',motifType]), tableTissuesWithPancancer.(['pCandidateDriverMutations_motifChange_',motifType])];

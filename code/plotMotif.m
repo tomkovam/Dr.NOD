@@ -15,11 +15,17 @@ yEpsilon = 0.02;
 
 hold on;
 
-maxY = 1.65;
-x1 = iPosMutation + 0.5*[-1,1];
-y_bottom = 0*[1,1];
-y_top = maxY*[1,1];
-h = patch([x1, fliplr(x1)], [y_bottom, fliplr(y_top)], 'k', 'EdgeColor', 'none');  set(h, 'FaceAlpha', 0.1);
+
+
+if (~isempty(sequence_alt))
+    maxY = 1.65;
+    x1 = iPosMutation + 0.5*[-1,1];
+    y_bottom = 0*[1,1];
+    y_top = maxY*[1,1];
+    h = patch([x1, fliplr(x1)], [y_bottom, fliplr(y_top)], 'k', 'EdgeColor', 'none');  set(h, 'FaceAlpha', 0.1);
+else
+    maxY = 1.35;
+end
 
 xText = 0.2;
 
@@ -56,17 +62,18 @@ text(xText, y1/2, strrep(motifName, '_', '\_'), 'Rotation', 90, 'HorizontalAlign
 % h = patch([xLimValues, fliplr(xLimValues)], [(y1+5*yEpsilon)*[1,1], fliplr((y1+10*yEpsilon)*[1,1])], 'w', 'EdgeColor', 'w');  %  set(h, 'FaceAlpha', 0.1);
 
 y1 = y1 + 0.1;
-for iPosition = 1:nPositions
-    heightBase = 0.2;
-    base = sequence_alt(iPosition);
-    plotOneBase(find(strcmp(lstBases, base)), iPosition - 0.5, iPosition + 0.5, y1, y1 + heightBase, xEpsilon, yEpsilon, sColours.(base), lineWidth, markerSize);  
-end
+heightBase = 0.2;
 yAlt = y1+heightBase/2;
-text(xText, yAlt, 'alt', 'HorizontalAlignment', 'right');
-y1 = y1 + heightBase + 0.1;
+if (~isempty(sequence_alt))
+    for iPosition = 1:nPositions
+        base = sequence_alt(iPosition);
+        plotOneBase(find(strcmp(lstBases, base)), iPosition - 0.5, iPosition + 0.5, y1, y1 + heightBase, xEpsilon, yEpsilon, sColours.(base), lineWidth, markerSize);
+    end
+    text(xText, yAlt, 'alt', 'HorizontalAlignment', 'right');
+    y1 = y1 + heightBase + 0.1;
+end
 
 for iPosition = 1:nPositions
-    heightBase = 0.2;
     base = sequence_ref(iPosition);
     plotOneBase(find(strcmp(lstBases, base)), iPosition - 0.5, iPosition + 0.5, y1, y1 + heightBase, xEpsilon, yEpsilon, sColours.(base), lineWidth, markerSize);  
 end

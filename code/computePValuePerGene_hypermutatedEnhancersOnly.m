@@ -59,10 +59,16 @@ else
         tableUE_annotations_hyperUE.(['pM_CADDnormalized_', typeName]) = myBinomTestRightSided(nMutSamplesPerUE, tableUE_annotations_hyperUE.nTheoreticalMutations_PHRED_geqCUTOFF, averageMutationFrequency, 'one');
         tableUE_annotations_hyperUE.(['eM_CADDnormalized_', typeName]) = log2(nMutSamplesPerUE./(tableUE_annotations_hyperUE.nTheoreticalMutations_PHRED_geqCUTOFF*averageMutationFrequency));
 
-        [xPValues, statsOne] = compute_pM_GLM_geneLevel(nMutSamplesPerUE, tableUE_annotations_hyperUE, tableUE_mean_trinucleotdies, nUsedSamples);
-        tableUE_annotations_hyperUE.(['pM_fullModel_', typeName]) = xPValues;
-        tableUE_annotations_hyperUE.(['eM_fullModel_', typeName]) = statsOne.foldChange;
-        statsUE.(typeName) = statsOne;
+        try
+            [xPValues, statsOne] = compute_pM_GLM_geneLevel(nMutSamplesPerUE, tableUE_annotations_hyperUE, tableUE_mean_trinucleotdies, nUsedSamples);
+            tableUE_annotations_hyperUE.(['pM_fullModel_', typeName]) = xPValues;
+            tableUE_annotations_hyperUE.(['eM_fullModel_', typeName]) = statsOne.foldChange;
+            statsUE.(typeName) = statsOne;
+        catch
+            tableUE_annotations_hyperUE.(['pM_fullModel_', typeName]) = NaN*tableUE_annotations_hyperUE.(['pM_CADDnormalized_', typeName]);
+            tableUE_annotations_hyperUE.(['eM_fullModel_', typeName]) = NaN*tableUE_annotations_hyperUE.(['eM_CADDnormalized_', typeName]);
+            warning('HyperUE %s pM computation issue...', typeName);
+        end
     end
 
     matUESamplesIsMut_SNVs_highCADD_hyperUE = matUESamplesIsMut_SNVs_highCADD;

@@ -1,7 +1,14 @@
-function [xAltRelative, yAltRelative] = plotGene_boxplot_forLogos(tissueName, biosampleABC, geneName, sColours, iSampleMutated)
+function [xAltRelative, yAltRelative] = plotGene_boxplot_forLogos(tissueName, biosampleABC, geneName, sColours, iSampleMutated, exclusionType)
+
+
+if (~exist('exclusionType', 'var') || strcmp(exclusionType, 'excludePOLE_MSI'))
+    suffix = '';
+else
+    suffix = ['_', exclusionType];
+end
 
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
+load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
 
 fontSize = 10;
 
@@ -26,18 +33,18 @@ set(gca, 'XTick', []);
 grid on;
 
 
-yLimVal = get(gca, 'YLim'); yLimVal(1) = 0; yLimVal(2) = max([yLimVal(2), yValues(iSampleMutated)*1.1]);
+yLimVal = get(gca, 'YLim'); yLimVal(1) = 0; yLimVal(2) = max([yLimVal(2); yValues(iSampleMutated)*1.1]);
 ylim(yLimVal);
 
 xAltRelative = (xAlt-xLimVal(1))/(xLimVal(2)-xLimVal(1));
 yAltRelative = yValues(iSampleMutated)/yLimVal(2);
 
-text(xLimVal(2), yValues(iSampleMutated), 'MUT', 'Color', sColours.mutated, 'HorizontalAlignment', 'center', 'FontSize', fontSize-2);
+text(xLimVal(2), max(yValues(iSampleMutated)), 'MUT', 'Color', sColours.mutated, 'HorizontalAlignment', 'center', 'FontSize', fontSize-2);
 text(xLimVal(2), median(yValues(sampleGroup==1), 'omitnan'), 'WT', 'Color', sColours.WT, 'HorizontalAlignment', 'center', 'FontSize', fontSize-2);
 
 xlim(xLimVal);
 
-ylabel([geneName, ' ', yLabelText]);
+ylabel(sprintf('{\\it%s} %s', geneName, yLabelText));
 set(gca, 'FontSize', fontSize);
 set(gca,'YColor',.5*[1,1,1]);
 

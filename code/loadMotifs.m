@@ -1,4 +1,4 @@
-function [dataTFBS, tableMutations_candidate] = loadMotifs(tableMutations_candidate, tableTissues_data4, sProperties)
+function [dataTFBS, tableMutations_candidate] = loadMotifs(tableMutations_candidate, nTissues, sProperties)
 %% Loads the TFBS motif data
 
 tableDataMotifs = readtable(sProperties.FUNSEQ2_ENCODE_MOTIFS, 'ReadVariableNames', false, 'NumHeaderLines', 0); % 'data/FunSeq2/ENCODE_motifs.txt' From http://compbio.mit.edu/encode-motifs/ | http://compbio.mit.edu/encode-motifs/motifs.txt
@@ -27,7 +27,9 @@ tableMotifPrefix.motifPrefix = unique(tableMotifs.motifPrefix);
 nMotifPrefix = length(tableMotifPrefix.motifPrefix);
 %%
 tableMutations_candidate.MOTIFG = arrayfun(@(x) regexp(x, 'MOTIFG=.+', 'match', 'once'), tableMutations_candidate.FunSeq2_motif_analysis, 'UniformOutput', true);
-if (~isequal(~strcmp(tableMutations_candidate.MOTIFG, ''), tableMutations_candidate.isMOTIFG==1)), error('MOTIFBR assignment not correct'); end
+if (ismember('isMOTIFG', tableMutations_candidate.Properties.VariableNames))
+    if (~isequal(~strcmp(tableMutations_candidate.MOTIFG, ''), tableMutations_candidate.isMOTIFG==1)), error('MOTIFG assignment not correct'); end
+end
 if (sum(contains(tableMutations_candidate.MOTIFG, 'MOTIFBR'))>0), error('MOTIFBR in MOTIFBR'); end
 %
 nRows = size(tableMutations_candidate, 1);
@@ -120,7 +122,7 @@ isOK = tableMutations_candidate.isOK;
 tmp = tableMutations_candidate(isOK,:);
 tmp2_MOTIFBR = isMutMotifPrefix_MOTIFBR(isOK,:);
 tmp2_MOTIFG = isMutMotifPrefix_MOTIFG(isOK,:);
-nTissues = size(tableTissues_data4, 1);
+
 matTissuesMotifPrefix_MOTIFBR_UP = zeros(nTissues, nMotifPrefix);
 matTissuesMotifPrefix_MOTIFG_UP = zeros(nTissues, nMotifPrefix);
 matTissuesMotifPrefix_MOTIFBR_DOWN = zeros(nTissues, nMotifPrefix);
@@ -132,15 +134,37 @@ for iTissue = 1:nTissues
     matTissuesMotifPrefix_MOTIFG_DOWN(iTissue,:) = sum(tmp2_MOTIFG(tmp.iTissue==iTissue & tmp.isMOTIFG==1 & ~tmp.isCandidateDriverUP,:), 1);
 end
 %% UNUSED (most are both positive and negative regulators)
-if (false)
+if (true)
     tablePositiveRegulator = readtable(sProperties.GO_POSITIVE_REGULATION); % 'data/QuickGO/QuickGO-annotations-0045893-20220414.txt' positive regulation of transcription, DNA-templated
     tableNegativeRegulator = readtable(sProperties.GO_NEGATIVE_REGULATION); % 'data/QuickGO/QuickGO-annotations-0045892-20220414.txt' negative regulation of transcription, DNA-templated
+    tableRepressor = readtable(sProperties.GO_REPRESSOR); % ### DNA-binding transcription repressor activity GO_REPRESSOR=data/QuickGO/QuickGO-annotations-0001217-20220414.txt
+    tableActivator = readtable(sProperties.GO_ACTIVATOR); % ### DNA-binding transcription activator activity GO_ACTIVATOR=data/QuickGO/QuickGO-annotations-0001216-20220414.txt
     lstPositiveRegulator = unique(tablePositiveRegulator.SYMBOL);
     lstNegativeRegulator = unique(tableNegativeRegulator.SYMBOL);
+    lstRepressor = unique(tableRepressor.SYMBOL);
+    lstActivator = unique(tableActivator.SYMBOL);
     tableMotifPrefix.isPositiveRegulator = ismember(tableMotifPrefix.motifPrefix, lstPositiveRegulator);
     tableMotifPrefix.isNegativeRegulator = ismember(tableMotifPrefix.motifPrefix, lstNegativeRegulator);
+    tableMotifPrefix.isActivator = ismember(tableMotifPrefix.motifPrefix, lstActivator);
+    tableMotifPrefix.isRepressor = ismember(tableMotifPrefix.motifPrefix, lstRepressor);
     tableMotifPrefix.isPositiveRegulator_prefix = cellfun(@(x) max(contains(lstPositiveRegulator, x)), tableMotifPrefix.motifPrefix);
     tableMotifPrefix.isNegativeRegulator_prefix = cellfun(@(x) max(contains(lstNegativeRegulator, x)), tableMotifPrefix.motifPrefix);
+    tableMutations_candidate.isMOTIFBR_positive = sum(isMutMotifPrefix_MOTIFBR(:,tableMotifPrefix.isPositiveRegulator), 2)>0;
+    tableMutations_candidate.isMOTIFBR_negative = sum(isMutMotifPrefix_MOTIFBR(:,tableMotifPrefix.isNegativeRegulator), 2)>0;
+    tableMutations_candidate.isMOTIFG_positive = sum(isMutMotifPrefix_MOTIFG(:,tableMotifPrefix.isPositiveRegulator), 2)>0;
+    tableMutations_candidate.isMOTIFG_negative = sum(isMutMotifPrefix_MOTIFG(:,tableMotifPrefix.isNegativeRegulator), 2)>0;
+    tableMutations_candidate.isMOTIFBR_activator = sum(isMutMotifPrefix_MOTIFBR(:,tableMotifPrefix.isActivator), 2)>0;
+    tableMutations_candidate.isMOTIFBR_repressor = sum(isMutMotifPrefix_MOTIFBR(:,tableMotifPrefix.isRepressor), 2)>0;
+    tableMutations_candidate.isMOTIFG_activator = sum(isMutMotifPrefix_MOTIFG(:,tableMotifPrefix.isActivator), 2)>0;
+    tableMutations_candidate.isMOTIFG_repressor = sum(isMutMotifPrefix_MOTIFG(:,tableMotifPrefix.isRepressor), 2)>0;
+    %%
+    tableMutations_candidate.nMOTIFBR_TFs_negative = NaN*tableMutations_candidate.nUE;
+    tableMutations_candidate.nMOTIFBR_TFs_positive = NaN*tableMutations_candidate.nUE;
+    for iRow = find(tableMutations_candidate.isMOTIFBR==1)'
+        tmp2 = split(tableMutations_candidate.MOTIFBR_TFs{iRow}, ',');
+        tableMutations_candidate.nMOTIFBR_TFs_negative(iRow) = sum(ismember(tmp2, lstNegativeRegulator));
+        tableMutations_candidate.nMOTIFBR_TFs_positive(iRow) = sum(ismember(tmp2, lstPositiveRegulator));
+    end
 end
 %%
 dataTFBS.tableMotifs = tableMotifs;

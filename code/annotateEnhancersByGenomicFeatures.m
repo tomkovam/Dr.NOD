@@ -9,7 +9,9 @@ if (~runAgain && exist(fileNameBMM, 'file'))
 else
     t1 = tic;
     fprintf('annotateEnhancersByGenomicFeatures %s...\n', fileNameBMM);
-    tableGenesNasserExpressed.nPositionsInEnhancers = matUniqueEnhancersGenes'*tableUniqueEnhancers.nPositions; % Number of positions in all unique enhancers regulating the given gene (I have checked it gives the same results as the previous slower implementation)
+    if (~isfield(tableGenesNasserExpressed, 'nPositionsInEnhancers')) % (moved above)
+        tableGenesNasserExpressed.nPositionsInEnhancers = matUniqueEnhancersGenes'*tableUniqueEnhancers.nPositions; % Number of positions in all unique enhancers regulating the given gene (I have checked it gives the same results as the previous slower implementation)
+    end
     tableGenes_annotations = tableGenesNasserExpressed(:,{'geneName', 'nPositionsInEnhancers'});
     tableUE_annotations = tableUniqueEnhancers(:,{'name', 'nPositions'});
     %nUE = size(tableUE_annotations, 1);

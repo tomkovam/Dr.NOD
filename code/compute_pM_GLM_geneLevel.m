@@ -1,4 +1,4 @@
-function [pM, stats] = compute_pM_GLM_geneLevel(nMutSamplesInEnhancersPerGene, tableGenes_annotations, tableGenes_mean_trinucleotides, nUsedSamples, univariableCutoff, verbose)
+function [pM, stats, mdl] = compute_pM_GLM_geneLevel(nMutSamplesInEnhancersPerGene, tableGenes_annotations, tableGenes_mean_trinucleotides, nUsedSamples, univariableCutoff, verbose)
 %% Computes the pM p-values (for scoreM) for each gene, i.e., whether the regulatory space of the gene is more mutated than expected (taking high-CADD mutations into consideration only)
 
 if (~exist('univariableCutoff', 'var'))
@@ -8,38 +8,18 @@ if (~exist('verbose', 'var'))
     verbose = false;
 end
 
-tableGenes_annotations.mutationFrequency = nMutSamplesInEnhancersPerGene./tableGenes_annotations.nTheoreticalMutations_PHRED_geqCUTOFF;
-tableDataForBMM = [tableGenes_mean_trinucleotides, tableGenes_annotations(:,{'mean_mfInFlanks', 'nPositionsInEnhancers', 'mean_GC', 'mean_replicationTiming', 'mean_baseActivity', 'mutationFrequency'})]; % The last column is the response variable
+[tableDataForBMM, tableGenes_annotations] = prepare_tableDataForBMM(nMutSamplesInEnhancersPerGene, tableGenes_annotations, tableGenes_mean_trinucleotides);
 
-
-if (ismember("mean_replicationTiming", tableDataForBMM.Properties.VariableNames)) % The zero means a missing value in this data set
-    tableDataForBMM.mean_replicationTiming(tableDataForBMM.mean_replicationTiming==0) = NaN;
-end
-
-tableDataForBMM.mutationFrequency(isinf(tableDataForBMM.mutationFrequency)) = NaN; % This can happen when nTheoreticalMutations_PHRED_geqCUTOFF=0 and nMutSamplesInEnhancersPerGene>0 because of indels (should not happen for highCADD SNVs)
-
-tablePredictors = table();
-tablePredictors.predictor = tableDataForBMM.Properties.VariableNames';
-nPredictors = size(tablePredictors, 1);
-
-tablePredictors.univariablePValue = NaN*ones(nPredictors, 1);
-for iCol = 1:nPredictors
-    try
-        mdl =  fitglm(tableDataForBMM(:,[iCol,end]), 'linear', 'Distribution', 'poisson', 'DispersionFlag', true);
-        tablePredictors.univariablePValue(iCol) = mdl.coefTest;
-    catch
-        warning('PROBLEM in column %s', tablePredictors.predictor{iCol});
-    end
-end
+tablePredictors = computeSignificantUnivariablePredictors(tableDataForBMM, univariableCutoff);
 
 try
-    mdl =  fitglm(tableDataForBMM(:,tablePredictors.univariablePValue<univariableCutoff), 'linear', 'Distribution', 'poisson', 'DispersionFlag', true);
+    mdl =  fitglm(tableDataForBMM(:,tablePredictors.isUsed), 'linear', 'Distribution', 'poisson', 'DispersionFlag', true);
     if (verbose)
-        tablePredictors(tablePredictors.univariablePValue<univariableCutoff,:)
+        tablePredictors(tablePredictors.isUsed,:)
         mdl
-        fprintf('Used predictors: %d\nExplained deviance: %.g\n', sum(tablePredictors.univariablePValue<univariableCutoff), mdl.Rsquared.Deviance);
+        fprintf('Used predictors: %d\nExplained deviance: %.g\n', sum(tablePredictors.isUsed), mdl.Rsquared.Deviance);
     end
-    expected_mf = predict(mdl, tableDataForBMM(:,1:end-1));
+    expected_mf = predict(mdl, tableDataForBMM(:,tablePredictors.isUsed & ~tablePredictors.isResponseVariable));
 
     %% BinomTest(n, k, 1 - (1-p)^s, ’one’)
     n = nMutSamplesInEnhancersPerGene;

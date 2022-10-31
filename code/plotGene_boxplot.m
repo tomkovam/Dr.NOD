@@ -1,7 +1,14 @@
-function plotGene_boxplot(tissueName, biosampleABC, geneName, sColours, printTissue)
-
+function plotGene_boxplot(tissueName, biosampleABC, geneName, sColours, printTissue, exclusionType)
+%%
+if (~exist('exclusionType', 'var') || strcmp(exclusionType, 'excludePOLE_MSI'))
+    suffix = '';
+else
+    suffix = ['_', exclusionType];
+end
+%%
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
+load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_qCombined', 'gene_pE', ...
+    'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression', 'CNVperSample');
 
 %%
 colors.n = .5*[1,1,1];
@@ -48,10 +55,18 @@ text(2, yVal, sprintf('n = %d\nn = %d', sum(sampleGroupInclWoExpression==2), sum
 % text(2, 2*yVal, sprintf('\nn = %d', sum(sampleGroup==2)), 'VerticalAlignment', 'top', 'HorizontalAlignment', 'center', 'FontSize', fontSize, 'Color', colors.n);
 xlim([0,2]+.5);
 
-ylabel(yLabelText);
-set(gca, 'FontSize', fontSize);
+% ylabel(yLabelText);
+ylabel(sprintf('{\\it%s} %s', geneName, yLabelText));
+% set(gca, 'FontSize', fontSize);
+set(gca, 'FontSize', 10);
+set(gca,'YColor',.5*[1,1,1]);
 
-% mdl =  fitglm([sampleGroup, CNVperSample], expressionPerSample, 'linear', 'Distribution', 'poisson', 'DispersionFlag', true); % Poisson with overdispersed count variable, as in https://www.nature.com/articles/s41467-019-13929-1 (quasi-Poisson family GLM)
+% mdl =  fitglm([sampleGroup, CNVperSample], expressionPerSample, 'linear', 'Distribution', 'poisson', 'DispersionFlag', true) % Poisson with overdispersed count variable, as in https://www.nature.com/articles/s41467-019-13929-1 (quasi-Poisson family GLM)
+% tmp1 = mdl.Coefficients.Estimate(1) + mdl.Coefficients.Estimate(2)*sampleGroup + mdl.Coefficients.Estimate(3)*CNVperSample;
+% tmp2 = log(expressionPerSample);
+% figure; plot(tmp1, tmp2, 'o');
+
+
 % title(sprintf('%s in %s\n{\\itp_M = %s, p_E = %s\nqCombined = %s}', geneName, tissueName, getPValueAsTextShort(gene_pM), getPValueAsTextShort(gene_pE), getPValueAsTextShort(gene_qCombined)));
 % title(sprintf('%s in %s\n\\color[rgb]{0.5,0.5,0.5}{\\itqCombined = %s}', geneName, tissueName, getPValueAsTextShort(gene_qCombined)));
 if (printTissue)

@@ -9,9 +9,6 @@
 
 # prepareAnnotatedEnhancers_step2 after step1
 
-DIR_NASSER=data/Nasser2021/
-INFILE=$DIR_NASSER/AllPredictions.AvgHiC.ABC0.015.minus150.ForABCPaperV3.txt.gz
-
 SORTED_PROTEIN_CODING_EXOME=data/genes/GENCODE/mergedSorted.protein_coding.exons.hg19v19.bed
 SORTED_PROTEIN_CODING_CDS=data/genes/GENCODE/mergedSorted.protein_coding.CDS.hg19v19.bed
 INFILE_CHR_SIZES=data/hg19.chrom.sizes

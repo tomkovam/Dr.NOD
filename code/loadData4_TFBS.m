@@ -21,22 +21,24 @@ if (~exist(saveFileData, 'file'))
         biosampleABC = tableTissues.biosampleABC{iTissue};
         levelOutputArguments = 2; % We require only the minimal number of output arguments, to speed everything up.
         %%
-        [~, tableGenes_pValues, ~, tableSamples, ~, ~, ~, tableMutations, matMutationsEnhancers, matUniqueEnhancersGenes] = ...
+        [tableGenesNasserExpressed, tableGenes_pValues, ~, tableSamples, ~, ~, ~, tableMutations, matMutationsEnhancers, matUniqueEnhancersGenes] = ...
             computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV);
         tableMutations.iSamplePCAWG = tableSamples.iSamplePCAWG(tableMutations.iSample);
         tableMutations.iTissue = iTissue*ones(size(tableMutations, 1), 1);
         %% isCandidate vs isDriver        
-        pM = tableGenes_pValues.(['p',xTestName,'_SNVs_highCADD']);
-        pE = tableGenes_pValues.(['p',yTestName,'_SNVs_highCADD']);      
-
-        P_cutoff = 0.05;
-        Q_cutoff = 0.15;
-        isP_M = pM < P_cutoff;
-        isP_E = pE < P_cutoff;
-        pCombined = combinePValues_EBM(pM,pE); 
-        qCombined = mafdr(pCombined, 'BHFDR', true);        
-        isCandidate = isP_M & isP_E & qCombined < Q_cutoff;
-        isUP = tableGenes_pValues.(['e',yTestName,'_',mutTypeName]) > 0;
+        %         pM = tableGenes_pValues.(['p',xTestName,'_SNVs_highCADD']);
+        %         pE = tableGenes_pValues.(['p',yTestName,'_SNVs_highCADD']);
+        %
+        %         P_cutoff = 0.05;
+        %         Q_cutoff = 0.15;
+        %         isP_M = pM < P_cutoff;
+        %         isP_E = pE < P_cutoff;
+        %         pCombined = combinePValues_EBM(pM,pE);
+        %         qCombined = mafdr(pCombined, 'BHFDR', true);
+        %         isCandidate = isP_M & isP_E & qCombined < Q_cutoff;
+        [isCandidate, isDriver, pM, pE, tableGenesNasserExpressed] = computeCandidateDrivers(tableGenesNasserExpressed, tableGenes_pValues, sProperties, xTestName, yTestName, mutTypeName);
+        %
+        isUP = tableGenesNasserExpressed.isUP; % tableGenes_pValues.(['e',yTestName,'_',mutTypeName]) > 0;
         %% Annotate with FunSeq2 predictions of TFBS change
         tableMutations_FunSeq2 = loadTableMutations_FunSeq2(false, tissueName, biosampleABC, tableMutations, tableSamples, sProperties); 
         %% Annotate with candidate driver mutations
@@ -86,8 +88,7 @@ if (~exist(saveFileData, 'file'))
     %% Checking that the middle 17bp of the context50bp do match the context field:
     tmp1 = tableMutations_candidate(tableMutations_candidate.isInFunSeq2,:);
     tmp1.context8bp = cellfun(@(x) upper(x(43:59)), tmp1.context50bp, 'UniformOutput', false);
-    if (~isequal(tmp1.context, tmp1.context8bp)), error('Contexts do not match'); end
-    
+    if (~isequal(tmp1.context, tmp1.context8bp)), error('Contexts do not match'); end    
     %%
     tableTissuesWithPancancer = table();
     nTissues = size(tableTissues, 1);
@@ -138,7 +139,6 @@ if (~exist(saveFileData, 'file'))
     %myPrintMemory
     createDir(fileparts(saveFileData));
     save(saveFileData, 'tableMutations_candidate', 'tableTissues', 'tableTissuesWithPancancer');
-
 else
     fprintf('Loading data from %s...\n', saveFileData);
     load(saveFileData, 'tableMutations_candidate', 'tableTissues', 'tableTissuesWithPancancer');

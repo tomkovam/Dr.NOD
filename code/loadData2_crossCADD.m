@@ -18,6 +18,7 @@ if (~exist(saveFileData, 'file'))
     sResCrossCADD.nObserved_candidateDrivers_CDGs = NaN*ones(nTissues, nBinCADD);
     sResCrossCADD.nExpected_candidateDrivers_CDGs = NaN*ones(nTissues, nBinCADD);
     sResCrossCADD.nCandidateDrivers = NaN*ones(nTissues, nBinCADD);
+    sResCrossCADD.stats = cell(nTissues, nBinCADD);
     %%
     matGencodeGeneTissue_isUsed = false(nGencodeGenes, nTissues, nBinCADD);
     matGencodeGeneTissue_isCandidate = false(nGencodeGenes, nTissues, nBinCADD);
@@ -32,19 +33,40 @@ if (~exist(saveFileData, 'file'))
             minCADD_PHRED = lstMinCADD_PHRED(iBinCADD);
             fprintf('\n=================== %s %d ===================\n', tissueName, minCADD_PHRED);
             sProperties.minCADD_PHRED = minCADD_PHRED;
-            levelOutputArguments = 1; % We require only the minimal number of output arguments, to speed everything up.
-            [tableGenesNasserExpressed, tableGenes_pValues] = ...
+            levelOutputArguments = 3; % We require only the minimal number of output arguments, to speed everything up.
+            [tableGenesNasserExpressed, tableGenes_pValues, stats] = ...
                 computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV);
             %
-            pM = tableGenes_pValues.(['p',xTestName,'_',mutTypeName]);
-            pE = tableGenes_pValues.(['p',yTestName,'_',mutTypeName]);
-            pCombined = combinePValues_EBM(pM,pE);
-            qCombined = mafdr(pCombined, 'BHFDR', true);
+            %             pM = tableGenes_pValues.(['p',xTestName,'_',mutTypeName]);
+            %             pE = tableGenes_pValues.(['p',yTestName,'_',mutTypeName]);
+            %             pCombined = combinePValues_EBM(pM,pE);
+            %             qCombined = mafdr(pCombined, 'BHFDR', true);
+            %
+            %             P_cutoff = 0.05;
+            %             Q_cutoff = 0.15;
+            %             isCandidate = pE < P_cutoff & pM < P_cutoff & qCombined < Q_cutoff;
+            %             isDriver = tableGenesNasserExpressed.isDriver;
+            %
+            %             %
+            %             tableGenesNasserExpressed.isUP = tableGenes_pValues.(['e',yTestName,'_',mutTypeName]) > 0;
+            %             isONCOGENE_notTSG = contains(tableGenesNasserExpressed.role_CGC, 'oncogene') & ~contains(tableGenesNasserExpressed.role_CGC, 'TSG'); % tableGenesNasserExpressed.isDriver & tableGenesNasserExpressed.isOncogene;
+            %             isTSG_notONCOGENE = contains(tableGenesNasserExpressed.role_CGC, 'TSG') & ~contains(tableGenesNasserExpressed.role_CGC, 'oncogene'); % tableGenesNasserExpressed.isDriver & tableGenesNasserExpressed.isTSG;
+            %
+            [isCandidate, isDriver, pM, pE, tableGenesNasserExpressed, isONCOGENE_notTSG, isTSG_notONCOGENE] = computeCandidateDrivers(tableGenesNasserExpressed, tableGenes_pValues, sProperties, xTestName, yTestName, mutTypeName);
+            %
+            tableGenesNasserExpressed.isOncogene = isONCOGENE_notTSG;
+            tableGenesNasserExpressed.isTSG = isTSG_notONCOGENE;
+            matGencodeGeneTissue_isUsed(tableGenesNasserExpressed.iGencode, iTissue, iBinCADD) = true;
+            matGencodeGeneTissue_isCandidate(tableGenesNasserExpressed.iGencode(isCandidate), iTissue, iBinCADD) = true;
+            matGencodeGeneTissue_isDriver(tableGenesNasserExpressed.iGencode(tableGenesNasserExpressed.isDriver)) = true;
 
-            P_cutoff = 0.05;
-            Q_cutoff = 0.15;
-            isCandidate = pE < P_cutoff & pM < P_cutoff & qCombined < Q_cutoff;
-            isDriver = tableGenesNasserExpressed.isDriver;
+            %             stats.tableGenesNasserExpressed = tableGenesNasserExpressed;
+            %             stats.tableGenes_pValues = tableGenes_pValues;
+            %             stats.pM = pM;
+            %             stats.pE = pE;
+            %             stats.isCandidate = isCandidate;
+            %             stats.isDriver = isDriver;
+
             [p, enrichment, nObserved, nExpected] = myFisherTest(isCandidate, isDriver, tailDirection, false);
             sResCrossCADD.pFisherCDG(iTissue,iBinCADD) = p;
             sResCrossCADD.pFisherCDG_text{iTissue,iBinCADD} = getPValueAsText(p);
@@ -52,15 +74,7 @@ if (~exist(saveFileData, 'file'))
             sResCrossCADD.nObserved_candidateDrivers_CDGs(iTissue,iBinCADD) = nObserved;
             sResCrossCADD.nExpected_candidateDrivers_CDGs(iTissue,iBinCADD) = nExpected;
             sResCrossCADD.nCandidateDrivers(iTissue,iBinCADD) = sum(isCandidate);
-            %
-            isONCOGENE = contains(tableGenesNasserExpressed.role_CGC, 'oncogene') & ~contains(tableGenesNasserExpressed.role_CGC, 'TSG'); % tableGenesNasserExpressed.isDriver & tableGenesNasserExpressed.isOncogene;
-            isTSG = contains(tableGenesNasserExpressed.role_CGC, 'TSG') & ~contains(tableGenesNasserExpressed.role_CGC, 'oncogene'); % tableGenesNasserExpressed.isDriver & tableGenesNasserExpressed.isTSG;
-            tableGenesNasserExpressed.isOncogene = isONCOGENE;
-            tableGenesNasserExpressed.isTSG = isTSG;
-            tableGenesNasserExpressed.isUP = tableGenes_pValues.(['e',yTestName,'_',mutTypeName]) > 0;
-            matGencodeGeneTissue_isUsed(tableGenesNasserExpressed.iGencode, iTissue, iBinCADD) = true;
-            matGencodeGeneTissue_isCandidate(tableGenesNasserExpressed.iGencode(isCandidate), iTissue, iBinCADD) = true;
-            matGencodeGeneTissue_isDriver(tableGenesNasserExpressed.iGencode(tableGenesNasserExpressed.isDriver)) = true;
+            %sResCrossCADD.stats{iTissue,iBinCADD} = stats;
         end
     end
     toc

@@ -13,10 +13,14 @@ if (runAgain || ~exist(saveFileData, 'file'))
         tableSamples.isExcluded(~ismember(tableSamples.project, {'MALY_DE', 'DLBC_US_LymphBNHL'})) = true;
     elseif (strcmp(exclusionType, 'exclude_lymphomas'))
         tableSamples.isExcluded(~ismember(tableSamples.project, {'CLLE_ES'})) = true;
+    elseif (strcmp(exclusionType, 'excludeAsDig'))
+        tableSamples.isExcluded(ismember(tableSamples.project, {'LINC_JP', 'LICA_FR', 'PAEN_AU', 'PAEN_IT'})) = true;
     else
         tableSamples.isExcluded = false(nSamples, 1);
     end
     tableSamples.isExcluded = tableSamples.isExcluded | ~tableSamples.isUsedOnePerDonor;
+    if (sum(~tableSamples.isExcluded)==0), error('All samples excluded.'); end
+
     tableMutations.isExcluded = tableSamples.isExcluded(tableMutations.iSample);
     tableMutations.isHighCADD = tableMutations.CADD_PHRED >= minCADD_PHRED; % OLD: tableSNVs.isHighCADD = tableSNVs.iBinCADD >= minBinCADD;
     if (verbose)

@@ -77,31 +77,8 @@ if (~exist(saveFileData, 'file'))
             ~, ~, ~, ~, ~, ~, tableUE_annotations_hyperUE, matGenesSamplesNMut_SNVs] = ... % levelOutputArguments = 3
         computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV);
         %% isCandidate vs isDriver
-        isDriver = tableGenesNasserExpressed.isDriver;
-        pM = tableGenes_pValues.(['p',xTestName,'_SNVs_highCADD']);        
-        pE = tableGenes_pValues.(['p',yTestName,'_SNVs_highCADD']);
-        sizeEffectE = tableGenes_pValues.(['e',yTestName,'_',mutTypeName]);
-        sizeEffectM = tableGenes_pValues.(['e',xTestName,'_',mutTypeName]);
-        pCombined = combinePValues_EBM(pM,pE); %combinePValues(pM,pE,'Brown');  % Fisher
-        qCombined = mafdr(pCombined, 'BHFDR', true); % ALTERNATIVELY: [~, ~, ~, qCombined] = fdr_bh(pCombined); % OLD:         
-        
-    
-        tableGenesNasserExpressed.isUP = tableGenes_pValues.(['e',yTestName,'_',mutTypeName]) > 0;
-        tableGenesNasserExpressed.pM = pM;
-        tableGenesNasserExpressed.pE = pE;
-        tableGenesNasserExpressed.pCombined = pCombined;
-        tableGenesNasserExpressed.qCombined = qCombined;
-
-        P_cutoff = 0.05;
-        Q_cutoff = 0.15;
-        isP_M = pM < P_cutoff;
-        isP_E = pE < P_cutoff;
-        isCandidate = isP_M & isP_E & qCombined < Q_cutoff;
-        isONCOGENE = contains(tableGenesNasserExpressed.role_CGC, 'oncogene');
-        isTSG = contains(tableGenesNasserExpressed.role_CGC, 'TSG');
-        isONCOGENE_notTSG = isONCOGENE & ~isTSG;
-        isTSG_notONCOGENE = isTSG & ~isONCOGENE;
-
+        [isCandidate, isDriver, pM, pE, tableGenesNasserExpressed, isONCOGENE_notTSG, isTSG_notONCOGENE, isONCOGENE, isTSG, sizeEffectE, sizeEffectM, pCombined, qCombined, isP_M, P_cutoff] = computeCandidateDrivers(tableGenesNasserExpressed, tableGenes_pValues, sProperties, xTestName, yTestName, mutTypeName);
+        %%
         sResults{iTissue}.tissuePrint = tableTissues.tissuePrint{iTissue};
         sResults{iTissue}.biosampleABC = biosampleABC;
         sResults{iTissue}.pM = pM;
@@ -228,7 +205,7 @@ if (~exist(saveFileData, 'file'))
         for iGene = find(isCandidate)'
             geneName = tableGenesNasserExpressed.geneName{iGene};
             saveForOneGeneVisualisation(tissueName, biosampleABC, geneName, pM(iGene), pE(iGene), qCombined(iGene), tableSamples, matCNV_genesSamples, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, ...
-                tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides);
+                tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, exclusionType);
         end
     end
     toc

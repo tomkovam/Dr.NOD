@@ -32,11 +32,14 @@ if (~exist(saveFileData, 'file'))
         levelOutputArguments = 1; % We require only the minimal number of output arguments, to speed everything up.
         [tableGenesNasserExpressed, tableGenes_pValues] = computeMainAnalysis(runAgain, levelOutputArguments, tissueName, biosampleABC, sProperties, tissueNameSV);
         %
-        pM = tableGenes_pValues.(['p',xTestName,'_',mutTypeName]); 
-        pE = tableGenes_pValues.(['p',yTestName,'_',mutTypeName]); 
-        pCombined = combinePValues_EBM(pM,pE);
-        cutoffQ = 0.15;
-        qCombined = mafdr(pCombined, 'BHFDR', true);
+        %         pM = tableGenes_pValues.(['p',xTestName,'_',mutTypeName]);
+        %         pE = tableGenes_pValues.(['p',yTestName,'_',mutTypeName]);
+        %         pCombined = combinePValues_EBM(pM,pE);
+        %         cutoffQ = 0.15;
+        %         qCombined = mafdr(pCombined, 'BHFDR', true);
+
+        [isCandidate, isDriver, pM, pE, tableGenesNasserExpressed, isONCOGENE_notTSG, isTSG_notONCOGENE, isONCOGENE, isTSG, sizeEffectE, sizeEffectM, pCombined, qCombined, isP_M, P_cutoff, isP_E, Q_cutoff] = computeCandidateDrivers(tableGenesNasserExpressed, tableGenes_pValues, sProperties, xTestName, yTestName, mutTypeName);
+        
         pM(isnan(pM)) = 1;
         pE(isnan(pE)) = 1;
         for iCutoffPM = 1:nCutoffPM
@@ -47,7 +50,7 @@ if (~exist(saveFileData, 'file'))
                 %
                 isCandidate = pE < cutoffPE & pM < cutoffPM;
                 matGencodeGeneTissue_isCandidate_pM_pE(tableGenesNasserExpressed.iGencode(isCandidate), iTissue, iCutoffPM, iCutoffPE) = true;
-                isCandidate = pE < cutoffPE & pM < cutoffPM & qCombined < cutoffQ;
+                isCandidate = pE < cutoffPE & pM < cutoffPM & qCombined < Q_cutoff;
                 matGencodeGeneTissue_isCandidate_pM_pE_FDR(tableGenesNasserExpressed.iGencode(isCandidate), iTissue, iCutoffPM, iCutoffPE) = true;
             end
         end

@@ -56,6 +56,6 @@ dim = [.007 .68 .01 .01]; str = 'd'; annotation('textbox',dim,'String',str, 'Fon
 dim = [.727 .68 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
 
 
-mySaveAs(fig, imagesPath, 'Fig3.png', false, true);
+mySaveAs(fig, imagesPath, 'Fig3', true, true);
 savefig([imagesPath, 'Fig3.fig']);
 
