@@ -33,3 +33,9 @@ data/genes/CGC_Census_allTue Aug 10 20_28_04 2021.txt
 data/genes/PCAWG_TableS1_compendium_mutational_drivers_formatted.xlsx
 data/genes/TableS3_panorama_driver_mutations_ICGC_samples.controlled.txt
 data/FunSeq2/annotatedPCAWG/intersectedB.*.motif.FunSeq2.bed.txt
+data/FunSeq2/annotatedPCAWG/intersectedC.*.motif.FunSeq2.context50bp.bed.txt
+ARCHIVE
+*.gtf.extended.txt
+*.gtf.txt
+data/genes/HousekeepingGenes.xlsx
+data/genes/Housekeeping_GenesHuman.csv
