@@ -1,103 +1,119 @@
-function plotFigure6(tableMutationGenePairs, imagesPath, sColours, tableTissues_data1)
-
-rng(1);
-tmp1 = tableMutationGenePairs(tableMutationGenePairs.isHighCADD & ~tableMutationGenePairs.isExcluded, :);
-
-nTissues = size(tableTissues_data1, 1);
-fontSize = 12;
-
-for iType = 1:2
-    if (iType == 1)
-        isCloserToAnotherGene = tmp1.isCloserToAnotherProteinCodingGene;
-        saveName = 'Fig7';
-    else
-        isCloserToAnotherGene = tmp1.isCloserToAnotherGene;
-        saveName = 'ExtDataFig3';
-    end
-    
-    fig = createMaximisedFigure(2, [0 0 20 15]);
-    axes('Position', [.22, .22, .68, .60]);
-    hold on;
-    xLimVal = [0-.7, nTissues+.7];
-
-
-    plot(xLimVal, log10(250)*[1,1], '--', 'Color', 0.5*[1,1,1]);
-    text(xLimVal(2)+.1, log10(250), '250 bp', 'Color', 0.5*[1,1,1], 'FontSize', fontSize);
-    plot(xLimVal, log10(20e3)*[1,1], '--', 'Color', 0.5*[1,1,1]);
-    text(xLimVal(2)+.1, log10(20e3), '20 kbp', 'Color', 0.5*[1,1,1], 'FontSize', fontSize);
-
-    
-    isOK = tmp1.iTissue>1 & ~isCloserToAnotherGene;
-    mySwarmchart(0*tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.closeMutation, (1+sColours.closeMutation)/2);
-    isOK = tmp1.iTissue>1 & isCloserToAnotherGene;
-    mySwarmchart(0*tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.distantMutation, (1+sColours.distantMutation)/2);
-
-    isOK = tmp1.iTissue>1 & ~isCloserToAnotherGene;
-    mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.closeMutation, (1+sColours.closeMutation)/2);
-    isOK = tmp1.iTissue>1 & isCloserToAnotherGene;
-    mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.distantMutation, (1+sColours.distantMutation)/2);
-
-    isOK = tmp1.iTissue==1 & ~isCloserToAnotherGene;
-    h2 = mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.closeMutation, (1+sColours.closeMutation)/2);
-    isOK = tmp1.iTissue==1 & isCloserToAnotherGene;
-    h3 = mySwarmchart(tmp1.iTissue(isOK), log10(tmp1.distance_thisGene(isOK)), sColours.distantMutation, (1+sColours.distantMutation)/2);
-
-    maxVal = 6.5; yGap = maxVal/30; ylim([0,maxVal]);
-    yVal1 = 1.5*yGap + maxVal;
-    yVal2 = 3.0*yGap + maxVal;
-    yVal3 = 4.5*yGap + maxVal;
-    yVal4 = 6.0*yGap + maxVal;
-    colourBasic = .5*[1,1,1];
-
-    for iTissue = 0:nTissues
-        if (iTissue == 0)
-            isOK = tmp1.iTissue>1;
-        else
-            isOK = tmp1.iTissue==iTissue;
-        end
-        ViolinGit(log10(tmp1.distance_thisGene(isOK)), iTissue, 'ViolinColor', sColours.distanceBackground, 'ViolinAlpha', 0.5, 'ShowData', false);
-
-        xVal = iTissue + .1;
-        text(xVal, yVal1, sprintf('%.1f', median(tmp1.distance_thisGene(isOK))/1e3), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-        %text(xVal, yVal1, sprintf('%.0f [%.0f-%.f]', median(tmp1.distance_thisGene(isOK))/1e3, quantile(tmp1.distance_thisGene(isOK), .25)/1e3, quantile(tmp1.distance_thisGene(isOK), .75)/1e3), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-        text(xVal, yVal2, sprintf('%.0f%%', 100*mean(tmp1.distance_thisGene(isOK)<=250)), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-        text(xVal, yVal3, sprintf('%.0f%%', 100*mean(tmp1.distance_thisGene(isOK)>20e3)), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-        text(xVal, yVal4, sprintf('%.0f%%', 100*mean(isCloserToAnotherGene(isOK))), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', sColours.distantMutation);
-    end
-    text(-1, yVal1, 'median distance (kbp)', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-    text(-1, yVal2, '\leq 250 bp', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-    text(-1, yVal3, '> 20 kbp', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', colourBasic);
-    text(-1, yVal4, 'different closest', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', sColours.distantMutation);
-
-
-    % text(xValues+.3, yVal+0*xValues, num2str(tableTissuesWithPancancer.nSamplesWGSandRNA, '%d'), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
-    % text(0, yVal, 'WGS+RNA', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
-    %
-    % yVal = 3*yGap + maxVal;
-    % text(xValues+.3, yVal+0*xValues, num2str(tableTissuesWithPancancer.nSamplesWGS, '%d'), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
-    % text(0, yVal, 'WGS', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
-
-
-
-
-    yTickVal = 0:1:7; yTickLabelVal = {'1 bp', '10 bp', '100 bp', '1 kbp', '10 kbp', '100 kbp', '1 Mbp', '10 Mbp'}; set(gca, 'YTick', yTickVal, 'yTickLabel', yTickLabelVal);
-    set(gca, 'XTick', 0:nTissues, 'XTickLabel', [{'Pan-cancer Solid'}; tableTissues_data1.tissuePrint], 'FontSize', fontSize)
-    xlim(xLimVal); box off;
-
-
-
-    %     hL = legend([h2, h3], {'This gene closest', 'Different gene closest'}, 'Location', 'SouthEast', 'FontSize', fontSize, 'EdgeColor', .8*[1,1,1]); %legend boxoff;
-    %     hL.Position(1) = hL.Position(1) - hL.Position(3)/4;
-    %     hL.Position(2) = hL.Position(2) + hL.Position(4)/2;
-    %     % hL.Position(3) = hL.Position(3)*2;
-    %     % hL.Position(4) = hL.Position(4)*1.2;
-
-    hL = legend([h2, h3], {'{\itG} is the closest gene to {\itM}', 'A different gene is the closest gene to {\itM}'}, 'Location', 'South', 'FontSize', fontSize, 'EdgeColor', .8*[1,1,1]); %legend boxoff;
-    %hL.Position(1) = hL.Position(1) - hL.Position(3)/4;
-    hL.Position(2) = hL.Position(2) - hL.Position(4)*4;
-
-
-    ylabel('Distance between gene {\itG} and mutation {\itM}'); % {'Distance between gene {\itG} and mutation {\itM}', 'of non-coding regulatory driver candidates'} 'Distance from high-CADD SNV to TSS'
-    mySaveAs(fig, imagesPath, saveName, true, true);
-    savefig([imagesPath, saveName, '.fig']);
+function plotFigure6(imagesPath, sColours, tableTissues_data1, dataSupTables, tableMutations_candidate)
+%% Here, we take the stringent QC together, and annotate the target genes accordingly, and then plot a list of target genes in each tissue and our confidence in them
+%%
+tmp = dataSupTables.tableGencodeGenesCandidates(:,{'geneSymbol', 'sizeEffectE', 'pE', 'sizeEffectM', 'pM', 'qCombined', 'tissuePrint', 'isDriver', 'isONCOGENE', 'isTSG', 'isUP', 'iTissue', 'literatureEvidenceOncogene', 'literatureEvidenceTSG'});
+tmp.abs_sizeEffectE = abs(tmp.sizeEffectE);
+tmp = sortrows(tmp,'abs_sizeEffectE','descend');
+tmp.literatureEvidence = max([tmp.literatureEvidenceOncogene, tmp.literatureEvidenceTSG], [], 2);
+%%
+fprintf('In fact, the absolute size effects are larger in blood (median %.1f) than in solid cancers (median %.1f), and the top %d targets with the largest size effects are also in blood (including MYC).\n', ...
+    median(tmp.abs_sizeEffectE(tmp.iTissue==1)), median(tmp.abs_sizeEffectE(tmp.iTissue>1)), find(tmp.iTissue>1, 1, 'first')-1);
+%%
+tmp2 = unique(tableMutations_candidate.candidateGenes(tableMutations_candidate.iTissue==1));
+tmp3 = tmp2(contains(tmp2, ' '));
+tmp = sortrows(tmp,'pE','ascend'); % qCombined
+lstGenesPotentialFalsePositives_group2_blood = [];
+for iRow = 1:length(tmp3)
+    lstGenes = strsplit(tmp3{iRow}, ' ');
+    tmp4 = tmp(ismember(tmp.geneSymbol, lstGenes),:)
+    tmp4.geneSymbol(tmp4.pE>tmp4.pE(1))
+    lstGenesPotentialFalsePositives_group2_blood = [lstGenesPotentialFalsePositives_group2_blood; tmp4.geneSymbol(tmp4.pE>tmp4.pE(1))];
 end
+lstGenesPotentialFalsePositives_group2_blood = unique(lstGenesPotentialFalsePositives_group2_blood);
+lstGenesPotentialFalsePositives_group1_blood = {'ZNF876P', 'WEE1', 'AICDA', 'BCAT1', 'C12orf77', 'PPM1F', 'TOP3B', 'PRAMENP'}; % computed in scriptBloodLymphomas.m
+%%
+fig = createMaximisedFigure(2); hold on;
+isOK = tmp.iTissue>1;
+yValues = tmp.abs_sizeEffectE(isOK); 
+xValues = tmp.literatureEvidence(isOK); xValues(xValues>2) = 2;
+labels = tmp.geneSymbol(isOK);
+boxchart(xValues, yValues);
+p = ranksum(yValues(xValues==0), yValues(xValues==2));
+yVal = 1.8;
+plot([0,2], yVal*[1,1], '.-k', 'LineWidth', 2);
+plot(0*[1,1], yVal + [-.02,0], '-k', 'LineWidth', 2);
+plot(2*[1,1], yVal + [-.02,0], '-k', 'LineWidth', 2);
+text(1, yVal, sprintf('{\\itp = %s}', getPValueAsText(p)), 'HorizontalAlignment', 'center', 'VerticalAlignment', 'bottom', 'FontSize', 16);
+set(gca, 'XTick', 0:2, 'XTickLabel', {'no evidence', 'evidence level 1', 'evidence level 2-4'}, 'FontSize', 16);
+yVal = 0.1;
+for iValue = [0,1,2]
+    text(iValue, yVal, sprintf('(%d genes)', sum(xValues==iValue)), 'HorizontalAlignment', 'center', 'FontSize', 14);
+end
+ylabel('Expression size effect');
+mySaveAs(fig, imagesPath, 'SupFig_expressionSizeEffect');
+
+cutoff_value = quantile(yValues(xValues==0), 1/3);
+%%
+tmp.potentialFalsePositive = 0*tmp.sizeEffectE;
+tmp.potentialFalsePositive(ismember(tmp.geneSymbol, [{'HCG15', 'CPOX', 'CLTC'}, lstGenesPotentialFalsePositives_group1_blood])) = 1; % Genes in flanking regions have also regulatory mutation count higher than expected by the background mutagenesis model.
+tmp.potentialFalsePositive(ismember(tmp.geneSymbol, [{'ZFP62', 'CCNB1IP1', 'ALOXE3'}, lstGenesPotentialFalsePositives_group2_blood'])) = 2; % Genes that share regulatory driver mutations (always the gene with the highest scoreE is kept).
+tmp.potentialFalsePositive(tmp.abs_sizeEffectE <= cutoff_value) = 3;
+tmp = sortrows(tmp,'geneSymbol','ascend'); % qCombined
+
+tmp(tmp.potentialFalsePositive==3 & tmp.iTissue==1, {'geneSymbol', 'tissuePrint'})
+%%
+tmp(tmp.potentialFalsePositive==3 & tmp.iTissue>1, {'geneSymbol', 'tissuePrint'})
+%%
+isOK = tmp.iTissue>1 & tmp.isUP & tmp.potentialFalsePositive >= 0;
+fprintf('Solid cancer driver-upregulated targets with oncogenic evidence: %.0f %% (%d/%d)\n', 100*mean(tmp.literatureEvidenceOncogene(isOK)>0), sum(tmp.literatureEvidenceOncogene(isOK)>0), sum(isOK));
+isOK = tmp.iTissue>1 & tmp.isUP & tmp.potentialFalsePositive == 0;
+fprintf('Solid cancer driver-upregulated targets with oncogenic evidence: %.0f %% (%d/%d)\n', 100*mean(tmp.literatureEvidenceOncogene(isOK)>0), sum(tmp.literatureEvidenceOncogene(isOK)>0), sum(isOK));
+% %% Solid - in the terms of the percentage of CDGs, the third type of filtering helps in driver-downregulated, but doesn't make a difference in driver-upregulated.
+% isOK = tmp.iTissue>1 & tmp.potentialFalsePositive >= 0;% & ~tmp.isUP;
+% fprintf('Solid cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
+% isOK = tmp.iTissue>1 & tmp.potentialFalsePositive == 0;% & ~tmp.isUP;
+% fprintf('Solid cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
+%% Blood - in the terms of the percentage of CDGs, the third type of filtering helps in driver-downregulated, but doesn't make a difference in driver-upregulated.
+isOK = tmp.iTissue==1 & tmp.potentialFalsePositive >= 0;% & ~tmp.isUP;
+fprintf('Blood cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
+isOK = tmp.iTissue==1 & tmp.potentialFalsePositive == 0;% & ~tmp.isUP;
+fprintf('Blood cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
+%%
+tmp(tmp.iTissue==1 & tmp.potentialFalsePositive>0 & tmp.isDriver,:)
+tmp(tmp.potentialFalsePositive>0 & tmp.iTissue==1, :)
+%% Fig 5
+nTissues = size(tableTissues_data1, 1);
+fontSize = 16;
+fig = createMaximisedFigure(3); axes('Position', [.02, .05, .95, .88]); hold on;
+for iDirection = 1:2
+    for iTissue = 2:nTissues
+        if (iDirection == 1)
+            lstGenes = find(tmp.iTissue == iTissue & tmp.isUP);
+            yVal = 0;
+        else
+            lstGenes = find(tmp.iTissue == iTissue & ~tmp.isUP);
+            yVal = 15.5;
+        end
+        text(iTissue, yVal, tableTissues_data1.tissuePrint{iTissue}, 'FontSize', fontSize);
+        for jGene = 1:length(lstGenes)
+            iGene = lstGenes(jGene);
+            if (tmp.literatureEvidenceOncogene(iGene)>2)
+                colour = sColours.ONCOGENE;
+            elseif (tmp.literatureEvidenceOncogene(iGene)>0)
+                colour = (1+sColours.ONCOGENE)/2;
+            elseif (tmp.literatureEvidenceTSG(iGene)>0)
+                colour = (1+sColours.TSG)/2;
+            else
+                colour = .5*[1,1,1];
+            end
+            text(iTissue, yVal + jGene, tmp.geneSymbol{iGene}, 'FontAngle', 'italic', 'Color', colour, 'FontSize', fontSize);
+            if (tmp.potentialFalsePositive(iGene)>0)
+                text(iTissue-.08, yVal + jGene, '?');
+            end
+        end
+    end
+end
+xlim([1.5, nTissues+.7]); ylim([0, 17]);
+text(1.5, 0, 'a', 'FontSize', 26);
+text(1.5, 15.5, 'b', 'FontSize', 26);
+% LEGEND
+xVal = 7; yVal = 11; yShift = .7;
+text(xVal, yVal, 'Oncogene (strong evidence)', 'Color', sColours.ONCOGENE, 'FontSize', fontSize); yVal= yVal + yShift;
+text(xVal, yVal, 'Oncogene (weak evidence)', 'Color', (1+sColours.ONCOGENE)/2, 'FontSize', fontSize); yVal= yVal + yShift;
+text(xVal, yVal, 'Tumour-suppressor gene', 'Color', (1+sColours.TSG)/2, 'FontSize', fontSize); yVal= yVal + yShift;
+text(xVal, yVal, '? = low confidence', 'FontSize', fontSize); yVal= yVal + .5; % possible false positive
+annotation('rectangle',[.73, .22, .26, .17]);
+%
+set(gca, 'YDir', 'reverse');
+axis off
+mySaveAs(fig, imagesPath, 'Fig5', true, true);
