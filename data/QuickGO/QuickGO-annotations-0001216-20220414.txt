@@ -1,0 +1,824 @@
+﻿GENE PRODUCT DB	GENE PRODUCT ID	SYMBOL	QUALIFIER	GO TERM	GO NAME	ECO ID	GO EVIDENCE CODE	REFERENCE	WITH/FROM	TAXON ID	ASSIGNED BY	ANNOTATION EXTENSION	GO ASPECT
+UniProtKB	A0A024QZ23	TFE3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:A2AEW1|ensembl:ENSMUSP00000076864	9606	Ensembl		F
+UniProtKB	A0A024R0P6	FOSB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P13346|ensembl:ENSMUSP00000003640	9606	Ensembl		F
+UniProtKB	A0A024R0W2	MEIS3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97368|ensembl:ENSMUSP00000002495	9606	Ensembl		F
+UniProtKB	A0A024R120	TFCP2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037599	9606	InterPro		F
+UniProtKB	A0A024R126	NR4A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P22829|ensembl:ENSRNOP00000010171	9606	Ensembl		F
+UniProtKB	A0A024R126	NR4A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P12813|ensembl:ENSMUSP00000155225	9606	Ensembl		F
+UniProtKB	A0A024R168	NR4A3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P51179|ensembl:ENSRNOP00000008302	9606	Ensembl		F
+UniProtKB	A0A024R1N6	SOX10	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O55170|ensembl:ENSRNOP00000015283	9606	Ensembl		F
+UniProtKB	A0A024R274	SMAD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97471|ensembl:ENSMUSP00000025393	9606	Ensembl		F
+UniProtKB	A0A024R2U8	AXUD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P59054|ensembl:ENSMUSP00000149214	9606	Ensembl		F
+UniProtKB	A0A024R3M5	FLI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P26323|ensembl:ENSMUSP00000016231	9606	Ensembl		F
+UniProtKB	A0A024R3T7	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042917	9606	InterPro		F
+UniProtKB	A0A024R3T7	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9WUI0|ensembl:ENSMUSP00000027778	9606	Ensembl		F
+UniProtKB	A0A024R3U6	SATB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q546B3|ensembl:ENSMUSP00000110057	9606	Ensembl		F
+UniProtKB	A0A024R405	ALS2CR8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8VHI4|ensembl:ENSMUSP00000141169	9606	Ensembl		F
+UniProtKB	A0A024R5Z3	SMAD3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8BUN5|ensembl:ENSMUSP00000034973	9606	Ensembl		F
+UniProtKB	A0A024R8P1	FOXJ1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61660|ensembl:ENSMUSP00000038351	9606	Ensembl		F
+UniProtKB	A0A024R8X1	hCG_1991559	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O54790|ensembl:ENSMUSP00000053899	9606	Ensembl		F
+UniProtKB	A0A024R974	ELF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q3UPW2|ensembl:ENSMUSP00000003135	9606	Ensembl		F
+UniProtKB	A0A024R9Q8	RBPSUH	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A0A024RBG7	NFYB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR027113	9606	InterPro		F
+UniProtKB	A0A024RBM7	PRDM4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q80V63|ensembl:ENSMUSP00000151931	9606	Ensembl		F
+UniProtKB	A0A024RD16	SRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JM73|ensembl:ENSMUSP00000015749	9606	Ensembl		F
+UniProtKB	A0A024RDU6	ELF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60775|ensembl:ENSMUSP00000046515	9606	Ensembl		F
+UniProtKB	A0A087WXV5	PAX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P09084|ensembl:ENSMUSP00000105594	9606	Ensembl		F
+UniProtKB	A0A087X185	RBPJL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A0A090N7T3	NEUROD6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P48986|ensembl:ENSMUSP00000047016	9606	Ensembl		F
+UniProtKB	A0A0A0MQU7	HNF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P15257|ensembl:ENSRNOP00000001565	9606	Ensembl		F
+UniProtKB	A0A0D9SEX9	GLIS1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8K1M4|ensembl:ENSMUSP00000035650	9606	Ensembl		F
+UniProtKB	A0A0S2Z383	NKX2-5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P42582|ensembl:ENSMUSP00000015723	9606	Ensembl		F
+UniProtKB	A0A0S2Z3C9	ETV6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97360|ensembl:ENSMUSP00000079818	9606	Ensembl		F
+UniProtKB	A0A0S2Z493	NEUROD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60867|ensembl:ENSMUSP00000040364	9606	Ensembl		F
+UniProtKB	A0A0S2Z4N0	MEF2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60929|ensembl:ENSMUSP00000117496	9606	Ensembl		F
+UniProtKB	A0A0S2Z4N5	TP63	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88898|ensembl:ENSMUSP00000110965	9606	Ensembl		F
+UniProtKB	A0A0S2Z595	FOSL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P10158|ensembl:ENSRNOP00000027891	9606	Ensembl		F
+UniProtKB	A0A0U3FYV6	SOX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:D4A543|ensembl:ENSRNOP00000016236	9606	Ensembl		F
+UniProtKB	A0A140VKG3	A0A140VKG3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9ESP5|ensembl:ENSMUSP00000153090	9606	Ensembl		F
+UniProtKB	A0A7I2PJA1	GLI2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q0VGT2|ensembl:ENSMUSP00000054837	9606	Ensembl		F
+UniProtKB	A0A7P0T947	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A0A7P0T9W9	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A0A7P0T9Y9	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A0A7P0TBJ4	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A0A7P0Z4N7	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	A1MJ41	PBX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P41778|ensembl:ENSMUSP00000135516	9606	Ensembl		F
+UniProtKB	A1PLF1	NHLH2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64221|ensembl:ENSMUSP00000143362	9606	Ensembl		F
+UniProtKB	A6NCS4	NKX2-6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:15649947		9606	BHF-UCL		F
+UniProtKB	A6NDR6	MEIS3P1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:104717|MGI:MGI:108519|MGI:MGI:108564|PANTHER:PTN000932623|UniProtKB:O14770	9606	GO_Central		F
+UniProtKB	A6NDX5	ZNF840P	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	A6NI15	MSGN1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JK54|ensembl:ENSMUSP00000055001	9606	Ensembl		F
+UniProtKB	A6NJ46	NKX6-3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:26314965		9606	ARUK-UCL	has_input(UniProtKB:Q16611)|has_input(UniProtKB:Q9BXH1)|has_input(UniProtKB:Q12983)|has_input(UniProtKB:Q53EL6)|has_input(UniProtKB:Q9NS71)	F
+UniProtKB	A6NJ46	NKX6-3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:26314965		9606	NTNU_SB	has_input(NCBI_Gene:56287)	F
+UniProtKB	A6NN14	ZNF729	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	A8K0S8	MEIS3P2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:104717|MGI:MGI:108519|MGI:MGI:108564|PANTHER:PTN000932623|UniProtKB:O14770	9606	GO_Central		F
+UniProtKB	A8MQ14	ZNF850	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	A8MXY4	ZNF99	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	B1AT47	GMEB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	B1AT47	GMEB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JL60|ensembl:ENSMUSP00000131331	9606	Ensembl		F
+UniProtKB	B2RCN8	B2RCN8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	B4DQS0	B4DQS0	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	B6ZGT9	NR2E1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64104|ensembl:ENSMUSP00000019938	9606	Ensembl		F
+UniProtKB	B7Z6K7	ZNF814	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	B7Z8D8	B7Z8D8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D0VY79	HIF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61221|ensembl:ENSMUSP00000021530	9606	Ensembl		F
+UniProtKB	D3GDV5	GCM2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039791	9606	InterPro		F
+UniProtKB	D6R927	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6R946	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6R9K5	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6R9X3	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RA45	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RAT2	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RB37	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RBQ8	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RCM1	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6REC2	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RF98	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	D6RIZ8	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	E0XEN6	FOXI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q922I5|ensembl:ENSMUSP00000058651	9606	Ensembl		F
+UniProtKB	F1D8N1	NR1H3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9Z0Y9|ensembl:ENSMUSP00000106988	9606	Ensembl		F
+UniProtKB	F1D8N6	NR4A2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q06219|ensembl:ENSMUSP00000028166	9606	Ensembl		F
+UniProtKB	F1D8R5	NR3B3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P62509|ensembl:ENSMUSP00000027906	9606	Ensembl		F
+UniProtKB	F1D8S0	NR6A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64249|ensembl:ENSMUSP00000108498	9606	Ensembl		F
+UniProtKB	F1D8T1	NR2A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P49698|ensembl:ENSMUSP00000018094	9606	Ensembl		F
+UniProtKB	F1DAL1	NR1H4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60641|ensembl:ENSMUSP00000100933	9606	Ensembl		F
+UniProtKB	F1T0D5	LHX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:A2ALD8|ensembl:ENSMUSP00000028302	9606	Ensembl		F
+UniProtKB	F1T0F8	PAX6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P63015|ensembl:ENSMUSP00000087870	9606	Ensembl		F
+UniProtKB	F8VSL3	NFYB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR027113	9606	InterPro		F
+UniProtKB	F8VWL0	TFCP2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037599	9606	InterPro		F
+UniProtKB	G0Z349	IRF6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97431|ensembl:ENSMUSP00000075839	9606	Ensembl		F
+UniProtKB	H0Y3W9	EBF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O08791|ensembl:ENSMUSP00000147829	9606	Ensembl		F
+UniProtKB	H0Y8R3	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	K7PPA8	TP53	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P02340|ensembl:ENSMUSP00000104298	9606	Ensembl		F
+UniProtKB	L8B7P7	ATL1-alpha	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q99PV8|ensembl:ENSMUSP00000068258	9606	Ensembl		F
+UniProtKB	O00287	RFXAP	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9118943		9606	GO_Central		F
+UniProtKB	O00287	RFXAP	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9806546		9606	GO_Central		F
+UniProtKB	O00321	ETV2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P41163|ensembl:ENSMUSP00000103782	9606	Ensembl		F
+UniProtKB	O00470	MEIS1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:104717|MGI:MGI:108519|MGI:MGI:108564|PANTHER:PTN000932623|UniProtKB:O14770	9606	GO_Central		F
+UniProtKB	O00470	MEIS1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60954|ensembl:ENSMUSP00000139219	9606	Ensembl		F
+UniProtKB	O00482	NR5A2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P45448|ensembl:ENSMUSP00000027649	9606	Ensembl		F
+UniProtKB	O00570	SOX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P53783|ensembl:ENSMUSP00000137203	9606	Ensembl		F
+UniProtKB	O00712	NFIB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19540848		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O00712	NFIB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97863|ensembl:ENSMUSP00000052863	9606	Ensembl		F
+UniProtKB	O00716	E2F3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7739537		9606	NTNU_SB		F
+UniProtKB	O00716	E2F3	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7739537		9606	NTNU_SB		F
+UniProtKB	O00716	E2F3	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:17062573		9606	UniProt		F
+UniProtKB	O14593	RFXANK	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9806546		9606	ARUK-UCL		F
+UniProtKB	O14627	CDX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21471217		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O14627	CDX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:21471217		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O14709	ZNF197	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	O14770	MEIS2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10764806		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O14770	MEIS2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:104717|MGI:MGI:108519|MGI:MGI:108564|PANTHER:PTN000932623|UniProtKB:O14770	9606	GO_Central		F
+UniProtKB	O14770	MEIS2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P97367	9606	UniProt		F
+UniProtKB	O14770	MEIS2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97367|ensembl:ENSMUSP00000028639	9606	Ensembl		F
+UniProtKB	O14813	PHOX2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:32094113		9606	MGI		F
+UniProtKB	O14813	PHOX2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62066|ensembl:ENSMUSP00000008090	9606	Ensembl		F
+UniProtKB	O14867	BACH1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97302|ensembl:ENSMUSP00000026703	9606	Ensembl		F
+UniProtKB	O14896	IRF6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97431|ensembl:ENSMUSP00000075839	9606	Ensembl		F
+UniProtKB	O14948	TFEC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q63302|ensembl:ENSRNOP00000073175	9606	Ensembl		F
+UniProtKB	O14948	TFEC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000304	TAS	PMID:9256061		9606	GO_Central		F
+UniProtKB	O15119	TBX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22130515		9606	BHF-UCL	occurs_in(UBERON:0000948),part_of(GO:0060317)	F
+UniProtKB	O15156	ZBTB7B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64321|ensembl:ENSMUSP00000103058	9606	Ensembl		F
+UniProtKB	O15162	PLSCR1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16091359		9606	UniProt		F
+UniProtKB	O15226	NKRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10562553		9606	NTNU_SB	has_input(NCBI_Gene:3456),occurs_at(SO:0001952)	F
+UniProtKB	O15266	SHOX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11751690		9606	NTNU_SB		F
+UniProtKB	O15266	SHOX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:11751690		9606	NTNU_SB		F
+UniProtKB	O15350	TP73	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:18421303	UniProtKB:P17208	9606	ParkinsonsUK-UCL	has_input(UniProtKB:P38936)|has_input(UniProtKB:Q07812)	F
+UniProtKB	O15350	TP73	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16343436		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O15353	FOXN1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61575|ensembl:ENSMUSP00000103929	9606	Ensembl		F
+UniProtKB	O15370	SOX12	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98360|MGI:MGI:98366|PANTHER:PTN002567758|UniProtKB:Q06945	9606	GO_Central		F
+UniProtKB	O15370	SOX12	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q04890|ensembl:ENSMUSP00000138293	9606	Ensembl		F
+UniProtKB	O15370	SOX12	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q04890	9606	UniProt		F
+UniProtKB	O15391	YY2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15087442		9606	NTNU_SB	has_input(NCBI_Gene:2353)|has_input(NCBI_Gene:7157)	F
+UniProtKB	O15516	CLOCK	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O08785|ensembl:ENSMUSP00000143939	9606	Ensembl		F
+UniProtKB	O15516	CLOCK	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O08785	9606	BHF-UCL		F
+UniProtKB	O15522	NKX2-8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12167706		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O15525	MAFG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O54790|ensembl:ENSMUSP00000053899	9606	Ensembl		F
+UniProtKB	O43186	CRX	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9XSK0	9606	ARUK-UCL	occurs_in(UBERON:0000966)	F
+UniProtKB	O43186	CRX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10625658		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O43248	HOXC11	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9582375		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O43313	ATMIN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q6P9S1	9606	ARUK-UCL		F
+UniProtKB	O43313	ATMIN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q6P9S1|ensembl:ENSMUSP00000104727	9606	Ensembl		F
+UniProtKB	O43345	ZNF208	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	O43474	KLF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60793|ensembl:ENSMUSP00000103245	9606	Ensembl		F
+UniProtKB	O43474	KLF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:21539536		9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	O43524	FOXO3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9WVH4|ensembl:ENSMUSP00000101141	9606	Ensembl		F
+UniProtKB	O43524	FOXO3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9WVH4	9606	BHF-UCL		F
+UniProtKB	O43680	TCF21	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35437|ensembl:ENSMUSP00000053178	9606	Ensembl		F
+UniProtKB	O43680	TCF21	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O35437	9606	UniProt		F
+UniProtKB	O43763	TLX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10869550		9606	NTNU_SB		F
+UniProtKB	O43812	DUX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9736770		9606	NTNU_SB		F
+UniProtKB	O43889	CREB3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:16940180		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O60281	ZNF292	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:D3ZXZ1|ensembl:ENSRNOP00000035972	9606	Ensembl		F
+UniProtKB	O60422	ONECUT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8K557|ensembl:ENSMUSP00000053288	9606	Ensembl		F
+UniProtKB	O60479	DLX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64205|ensembl:ENSMUSP00000090443	9606	Ensembl		F
+UniProtKB	O60481	ZIC3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17764085		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O60481	ZIC3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62521|ensembl:ENSMUSP00000085999	9606	Ensembl		F
+UniProtKB	O60548	FOXD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12621056		9606	NTNU_SB	has_input(NCBI_Gene:5573)	F
+UniProtKB	O60806	TBX19	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q99ME7|ensembl:ENSMUSP00000027859	9606	Ensembl		F
+UniProtKB	O75030	MITF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14737107		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O75030	MITF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:14737107		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O75030	MITF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q08874|ensembl:ENSMUSP00000044938	9606	Ensembl		F
+UniProtKB	O75030	MITF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20530484		9606	UniProt		F
+UniProtKB	O75132	ZBED4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q80WQ9	9606	ARUK-UCL		F
+UniProtKB	O75132	ZBED4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q80WQ9|ensembl:ENSMUSP00000035437	9606	Ensembl		F
+UniProtKB	O75360	PROP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97458|ensembl:ENSMUSP00000057231	9606	Ensembl		F
+UniProtKB	O75364	PITX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35160|ensembl:ENSMUSP00000026259	9606	Ensembl		F
+UniProtKB	O75444	MAF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P54843|ensembl:ENSMUSP00000067704	9606	Ensembl		F
+UniProtKB	O75469	NR1I2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11114890		9606	NTNU_SB		F
+UniProtKB	O75593	FOXH1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1347465|PANTHER:PTN000215618	9606	GO_Central		F
+UniProtKB	O75593	FOXH1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88621|ensembl:ENSMUSP00000036591	9606	Ensembl		F
+UniProtKB	O75603	GCM2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039791	9606	InterPro		F
+UniProtKB	O75840	KLF7	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9774444		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O94916	NFAT5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11485737		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O94993	SOX30	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CGW4|ensembl:ENSMUSP00000037519	9606	Ensembl		F
+UniProtKB	O94993	SOX30	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8CGW4	9606	UniProt		F
+UniProtKB	O94993-1	SOX30	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10359848		9606	GO_Central		F
+UniProtKB	O95096	NKX2-2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P42586	9606	UniProt		F
+UniProtKB	O95096	NKX2-2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P42586|ensembl:ENSMUSP00000069666	9606	Ensembl		F
+UniProtKB	O95231	VENTX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21325273		9606	NTNU_SB	has_input(NCBI_Gene:1029)	F
+UniProtKB	O95343	SIX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q62233	9606	UniProt		F
+UniProtKB	O95644	NFATC1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O88942	9606	BHF-UCL	occurs_at(SO:0000165)	F
+UniProtKB	O95718	ESRRB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q61539	9606	UniProt		F
+UniProtKB	O95948	ONECUT2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11478782		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	O96004	HAND1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64279|ensembl:ENSMUSP00000046999	9606	Ensembl		F
+UniProtKB	O96004	HAND1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q64279	9606	BHF-UCL		F
+UniProtKB	O96006	ZBED1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17220279		9606	NTNU_SB	has_input(NCBI_Gene:6194)|has_input(NCBI_Gene:6204)|has_input(NCBI_Gene:6206)	F
+UniProtKB	O96006	ZBED1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17220279		9606	NTNU_SB	has_input(NCBI_Gene:6194),occurs_at(SO:0001952)	F
+UniProtKB	P01100	FOS	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P01101|ensembl:ENSMUSP00000021674	9606	Ensembl		F
+UniProtKB	P01106	MYC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:27791094		9606	ARUK-UCL	occurs_in(CL:0000351),has_input(RNAcentral:URS00000A68B2_9606),occurs_in(UBERON:0000319),part_of(GO:1902895)	F
+UniProtKB	P01106	MYC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10723141		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P03372	ESR1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12047722		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P04150	NR3C1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16728402		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P04150	NR3C1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23823477		9606	UniProt	has_input(UniProtKB:Q8TAP4)	F
+UniProtKB	P04198	MYCN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17327229		9606	NTNU_SB	has_input(NCBI_Gene:5747),occurs_at(SO:0001952)	F
+UniProtKB	P04637	TP53	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22578566		9606	ARUK-UCL	has_input(RNAcentral:URS0000446722_9606),part_of(GO:1902895)	F
+UniProtKB	P04637	TP53	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17145718		9606	ARUK-UCL	has_input(UniProtKB:Q07812)	F
+UniProtKB	P04637	TP53	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P02340|ensembl:ENSMUSP00000104298	9606	Ensembl		F
+UniProtKB	P04637	TP53	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17146433		9606	BHF-UCL	has_input(UniProtKB:Q9H4X1),occurs_at(SO:0001952)	F
+UniProtKB	P04637	TP53	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12609999		9606	GO_Central	has_input(UniProtKB:P38936)|occurs_in(GO:0000785)	F
+UniProtKB	P05412	JUN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:2833704		9606	ARUK-UCL		F
+UniProtKB	P05412	JUN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19861239		9606	BHF-UCL		F
+UniProtKB	P05412	JUN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:19962668		9606	BHF-UCL	has_input(RNAcentral:URS000077BBBB_9606),occurs_at(SO:0001952)	F
+UniProtKB	P05412	JUN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:2833704		9606	GO_Central		F
+UniProtKB	P05549	TFAP2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20808827		9606	UniProt		F
+UniProtKB	P05549	TFAP2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11278550		9606	UniProt	has_input(UniProtKB:P21860)	F
+UniProtKB	P06401	PGR	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17785366		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P08047	SP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14701757		9606	ARUK-UCL	has_input(UniProtKB:P56817)	F
+UniProtKB	P08047	SP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:2833704		9606	ARUK-UCL		F
+UniProtKB	P08047	SP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21659522		9606	BHF-UCL	has_input(UniProtKB:P32929),occurs_in(CL:0002539),regulates(GO:0070814),part_of(GO:0051145),occurs_at(SO:0001952)	F
+UniProtKB	P08047	SP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16691198		9606	CAFA	occurs_at(SO:0001952)	F
+UniProtKB	P08048	ZFY	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:32406922	UniProtKB:P17010	9606	ARUK-UCL		F
+UniProtKB	P08151	GLI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000303	NAS	PMID:18263616		9606	BHF-UCL		F
+UniProtKB	P08651	NFIC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1524678		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P09016	HOXD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1756725		9606	NTNU_SB	has_input(NCBI_Gene:3235)	F
+UniProtKB	P09016	HOXD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:1756725		9606	NTNU_SB	has_input(NCBI_Gene:3235)	F
+UniProtKB	P09017	HOXC4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15252056		9606	NTNU_SB	has_input(NCBI_Gene:3492),occurs_at(SO:0000165)	F
+UniProtKB	P09067	HOXB5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P09079|ensembl:ENSMUSP00000035423	9606	Ensembl		F
+UniProtKB	P09629	HOXB7	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8756643		9606	NTNU_SB	has_input(NCBI_Gene:2247),occurs_at(SO:0001952)	F
+UniProtKB	P10242	MYB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10233885		9606	NTNU_SB	has_input(NCBI_Gene:1991)	F
+UniProtKB	P10243	MYBL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7987850		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P10243	MYBL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P51960	9606	UniProt		F
+UniProtKB	P10244	MYBL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10770937		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P10275	AR	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16728402		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P10914	IRF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:32385160		9606	ARUK-UCL		F
+UniProtKB	P10914	IRF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:15509808		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P11161	EGR2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12687019		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P11308	ERG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:18195090		9606	NTNU_SB	has_input(NCBI_Gene:1003)	F
+UniProtKB	P11831	SRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:23764775	UniProtKB:Q969V6	9606	ARUK-UCL	has_input(RNAcentral:URS0000554A4F_9606),part_of(GO:1902895)	F
+UniProtKB	P11831	SRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JM73|ensembl:ENSMUSP00000015749	9606	Ensembl		F
+UniProtKB	P11831	SRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9JM73	9606	BHF-UCL		F
+UniProtKB	P11831	SRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20808827		9606	UniProt		F
+UniProtKB	P13349	MYF5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P24699|ensembl:ENSMUSP00000000445	9606	Ensembl		F
+UniProtKB	P13378	HOXD8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1756725		9606	NTNU_SB		F
+UniProtKB	P14316	IRF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:9540062		9606	NTNU_SB		F
+UniProtKB	P14651	HOXB3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9556594		9606	NTNU_SB		F
+UniProtKB	P14652	HOXB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15289435		9606	NTNU_SB	has_input(NCBI_Gene:18935)	F
+UniProtKB	P14653	HOXB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9556594		9606	NTNU_SB	has_input(NCBI_Gene:18424)	F
+UniProtKB	P14653	HOXB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9556594		9606	NTNU_SB	has_input(NCBI_Gene:18424),occurs_at(SO:0001952)	F
+UniProtKB	P14921	ETS1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15001984		9606	NTNU_SB	has_input(NCBI_Gene:3371)	F
+UniProtKB	P15172	MYOD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11076940		9606	NTNU_SB		F
+UniProtKB	P15172	MYOD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P10085|ensembl:ENSMUSP00000072330	9606	Ensembl		F
+UniProtKB	P15173	MYOG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11076940		9606	NTNU_SB		F
+UniProtKB	P15173	MYOG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P12979|ensembl:ENSMUSP00000027730	9606	Ensembl		F
+UniProtKB	P15173	MYOG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000304	TAS	PMID:19783823		9606	BHF-UCL		F
+UniProtKB	P15336	ATF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:18671972		9606	ARUK-UCL		F
+UniProtKB	P15336	ATF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16300731		9606	NTNU_SB	has_input(NCBI_Gene:896)	F
+UniProtKB	P15336	ATF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P16951|ensembl:ENSMUSP00000058521	9606	Ensembl		F
+UniProtKB	P15336	ATF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19861239		9606	BHF-UCL		F
+UniProtKB	P15407	FOSL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P10158|ensembl:ENSRNOP00000027891	9606	Ensembl		F
+UniProtKB	P15408	FOSL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:13679379		9606	NTNU_SB		F
+UniProtKB	P15884	TCF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:8978694	UniProtKB:Q60722	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	P15923	TCF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10652346		9606	ARUK-UCL		F
+UniProtKB	P15923	TCF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10775504		9606	GO_Central		F
+UniProtKB	P15923	TCF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14752053		9606	GO_Central		F
+UniProtKB	P15923-1	TCF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15509787		9606	BHF-UCL		F
+UniProtKB	P15976	GATA1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P17679|ensembl:ENSMUSP00000033502	9606	Ensembl		F
+UniProtKB	P15976	GATA1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15920471		9606	BHF-UCL		F
+UniProtKB	P16220	CREB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q01147	9606	ARUK-UCL	has_input(UniProtKB:Q15911),part_of(GO:0071300)	F
+UniProtKB	P16220	CREB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q01147|ensembl:ENSMUSP00000059973	9606	Ensembl		F
+UniProtKB	P16220	CREB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19861239		9606	BHF-UCL		F
+UniProtKB	P17010	ZFX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:24831540		9606	ARUK-UCL		F
+UniProtKB	P17028	ZNF24	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11532988		9606	NTNU_SB		F
+UniProtKB	P17038	ZNF43	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	P17275	JUNB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P09450|ensembl:ENSMUSP00000064680	9606	Ensembl		F
+UniProtKB	P17535	JUND	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P15066|ensembl:ENSMUSP00000092901	9606	Ensembl		F
+UniProtKB	P17535	JUND	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P52909|ensembl:ENSRNOP00000026470	9606	Ensembl		F
+UniProtKB	P17676	CEBPB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P28033|ensembl:ENSMUSP00000069850	9606	Ensembl		F
+UniProtKB	P17676	CEBPB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P21272|ensembl:ENSRNOP00000071427	9606	Ensembl		F
+UniProtKB	P17947	SPI1	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:20139074		9606	ARUK-UCL	has_input(UniProtKB:Q8WYK2)	F
+UniProtKB	P17947	SPI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P17433|ensembl:ENSMUSP00000002180	9606	Ensembl		F
+UniProtKB	P18146	EGR1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19307576		9606	ARUK-UCL	has_input(RNAcentral:URS000039E1E1_9606),occurs_in(CL:0000084)	F
+UniProtKB	P18146	EGR1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P08046|ensembl:ENSMUSP00000069616	9606	Ensembl		F
+UniProtKB	P18846	ATF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1655749		9606	NTNU_SB		F
+UniProtKB	P18847	ATF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:18308734	UniProtKB:P29596	9606	ARUK-UCL	has_input(UniProtKB:D3ZDH4),occurs_in(CL:0000115)	F
+UniProtKB	P18847	ATF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16300731		9606	NTNU_SB	has_input(NCBI_Gene:896)	F
+UniProtKB	P18847	ATF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P29596|ensembl:ENSRNOP00000005085	9606	Ensembl		F
+UniProtKB	P18848	ATF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:88096|PANTHER:PTN000315883|PomBase:SPAC25G10.03|UniProtKB:Q9Y2D1	9606	GO_Central		F
+UniProtKB	P18848	ATF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q06507|ensembl:ENSMUSP00000105234	9606	Ensembl		F
+UniProtKB	P18850	ATF6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14973138		9606	NTNU_SB	has_input(NCBI_Gene:3309)	F
+UniProtKB	P19419	ELK1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12750007		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P19532	TFE3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:A2AEW1|ensembl:ENSMUSP00000076864	9606	Ensembl		F
+UniProtKB	P19544	WT1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23042785		9606	ARUK-UCL	has_input(UniProtKB:Q9Y6K1)	F
+UniProtKB	P19544	WT1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P22561	9606	UniProt		F
+UniProtKB	P19838	NFKB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1406630		9606	NTNU_SB	occurs_at(SO:0000165)	F
+UniProtKB	P19838:PRO_0000030311	NFKB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23811396		9606	ARUK-UCL	part_of(GO:0045944),has_input(UniProtKB:P29475)	F
+UniProtKB	P20265	POU3F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P31360|ensembl:ENSMUSP00000136147	9606	Ensembl		F
+UniProtKB	P20719	HOXA5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10879542		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P20823	HNF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P15257	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	P22736	NR4A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P22829	9606	UniProt		F
+UniProtKB	P22736	NR4A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P22829|ensembl:ENSRNOP00000010171	9606	Ensembl		F
+UniProtKB	P22736	NR4A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P12813|ensembl:ENSMUSP00000155225	9606	Ensembl		F
+UniProtKB	P23409	MYF6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P15375|ensembl:ENSMUSP00000047529	9606	Ensembl		F
+UniProtKB	P23769	GATA2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O09100|ensembl:ENSMUSP00000015197	9606	Ensembl		F
+UniProtKB	P23771	GATA3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:2017177		9606	ARUK-UCL		F
+UniProtKB	P23771	GATA3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:2017177		9606	MGI		F
+UniProtKB	P23771	GATA3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P23772|ensembl:ENSMUSP00000100041	9606	Ensembl		F
+UniProtKB	P25208	NFYB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:11306579	UniProtKB:Q03701	9606	ARUK-UCL		F
+UniProtKB	P25208	NFYB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR027113	9606	InterPro		F
+UniProtKB	P25490	YY1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:30241939		9606	BHF-UCL	occurs_in(CL:0002129),has_input(RNAcentral:URS0000759CF4_9606)	F
+UniProtKB	P25490	YY1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:30241939		9606	BHF-UCL	has_input(UniProtKB:Q13936),occurs_in(CL:0002129)	F
+UniProtKB	P26367	PAX6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P63015|ensembl:ENSMUSP00000087870	9606	Ensembl		F
+UniProtKB	P28069	POU1F1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P10037|ensembl:ENSRNOP00000000905	9606	Ensembl		F
+UniProtKB	P28324	ELK4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:20145255		9606	NTNU_SB	has_input(NCBI_Gene:51141)	F
+UniProtKB	P28358	HOXD10	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P28359|ensembl:ENSMUSP00000062412	9606	Ensembl		F
+UniProtKB	P28360	MSX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P13297|ensembl:ENSMUSP00000058354	9606	Ensembl		F
+UniProtKB	P28698	MZF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7579328		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P28702	RXRB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12767074		9606	NTNU_SB		F
+UniProtKB	P31249	HOXD3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14610084		9606	NTNU_SB	has_input(NCBI_Gene:3690)	F
+UniProtKB	P31260	HOXA10	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21471217		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P31268	HOXA7	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11435435		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P31271	HOXA13	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62424|ensembl:ENSMUSP00000125221	9606	Ensembl		F
+UniProtKB	P31276	HOXC13	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P50207|ensembl:ENSMUSP00000001700	9606	Ensembl		F
+UniProtKB	P31314	TLX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9QX99|ensembl:ENSMUSP00000026236	9606	Ensembl		F
+UniProtKB	P32242	OTX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:18849347		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P32243	OTX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12559959		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P32243	OTX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20530484		9606	UniProt		F
+UniProtKB	P32519	ELF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8756667		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P32519	ELF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60775|ensembl:ENSMUSP00000046515	9606	Ensembl		F
+UniProtKB	P35453	HOXD13	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:24789103		9606	UniProt		F
+UniProtKB	P35453	HOXD13	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70217|ensembl:ENSMUSP00000001872	9606	Ensembl		F
+UniProtKB	P35638	DDIT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22065586		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P35638	DDIT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002703959|UniProtKB:P35638	9606	GO_Central		F
+UniProtKB	P35713	SOX18	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22292085		9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	P35716	SOX11	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98359|PANTHER:PTN002567778|RGD:69351	9606	GO_Central		F
+UniProtKB	P35716	SOX11	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q7M6Y2|ensembl:ENSMUSP00000078070	9606	Ensembl		F
+UniProtKB	P35716	SOX11	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P0C1G9|ensembl:ENSRNOP00000040127	9606	Ensembl		F
+UniProtKB	P35716	SOX11	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q7M6Y2	9606	UniProt		F
+UniProtKB	P36508	ZNF76	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10893243		9606	NTNU_SB	has_input(NCBI_Gene:21454)	F
+UniProtKB	P36956	SREBF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:31501273		9606	ARUK-UCL	occurs_in(CL:0000540),part_of(GO:1902895),has_input(RNAcentral:URS0000591950_9606)	F
+UniProtKB	P36956	SREBF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:31501273		9606	ARUK-UCL	occurs_in(CL:0000540),has_input(UniProtKB:P61978)	F
+UniProtKB	P36956	SREBF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P56720|ensembl:ENSRNOP00000050057	9606	Ensembl		F
+UniProtKB	P36956-3	SREBF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:24296663		9606	BHF-UCL	occurs_in(CL:0000182),has_input(RNAcentral:URS000075D261_9606),occurs_at(SO:0001952)	F
+UniProtKB	P40424	PBX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P41778|ensembl:ENSMUSP00000135516	9606	Ensembl		F
+UniProtKB	P40425	PBX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19356220		9606	NTNU_SB	has_input(NCBI_Gene:269523)	F
+UniProtKB	P40426	PBX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35317|ensembl:ENSMUSP00000045281	9606	Ensembl		F
+UniProtKB	P40763	STAT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:31886314	RNAcentral:URS00004E0808_9606,UniProtKB:P05231	9606	ARUK-UCL	has_input(UniProtKB:P01584),occurs_in(CL:2000001)	F
+UniProtKB	P40763	STAT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:31886314	RNAcentral:URS00004E0808_9606,UniProtKB:P05231	9606	ARUK-UCL	has_input(UniProtKB:P01375),occurs_in(CL:2000001)	F
+UniProtKB	P40763	STAT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:31886314	RNAcentral:URS00004E0808_9606,UniProtKB:P05231	9606	ARUK-UCL	has_input(UniProtKB:P10145),occurs_in(CL:2000001)	F
+UniProtKB	P40763	STAT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:31886314	RNAcentral:URS00004E0808_9606,UniProtKB:P05231	9606	ARUK-UCL	has_input(UniProtKB:P22301),occurs_in(CL:2000001)	F
+UniProtKB	P40763	STAT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16835372		9606	BHF-UCL	has_input(UniProtKB:P81172),occurs_at(SO:0001952)	F
+UniProtKB	P40763	STAT3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:16946298		9606	BHF-UCL	occurs_in(UBERON:0002107),has_input(UniProtKB:P81172),occurs_at(SO:0001952)	F
+UniProtKB	P41161	ETV5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:15857832		9606	NTNU_SB		F
+UniProtKB	P41212	ETV6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97360|ensembl:ENSMUSP00000079818	9606	Ensembl		F
+UniProtKB	P41235	HNF4A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P49698|ensembl:ENSMUSP00000018094	9606	Ensembl		F
+UniProtKB	P41235	HNF4A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P22449	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	P41970	ELK3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12788937		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P42226	STAT6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8810328		9606	NTNU_SB	has_input(NCBI_Gene:3659)	F
+UniProtKB	P43268	ETV4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:24983502		9606	NTNU_SB	has_input(NCBI_Gene:5743)	F
+UniProtKB	P43354	NR4A2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q06219	9606	UniProt		F
+UniProtKB	P43354	NR4A2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q06219|ensembl:ENSMUSP00000028166	9606	Ensembl		F
+UniProtKB	P43694	GATA4	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:29325903		9606	BHF-UCL	has_input(UniProtKB:P01160)|has_input(UniProtKB:P29474)	F
+UniProtKB	P43694	GATA4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:21330551	UniProtKB:P97471	9606	BHF-UCL		F
+UniProtKB	P43694	GATA4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21220346		9606	GO_Central		F
+UniProtKB	P47902	CDX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15774940		9606	NTNU_SB	occurs_at(SO:0000165)	F
+UniProtKB	P48378	RFX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P48379|ensembl:ENSMUSP00000002444	9606	Ensembl		F
+UniProtKB	P48382	RFX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:9806546	UniProtKB:O14593,UniProtKB:P48382	9606	ARUK-UCL		F
+UniProtKB	P48382	RFX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10586057		9606	NTNU_SB	has_input(NCBI_Gene:3122)	F
+UniProtKB	P48431	SOX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:D4A543|ensembl:ENSRNOP00000016236	9606	Ensembl		F
+UniProtKB	P48436	SOX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:31194875		9606	UniProt		F
+UniProtKB	P48436	SOX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q04887|ensembl:ENSMUSP00000000579	9606	Ensembl		F
+UniProtKB	P48436	SOX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:F1LYL9|ensembl:ENSRNOP00000003511	9606	Ensembl		F
+UniProtKB	P48436	SOX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20530484		9606	UniProt		F
+UniProtKB	P48436	SOX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21367821		9606	UniProt		F
+UniProtKB	P48436	SOX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20484372		9606	UniProt		F
+UniProtKB	P49116	NR2C2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10644740		9606	NTNU_SB	has_input(NCBI_Gene:3973)	F
+UniProtKB	P49116	NR2C2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9556573		9606	NTNU_SB		F
+UniProtKB	P49116	NR2C2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10644740		9606	NTNU_SB	has_input(NCBI_Gene:3973),occurs_at(SO:0001952)	F
+UniProtKB	P49639	HOXA1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15665309		9606	NTNU_SB	has_input(NCBI_Gene:595)	F
+UniProtKB	P49715	CEBPA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P53566	9606	UniProt	has_input(UniProtKB:Q60994)	F
+UniProtKB	P49715	CEBPA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P53566|ensembl:ENSMUSP00000096129	9606	Ensembl		F
+UniProtKB	P49715	CEBPA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:16946298		9606	BHF-UCL	occurs_in(UBERON:0002107),has_input(UniProtKB:P81172)	F
+UniProtKB	P49716	CEBPD	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q00322|ensembl:ENSMUSP00000148145	9606	Ensembl		F
+UniProtKB	P50221	MEOX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P32442|ensembl:ENSMUSP00000051158	9606	Ensembl		F
+UniProtKB	P50222	MEOX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17074759		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P50222	MEOX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:17074759		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P50458	LHX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9Z0S2|ensembl:ENSMUSP00000000253	9606	Ensembl		F
+UniProtKB	P50549	ETV1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12750007		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P51692	STAT5B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:29844444		9606	UniProt		F
+UniProtKB	P51692	STAT5B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P42232|ensembl:ENSMUSP00000102981	9606	Ensembl		F
+UniProtKB	P52747	ZNF143	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10893243		9606	NTNU_SB	has_input(NCBI_Gene:21454),occurs_at(SO:0001952)	F
+UniProtKB	P52951	GBX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P48031|ensembl:ENSMUSP00000048508	9606	Ensembl		F
+UniProtKB	P52952	NKX2-5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:15649947		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P52952	NKX2-5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P42582|ensembl:ENSMUSP00000015723	9606	Ensembl		F
+UniProtKB	P52952	NKX2-5	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:29325903		9606	BHF-UCL	has_input(UniProtKB:P29474)	F
+UniProtKB	P52952	NKX2-5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19578358		9606	BHF-UCL	has_input(RNAcentral:URS00004F4657_9606),has_input(RNAcentral:URS00000D864F_9606)	F
+UniProtKB	P53539	FOSB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P13346|ensembl:ENSMUSP00000003640	9606	Ensembl		F
+UniProtKB	P53567	CEBPG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15833715		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P54821	PRRX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9334314		9606	ARUK-UCL		F
+UniProtKB	P54821	PRRX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P63013|ensembl:ENSMUSP00000027878	9606	Ensembl		F
+UniProtKB	P54845	NRL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8552602		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P54845	NRL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:17335001		9606	GO_Central		F
+UniProtKB	P55055	NR1H2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9013544		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	P55055	NR1H2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62755|ensembl:ENSRNOP00000026862	9606	Ensembl		F
+UniProtKB	P55317	FOXA1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P23512	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	P55771	PAX9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P47242|ensembl:ENSMUSP00000117928	9606	Ensembl		F
+UniProtKB	P56178	DLX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70396|ensembl:ENSMUSP00000052559	9606	Ensembl		F
+UniProtKB	P56178	DLX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P70396	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	P56693	SOX10	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O55170|ensembl:ENSRNOP00000015283	9606	Ensembl		F
+UniProtKB	P56693	SOX10	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000304	TAS	PMID:9722528		9606	GO_Central		F
+UniProtKB	P56693	SOX10	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O55170	9606	UniProt		F
+UniProtKB	P57071	PRDM15	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	P58012	FOXL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88470|ensembl:ENSMUSP00000053297	9606	Ensembl		F
+UniProtKB	P59923	ZNF445	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	P61296	HAND2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61039|ensembl:ENSMUSP00000044983	9606	Ensembl		F
+UniProtKB	P61296	HAND2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q61039	9606	BHF-UCL		F
+UniProtKB	P61296	HAND2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15486975		9606	UniProt		F
+UniProtKB	P61371	ISL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P61374|ensembl:ENSRNOP00000017305	9606	Ensembl		F
+UniProtKB	P61371	ISL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P61372|ensembl:ENSMUSP00000044879	9606	Ensembl		F
+UniProtKB	P62508	ESRRG	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P62509|ensembl:ENSMUSP00000027906	9606	Ensembl		F
+UniProtKB	P78337	PITX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70314|ensembl:ENSMUSP00000021968	9606	Ensembl		F
+UniProtKB	P78347	GTF2I	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9334314		9606	ARUK-UCL		F
+UniProtKB	P78412	IRX6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1927642|PANTHER:PTN004243646	9606	GO_Central		F
+UniProtKB	P78415	IRX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P81067|ensembl:ENSMUSP00000091002	9606	Ensembl		F
+UniProtKB	P78415	IRX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:21825130	UniProtKB:P81067	9606	BHF-UCL	occurs_in(UBERON:0002354),has_input(UniProtKB:P36382),part_of(GO:1903598)	F
+UniProtKB	P78545	ELF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q3UPW2|ensembl:ENSMUSP00000003135	9606	Ensembl		F
+UniProtKB	P78545	ELF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9234700		9606	GO_Central	has_input(UniProtKB:P35326)	F
+UniProtKB	P84022	SMAD3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:25605017		9606	ARUK-UCL	part_of(GO:1902893)	F
+UniProtKB	P84022	SMAD3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:24964035	UniProtKB:Q8BUN5	9606	ARUK-UCL	has_input(UniProtKB:Q13526)	F
+UniProtKB	P84022	SMAD3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8BUN5|ensembl:ENSMUSP00000034973	9606	Ensembl		F
+UniProtKB	P84022	SMAD3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:26311719		9606	BHF-UCL	occurs_in(CL:0002591),part_of(GO:0071560),has_input(RNAcentral:URS00000D864F_9606),has_input(RNAcentral:URS00004F4657_9606),occurs_at(SO:0001952)	F
+UniProtKB	P98177	FOXO4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11689711		9606	NTNU_SB	has_input(NCBI_Gene:3484)	F
+UniProtKB	Q00653	NFKB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12835724		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q01094	E2F1	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:28992046		9606	UniProt		F
+UniProtKB	Q01094	E2F1	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:17062573		9606	UniProt		F
+UniProtKB	Q01167	FOXK2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9065434		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q01196	RUNX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9199349		9606	NTNU_SB		F
+UniProtKB	Q01196	RUNX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:9199349		9606	NTNU_SB		F
+UniProtKB	Q01543	FLI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P26323|ensembl:ENSMUSP00000016231	9606	Ensembl		F
+UniProtKB	Q01664	TFAP4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:2833704		9606	ARUK-UCL		F
+UniProtKB	Q01664	TFAP4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JIZ5|ensembl:ENSMUSP00000005862	9606	Ensembl		F
+UniProtKB	Q01851	POU4F1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:18421303	UniProtKB:P17208	9606	ARUK-UCL	has_input(UniProtKB:P38936)	F
+UniProtKB	Q01851	POU4F1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P17208|ensembl:ENSMUSP00000060798	9606	Ensembl		F
+UniProtKB	Q01851	POU4F1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P17208	9606	GO_Central		F
+UniProtKB	Q01892	SPIB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:10196196		9606	NTNU_SB	has_input(NCBI_Gene:111519),occurs_at(SO:0000165)	F
+UniProtKB	Q01954	BNC1	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:11152639		9606	ARUK-UCL	part_of(GO:0045943)	F
+UniProtKB	Q02078	MEF2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7760790		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q02078	MEF2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60929|ensembl:ENSMUSP00000117496	9606	Ensembl		F
+UniProtKB	Q02078	MEF2A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15466416		9606	BHF-UCL		F
+UniProtKB	Q02080	MEF2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7760790		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q02548	PAX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q02650|ensembl:ENSMUSP00000014174	9606	Ensembl		F
+UniProtKB	Q02575	NHLH1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12878195		9606	NTNU_SB		F
+UniProtKB	Q02577	NHLH2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64221|ensembl:ENSMUSP00000143362	9606	Ensembl		F
+UniProtKB	Q03014	HHEX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:20028982		9606	GO_Central		F
+UniProtKB	Q03112	MECOM	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q03933	HSF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10561509		9606	NTNU_SB		F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:26435691		9606	ARUK-UCL	has_input(UniProtKB:Q9UPY3)	F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23811396		9606	ARUK-UCL	part_of(GO:0045944),has_input(UniProtKB:P29475)	F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000316	IGI	PMID:21806946	UniProtKB:P30990	9606	ARUK-UCL	part_of(GO:1902895),part_of(GO:0007218),has_input(RNAcentral:URS0000338542_9606)	F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:21329555	UniProtKB:Q04207	9606	ARUK-UCL	has_input(UniProtKB:P56817)	F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17350185		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1406630		9606	NTNU_SB	occurs_at(SO:0000165)	F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q04207|ensembl:ENSMUSP00000025867	9606	Ensembl		F
+UniProtKB	Q04206	RELA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:26268439		9606	BHF-UCL	occurs_in(CL:0000071),has_input(RNAcentral:URS00006588D4_9606),occurs_at(SO:0001952)	F
+UniProtKB	Q04864	REL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1406630		9606	NTNU_SB	occurs_at(SO:0000165)	F
+UniProtKB	Q05215	EGR4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12560487		9606	NTNU_SB	has_input(NCBI_Gene:7124)	F
+UniProtKB	Q05481	ZNF91	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q05516	ZBTB16	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q06330	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	Q06330	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:18663143		9606	MGI		F
+UniProtKB	Q06330	RBPJ	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P31266|ensembl:ENSMUSP00000040694	9606	Ensembl		F
+UniProtKB	Q06413	MEF2C	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15486975		9606	UniProt		F
+UniProtKB	Q06546	GABPA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12750007		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q06546	GABPA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22306510		9606	BHF-UCL		F
+UniProtKB	Q06710	PAX8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P51974|ensembl:ENSRNOP00000033966	9606	Ensembl		F
+UniProtKB	Q06730	ZNF33A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q06732	ZNF33B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q06889	EGR3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P43300|ensembl:ENSMUSP00000153491	9606	Ensembl		F
+UniProtKB	Q06945	SOX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98360|MGI:MGI:98366|PANTHER:PTN002567758|UniProtKB:Q06945	9606	GO_Central		F
+UniProtKB	Q06945	SOX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19147588		9606	UniProt		F
+UniProtKB	Q06945	SOX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q06831	9606	UniProt		F
+UniProtKB	Q07687	DLX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P40764|ensembl:ENSMUSP00000024159	9606	Ensembl		F
+UniProtKB	Q07869	PPARA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9748239		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q10586	DBP	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20093779		9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q10587	TEF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P41224|ensembl:ENSRNOP00000026258	9606	Ensembl		F
+UniProtKB	Q12778	FOXO1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17024043		9606	UniProt		F
+UniProtKB	Q12778	FOXO1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9R1E0	9606	UniProt		F
+UniProtKB	Q12778	FOXO1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9R1E0|ensembl:ENSMUSP00000055308	9606	Ensembl		F
+UniProtKB	Q12800	TFCP2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98509|PANTHER:PTN000112980|UniProtKB:Q6ISB3|UniProtKB:Q8TE85|UniProtKB:Q9NZI5|UniProtKB:Q9NZI7	9606	GO_Central		F
+UniProtKB	Q12800	TFCP2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037599	9606	InterPro		F
+UniProtKB	Q12837	POU4F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17637757		9606	ARUK-UCL	occurs_in(UBERON:0000948),has_input(UniProtKB:P24385)	F
+UniProtKB	Q12837	POU4F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:17145718	UniProtKB:Q63934	9606	ARUK-UCL	has_input(UniProtKB:Q07812)	F
+UniProtKB	Q12837	POU4F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17637757		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q12837	POU4F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q63934-2	9606	UniProt		F
+UniProtKB	Q12837	POU4F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q63934|ensembl:ENSMUSP00000034115	9606	Ensembl		F
+UniProtKB	Q12837	POU4F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21241485		9606	UniProt		F
+UniProtKB	Q12857	NFIA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17010934		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q12870	TCF15	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60756|ensembl:ENSMUSP00000086511	9606	Ensembl		F
+UniProtKB	Q12946	FOXF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:8626802		9606	NTNU_SB		F
+UniProtKB	Q12947	FOXF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8626802		9606	NTNU_SB		F
+UniProtKB	Q12947	FOXF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:8626802		9606	NTNU_SB		F
+UniProtKB	Q12948	FOXC1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17993506		9606	NTNU_SB	has_input(NCBI_Gene:2308)	F
+UniProtKB	Q12948	FOXC1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q61572	9606	UniProt		F
+UniProtKB	Q12948	FOXC1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61572|ensembl:ENSMUSP00000052196	9606	Ensembl		F
+UniProtKB	Q12951	FOXI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19214237		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q12951	FOXI1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q922I5|ensembl:ENSMUSP00000058651	9606	Ensembl		F
+UniProtKB	Q12968	NFATC3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15173172		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q12968	NFATC3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:15173172		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q13029	PRDM2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8654390		9606	NTNU_SB	has_input(NCBI_Gene:3162)	F
+UniProtKB	Q13029	PRDM2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:8654390		9606	NTNU_SB	has_input(NCBI_Gene:3162)	F
+UniProtKB	Q13029	PRDM2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:8654390		9606	NTNU_SB	has_input(NCBI_Gene:3162)	F
+UniProtKB	Q13105	ZBTB17	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9312026		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q13105	ZBTB17	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:9312026		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q13105	ZBTB17	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:19160485		9606	CAFA		F
+UniProtKB	Q13118	KLF10	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15087465		9606	NTNU_SB	has_input(NCBI_Gene:3681),occurs_at(SO:0001952)	F
+UniProtKB	Q13129	RLF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:8545128	UniProtKB:D3ZXZ1	9606	UniProt		F
+UniProtKB	Q13133	NR1H3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9Z0Y9|ensembl:ENSMUSP00000106988	9606	Ensembl		F
+UniProtKB	Q13469	NFATC2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60591|ensembl:ENSMUSP00000074198	9606	Ensembl		F
+UniProtKB	Q13485	SMAD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9389648		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q13485	SMAD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97471|ensembl:ENSMUSP00000025393	9606	Ensembl		F
+UniProtKB	Q13485	SMAD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:18832382		9606	GO_Central	has_input(UniProtKB:O95863)	F
+UniProtKB	Q13562	NEUROD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60867|ensembl:ENSMUSP00000040364	9606	Ensembl		F
+UniProtKB	Q13562	NEUROD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14752053		9606	GO_Central		F
+UniProtKB	Q13568	IRF5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12600985		9606	NTNU_SB	has_input(NCBI_Gene:3439)	F
+UniProtKB	Q13887	KLF5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16595680		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q13950	RUNX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q08775|ensembl:ENSMUSP00000123743	9606	Ensembl		F
+UniProtKB	Q13952	NFYC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:107901|PANTHER:PTN000028719	9606	GO_Central		F
+UniProtKB	Q13952	NFYC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70353|ensembl:ENSMUSP00000112810	9606	Ensembl		F
+UniProtKB	Q14119	VEZF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11504723		9606	NTNU_SB	has_input(NCBI_Gene:1906)	F
+UniProtKB	Q14186	TFDP1	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7739537		9606	NTNU_SB		F
+UniProtKB	Q14188	TFDP2	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7739537		9606	NTNU_SB		F
+UniProtKB	Q14209	E2F2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7739537		9606	NTNU_SB		F
+UniProtKB	Q14209	E2F2	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7739537		9606	NTNU_SB		F
+UniProtKB	Q14494:PRO_0000443103	NFE2L1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:10601325	UniProtKB:Q61985:PRO_0000443104	9606	UniProt		F
+UniProtKB	Q14494:PRO_0000443103	NFE2L1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:11342101	UniProtKB:Q61985:PRO_0000443104	9606	UniProt		F
+UniProtKB	Q14494:PRO_0000443103	NFE2L1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:20385086	UniProtKB:Q61985:PRO_0000443104	9606	UniProt		F
+UniProtKB	Q14494:PRO_0000443103	NFE2L1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:22586274	UniProtKB:Q61985:PRO_0000443104	9606	UniProt		F
+UniProtKB	Q14541	HNF4G	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23896584		9606	NTNU_SB	has_input(NCBI_Gene:3037)	F
+UniProtKB	Q14585	ZNF345	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q14586	ZNF267	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q14587	ZNF268	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q14653	IRF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:17560375		9606	NTNU_SB	has_input(NCBI_Gene:15977),occurs_at(SO:0001952)	F
+UniProtKB	Q14663	KBF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	Q14814	MEF2D	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q63943|ensembl:ENSMUSP00000103184	9606	Ensembl		F
+UniProtKB	Q14872	MTF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9582278		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q14872	MTF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002715649|UniProtKB:Q14872	9606	GO_Central		F
+UniProtKB	Q14994	NR1I3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11114890		9606	NTNU_SB		F
+UniProtKB	Q15306	IRF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12374808		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15319	POU4F3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23805044		9606	ParkinsonsUK-UCL	has_input(UniProtKB:Q99578),occurs_in(CL:0000540)	F
+UniProtKB	Q15319	POU4F3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15465029		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15329	E2F5	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:17062573		9606	UniProt		F
+UniProtKB	Q15406	NR6A1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64249|ensembl:ENSMUSP00000108498	9606	Ensembl		F
+UniProtKB	Q15475	SIX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15141091		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15475	SIX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:15141091		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15561	TEAD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62296|ensembl:ENSMUSP00000006311	9606	Ensembl		F
+UniProtKB	Q15699	ALX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9753625		9606	NTNU_SB		F
+UniProtKB	Q15699	ALX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002803087|UniProtKB:Q15699	9606	GO_Central		F
+UniProtKB	Q15699	ALX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000304	TAS	PMID:8756334		9606	GO_Central		F
+UniProtKB	Q15744	CEBPE	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10233885		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15784	NEUROD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62414|ensembl:ENSMUSP00000041373	9606	Ensembl		F
+UniProtKB	Q15796	SMAD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:24964035	UniProtKB:Q62432	9606	ARUK-UCL	has_input(UniProtKB:Q13526)	F
+UniProtKB	Q15796	SMAD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9389648		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15796	SMAD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62432|ensembl:ENSMUSP00000130115	9606	Ensembl		F
+UniProtKB	Q15796	SMAD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:31582430		9606	BHF-UCL	part_of(GO:0007179)	F
+UniProtKB	Q15797	SMAD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12270938		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q15915	ZIC1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P46684|ensembl:ENSMUSP00000034927	9606	Ensembl		F
+UniProtKB	Q16236	NFE2L2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60795|ensembl:ENSMUSP00000099733	9606	Ensembl		F
+UniProtKB	Q16254	E2F4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11418595		9606	NTNU_SB		F
+UniProtKB	Q16254	E2F4	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:17062573		9606	UniProt		F
+UniProtKB	Q16520	BATF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35284|ensembl:ENSMUSP00000040706	9606	Ensembl		F
+UniProtKB	Q16534	HLF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8065331		9606	NTNU_SB		F
+UniProtKB	Q16534	HLF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:8065331		9606	NTNU_SB		F
+UniProtKB	Q16656	NRF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23525105		9606	ARUK-UCL	has_input(UniProtKB:P14735)	F
+UniProtKB	Q16656	NRF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19674972		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q16656	NRF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:19674972		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q16665	HIF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19782034		9606	ARUK-UCL	has_input(RNAcentral:URS00005FDE16_9606)	F
+UniProtKB	Q16665	HIF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61221|ensembl:ENSMUSP00000021530	9606	Ensembl		F
+UniProtKB	Q16665	HIF1A	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000315	IMP	PMID:33108349		9606	BHF-UCL	occurs_in(CL:2000046),part_of(GO:0071456),part_of(GO:1902895),has_input(RNAcentral:URS0000347D0F_9606)	F
+UniProtKB	Q16665	HIF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:24983504		9606	BHF-UCL	part_of(GO:0071456),has_input(UniProtKB:Q96GC9)	F
+UniProtKB	Q16676	FOXD1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61345|ensembl:ENSMUSP00000100725	9606	Ensembl		F
+UniProtKB	Q2L4T1	Pax9	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P47242|ensembl:ENSMUSP00000117928	9606	Ensembl		F
+UniProtKB	Q32MQ0	ZNF750	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002685411|UniProtKB:Q32MQ0	9606	GO_Central		F
+UniProtKB	Q32MQ0	ZNF750	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22364861		9606	UniProt		F
+UniProtKB	Q33E94	RFX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16893423		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q4V348	ZNF658B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q52M93	ZNF585B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q53GI4	TEAD4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62296|ensembl:ENSMUSP00000006311	9606	Ensembl		F
+UniProtKB	Q53QU7	DLX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P40764|ensembl:ENSMUSP00000024159	9606	Ensembl		F
+UniProtKB	Q53X93	CREB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q01147|ensembl:ENSMUSP00000059973	9606	Ensembl		F
+UniProtKB	Q53XR6	SMAD2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62432|ensembl:ENSMUSP00000130115	9606	Ensembl		F
+UniProtKB	Q53Y73	DLX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70396|ensembl:ENSMUSP00000052559	9606	Ensembl		F
+UniProtKB	Q53ZD3	FOXL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88470|ensembl:ENSMUSP00000053297	9606	Ensembl		F
+UniProtKB	Q546S1	EGR1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P08046|ensembl:ENSMUSP00000069616	9606	Ensembl		F
+UniProtKB	Q58EY0	RORB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8R1B8|ensembl:ENSMUSP00000047597	9606	Ensembl		F
+UniProtKB	Q5JTV1	GMEB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	Q5JVG2	ZNF484	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q5QPV1	RBPJL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	Q5TYW1	ZNF658	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q5U079	JUNB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P09450|ensembl:ENSMUSP00000064680	9606	Ensembl		F
+UniProtKB	Q5VTD9	GFI1B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q659E7	DKFZp434I0735	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	Q66K89	E4F1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9121437		9606	GO_Central		F
+UniProtKB	Q66K89	E4F1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10869426		9606	GO_Central		F
+UniProtKB	Q68CJ9	CREB3L3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11353085		9606	NTNU_SB		F
+UniProtKB	Q68CJ9	CREB3L3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:11353085		9606	NTNU_SB		F
+UniProtKB	Q68DE3	USF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:33058301		9606	ARUK-UCL		F
+UniProtKB	Q6DJT9	PLAG1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10646861		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q6FG41	FOS	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P01101|ensembl:ENSMUSP00000021674	9606	Ensembl		F
+UniProtKB	Q6IQ21	ZNF770	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ISB3	GRHL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98509|PANTHER:PTN000112980|UniProtKB:Q6ISB3|UniProtKB:Q8TE85|UniProtKB:Q9NZI5|UniProtKB:Q9NZI7	9606	GO_Central		F
+UniProtKB	Q6ISB3	GRHL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:29309642		9606	UniProt		F
+UniProtKB	Q6ISB3	GRHL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23814079		9606	HGNC		F
+UniProtKB	Q6NX49	ZNF544	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6P3V2	ZNF585A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6QHK4	FIGLA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O55208|ensembl:ENSMUSP00000032070	9606	Ensembl		F
+UniProtKB	Q6VUC0	TFAP2E	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q6VUP9|ensembl:ENSMUSP00000035902	9606	Ensembl		F
+UniProtKB	Q6ZMW2	ZNF782	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ZN19	ZNF841	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ZN55	ZNF574	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ZNA1	ZNF836	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ZNG1	ZNF600	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ZR52	ZNF493	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q6ZVD7	STOX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000500144|WB:WBGene00001820	9606	GO_Central		F
+UniProtKB	Q70SY1	CREB3L2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8BH52|ensembl:ENSMUSP00000040208	9606	Ensembl		F
+UniProtKB	Q70SY1	CREB3L2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q6QDP7|ensembl:ENSRNOP00000017338	9606	Ensembl		F
+UniProtKB	Q7RTS1	BHLHA15	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9QYC3|ensembl:ENSMUSP00000055493	9606	Ensembl		F
+UniProtKB	Q7RTS3	PTF1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9QX98|ensembl:ENSMUSP00000028068	9606	Ensembl		F
+UniProtKB	Q7RTU7	SCX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64124|ensembl:ENSMUSP00000043668	9606	Ensembl		F
+UniProtKB	Q7RTU7	SCX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10775504		9606	GO_Central		F
+UniProtKB	Q7Z4V0	ZNF438	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q86V15	CASZ1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:27693370		9606	ARUK-UCL		F
+UniProtKB	Q86WZ6	ZNF227	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8HWS3	RFX6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20148032		9606	NTNU_SB		F
+UniProtKB	Q8IUM7	NPAS4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14701734		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q8IUR6	CREBRF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16940180		9606	NTNU_SB	has_input(NCBI_Gene:9709)	F
+UniProtKB	Q8N187	CARF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8VHI4|ensembl:ENSMUSP00000141169	9606	Ensembl		F
+UniProtKB	Q8N196	SIX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70178|ensembl:ENSMUSP00000045973	9606	Ensembl		F
+UniProtKB	Q8N2R0	OSR2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q91ZD1	9606	ARUK-UCL		F
+UniProtKB	Q8N2R0	OSR2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q91ZD1|ensembl:ENSMUSP00000154286	9606	Ensembl		F
+UniProtKB	Q8N393	ZNF786	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8N4W9	ZNF808	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8N5J4	SPIC	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q6P3D7|ensembl:ENSMUSP00000004473	9606	Ensembl		F
+UniProtKB	Q8N8J6	ZNF615	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8NB50	ZFP62	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8NBF1	GLIS1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000303	NAS	PMID:18263616		9606	BHF-UCL		F
+UniProtKB	Q8NCA9	ZNF784	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q8NCK3	ZNF485	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q8NEA6	GLIS3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:14500813	UniProtKB:Q6XP49	9606	BHF-UCL		F
+UniProtKB	Q8NEA6	GLIS3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:18263616	UniProtKB:Q6XP49	9606	BHF-UCL		F
+UniProtKB	Q8NHW3	MAFA	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CF90|ensembl:ENSMUSP00000054226	9606	Ensembl		F
+UniProtKB	Q8NI51	CTCFL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16140944		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q8TBJ5	FEZF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9ESP5|ensembl:ENSMUSP00000153090	9606	Ensembl		F
+UniProtKB	Q8TDD2	SP7	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8VI67	9606	UniProt		F
+UniProtKB	Q8TDD2	SP7	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8VI67|ensembl:ENSMUSP00000077596	9606	Ensembl		F
+UniProtKB	Q8TE12	LMX1A	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JKU8|ensembl:ENSMUSP00000028003	9606	Ensembl		F
+UniProtKB	Q8TE85	GRHL3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98509|PANTHER:PTN000112980|UniProtKB:Q6ISB3|UniProtKB:Q8TE85|UniProtKB:Q9NZI5|UniProtKB:Q9NZI7	9606	GO_Central		F
+UniProtKB	Q8TE85	GRHL3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23685552		9606	HGNC		F
+UniProtKB	Q8TEY5	CREB3L4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9D2A5|ensembl:ENSMUSP00000029547	9606	Ensembl		F
+UniProtKB	Q8TF20	ZNF721	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8TF68	ZNF384	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8WTR7	ZNF473	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8WXB4	ZNF606	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q8WYN3	CSRNP3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P59055|ensembl:ENSMUSP00000117533	9606	Ensembl		F
+UniProtKB	Q92481	TFAP2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61313|ensembl:ENSMUSP00000027059	9606	Ensembl		F
+UniProtKB	Q92481	TFAP2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7559606		9606	GO_Central	has_input(UniProtKB:P24593)	F
+UniProtKB	Q92481	TFAP2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q61313	9606	UniProt		F
+UniProtKB	Q92570	NR4A3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20558821		9606	UniProt		F
+UniProtKB	Q92570	NR4A3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P51179|ensembl:ENSRNOP00000008302	9606	Ensembl		F
+UniProtKB	Q92753	RORB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8R1B8|ensembl:ENSMUSP00000047597	9606	Ensembl		F
+UniProtKB	Q92754	TFAP2C	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11278550		9606	UniProt	has_input(UniProtKB:P21860)	F
+UniProtKB	Q92766	RREB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8816445		9606	NTNU_SB		F
+UniProtKB	Q92766	RREB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002509549|UniProtKB:Q92766	9606	GO_Central		F
+UniProtKB	Q92858	ATOH1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P48985|ensembl:ENSMUSP00000098903	9606	Ensembl		F
+UniProtKB	Q92949	FOXJ1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q61660	9606	UniProt		F
+UniProtKB	Q92949	FOXJ1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61660|ensembl:ENSMUSP00000038351	9606	Ensembl		F
+UniProtKB	Q969G2	LHX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15998782		9606	NTNU_SB	has_input(NCBI_Gene:5449)	F
+UniProtKB	Q96BA8	CREB3L1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9Z125	9606	ParkinsonsUK-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q96IR2	ZNF845	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q96IS3	RAX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15028672		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q96JF6	ZNF594	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q96K58	ZNF668	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q96K83	ZNF521	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q96LX8	ZNF597	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q96MX3	ZNF48	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q96NK8	NEUROD6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P48986|ensembl:ENSMUSP00000047016	9606	Ensembl		F
+UniProtKB	Q96RE9	ZNF300	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20585888		9606	NTNU_SB		F
+UniProtKB	Q96RI1	NR1H4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:24211198		9606	MGI		F
+UniProtKB	Q96RI1	NR1H4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:27471003		9606	MGI		F
+UniProtKB	Q96RI1	NR1H4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60641|ensembl:ENSMUSP00000100933	9606	Ensembl		F
+UniProtKB	Q96RI1	NR1H4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21757002		9606	BHF-UCL		F
+UniProtKB	Q96S65	CSRNP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P59054|ensembl:ENSMUSP00000149214	9606	Ensembl		F
+UniProtKB	Q99081	TCF12	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11802795		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q99453	PHOX2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16144830		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q99453	PHOX2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:32094113		9606	MGI		F
+UniProtKB	Q99453	PHOX2B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35690|ensembl:ENSMUSP00000012664	9606	Ensembl		F
+UniProtKB	Q99459	CDC5L	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11082045		9606	NTNU_SB		F
+UniProtKB	Q99581	FEV	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O70132|ensembl:ENSRNOP00000024190	9606	Ensembl		F
+UniProtKB	Q99593	TBX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70326|ensembl:ENSMUSP00000018407	9606	Ensembl		F
+UniProtKB	Q99593	TBX5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P70326	9606	BHF-UCL	has_input(UniProtKB:Q14524),occurs_in(UBERON:0004146),causally_upstream_of(GO:0086019)|has_input(UniProtKB:P36382),occurs_in(UBERON:0004146),part_of(GO:1903598)	F
+UniProtKB	Q99607	ELF4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14625302		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q99608	NDN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P25233|ensembl:ENSMUSP00000045369	9606	Ensembl		F
+UniProtKB	Q99612	KLF6	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:18755691		9606	NTNU_SB	has_input(NCBI_Gene:467),occurs_at(SO:0001952)	F
+UniProtKB	Q99687	MEIS3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:104717|MGI:MGI:108519|MGI:MGI:108564|PANTHER:PTN000932623|UniProtKB:O14770	9606	GO_Central		F
+UniProtKB	Q99687	MEIS3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97368|ensembl:ENSMUSP00000002495	9606	Ensembl		F
+UniProtKB	Q99732	LITAF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:21217782		9606	NTNU_SB	has_input(NCBI_Gene:9966)	F
+UniProtKB	Q99814	EPAS1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97481|ensembl:ENSMUSP00000024954	9606	Ensembl		F
+UniProtKB	Q99941	ATF6B	contributes_to	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:14973138		9606	NTNU_SB	has_input(NCBI_Gene:3309)	F
+UniProtKB	Q99958	FOXC2	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61850|ensembl:ENSMUSP00000055290	9606	Ensembl		F
+UniProtKB	Q99958	FOXC2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20956529		9606	BHF-UCL		F
+UniProtKB	Q99958	FOXC2	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:9169153		9606	UniProt		F
+UniProtKB	Q9BQA5	HINFP	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19170105		9606	GO_Central		F
+UniProtKB	Q9BQA5	HINFP	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:18850719		9606	GO_Central		F
+UniProtKB	Q9BRJ9	MESP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97309|ensembl:ENSMUSP00000032760	9606	Ensembl		F
+UniProtKB	Q9BRP0	OVOL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CIV7|ensembl:ENSMUSP00000044026	9606	Ensembl		F
+UniProtKB	Q9BY31	ZNF717	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9BYN7	ZNF341	enables	GO:0001216	DNA-binding transcription activator activity	ECO:0000314	IDA	PMID:29907690		9606	UniProt		F
+UniProtKB	Q9BZE0	GLIS2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8VDL9|ensembl:ENSMUSP00000014447	9606	Ensembl		F
+UniProtKB	Q9BZE0	GLIS2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8VDL9	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q9BZE3	BARHL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P63157|ensembl:ENSMUSP00000053147	9606	Ensembl		F
+UniProtKB	Q9C0K0	BCL11B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q99PV8|ensembl:ENSMUSP00000068258	9606	Ensembl		F
+UniProtKB	Q9H161	ALX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:108359|PANTHER:PTN002803099	9606	GO_Central		F
+UniProtKB	Q9H161	ALX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35137|ensembl:ENSMUSP00000047962	9606	Ensembl		F
+UniProtKB	Q9H175	CSRNP2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8BGQ2|ensembl:ENSMUSP00000052144	9606	Ensembl		F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042917	9606	InterPro		F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9WUI0|ensembl:ENSMUSP00000027778	9606	Ensembl		F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9WUI0	9606	BHF-UCL	has_input(UniProtKB:P35968),occurs_at(SO:0001952)|has_input(UniProtKB:P16234),occurs_at(SO:0001952)	F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9WUI0	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:22164283	UniProtKB:Q9WUI0	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9WUI0	9606	BHF-UCL	occurs_at(SO:0000165)	F
+UniProtKB	Q9H2W2	MIXL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	PMID:22164283	UniProtKB:Q9WUI0	9606	BHF-UCL	occurs_at(SO:0000165)	F
+UniProtKB	Q9H3D4	TP63	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88898|ensembl:ENSMUSP00000110965	9606	Ensembl		F
+UniProtKB	Q9H4S2	GSX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P31315|ensembl:ENSMUSP00000069728	9606	Ensembl		F
+UniProtKB	Q9H6I2	SOX17	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:107543|PANTHER:PTN002567805	9606	GO_Central		F
+UniProtKB	Q9H6I2	SOX17	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61473|ensembl:ENSMUSP00000027035	9606	Ensembl		F
+UniProtKB	Q9H8N7	ZNF395	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:28316371		9606	ARUK-UCL		F
+UniProtKB	Q9HAK2	EBF2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O08792|ensembl:ENSMUSP00000135500	9606	Ensembl		F
+UniProtKB	Q9HAP2	MLXIP	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11073985		9606	NTNU_SB		F
+UniProtKB	Q9HAZ2	PRDM16	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q9HBZ2	ARNT2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61324|ensembl:ENSMUSP00000082154	9606	Ensembl		F
+UniProtKB	Q9NP62	GCM1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15385555		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9NP62	GCM1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039791	9606	InterPro		F
+UniProtKB	Q9NPC8	SIX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62232|ensembl:ENSMUSP00000125871	9606	Ensembl		F
+UniProtKB	Q9NQ87	HEYL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9DBX7|ensembl:ENSMUSP00000040576	9606	Ensembl		F
+UniProtKB	Q9NQZ8	ZNF71	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q9NY43	BARHL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8VIB5|ensembl:ENSMUSP00000084005	9606	Ensembl		F
+UniProtKB	Q9NYD6	HOXC10	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10835276		9606	NTNU_SB	has_input(NCBI_Gene:3913)	F
+UniProtKB	Q9NYT6	ZNF226	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9NZC4	EHF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17027647		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9NZC4	EHF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10644770		9606	UniProt		F
+UniProtKB	Q9NZI5	GRHL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12175488		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9NZI5	GRHL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98509|PANTHER:PTN000112980|UniProtKB:Q6ISB3|UniProtKB:Q8TE85|UniProtKB:Q9NZI5|UniProtKB:Q9NZI7	9606	GO_Central		F
+UniProtKB	Q9NZI5	GRHL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:29309642		9606	UniProt		F
+UniProtKB	Q9NZI6	TFCP2L1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98509|PANTHER:PTN000112980|UniProtKB:Q6ISB3|UniProtKB:Q8TE85|UniProtKB:Q9NZI5|UniProtKB:Q9NZI7	9606	GO_Central		F
+UniProtKB	Q9NZI7	UBP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:98509|PANTHER:PTN000112980|UniProtKB:Q6ISB3|UniProtKB:Q8TE85|UniProtKB:Q9NZI5|UniProtKB:Q9NZI7	9606	GO_Central		F
+UniProtKB	Q9NZI7	UBP1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:8114710		9606	GO_Central		F
+UniProtKB	Q9NZL3	ZNF224	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9P0K8	FOXJ2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10777590		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9P243	ZFAT	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q7TS63|ensembl:ENSMUSP00000125257	9606	Ensembl		F
+UniProtKB	Q9P2F5	STOX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000500144|WB:WBGene00001820	9606	GO_Central		F
+UniProtKB	Q9P2F9	ZNF319	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9UBC0	ONECUT1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P70512	9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q9UBG7	RBPJL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040159	9606	InterPro		F
+UniProtKB	Q9UBG7	RBPJL	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O08674|ensembl:ENSMUSP00000017151	9606	Ensembl		F
+UniProtKB	Q9UBR4	LHX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15271874		9606	NTNU_SB		F
+UniProtKB	Q9UBR4	LHX3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:A2ALD8|ensembl:ENSMUSP00000028302	9606	Ensembl		F
+UniProtKB	Q9UBX2	DUX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17984056		9606	NTNU_SB	has_input(NCBI_Gene:18740),occurs_at(SO:0001952)	F
+UniProtKB	Q9UBX2	DUX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:30315230		9606	UniProt		F
+UniProtKB	Q9UEG4	ZNF629	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9UID6	ZNF639	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:20484494		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9UIH9	KLF15	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:19767294		9606	BHF-UCL	has_input(UniProtKB:Q8N8U9),occurs_at(SO:0001952)	F
+UniProtKB	Q9UII5	ZNF107	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9UIU6	SIX4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61321|ensembl:ENSMUSP00000036150	9606	Ensembl		F
+UniProtKB	Q9UJU2	LEF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P27782|ensembl:ENSMUSP00000029611	9606	Ensembl		F
+UniProtKB	Q9UJU2	LEF1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:23001182		9606	BHF-UCL		F
+UniProtKB	Q9UJU3	ZNF112	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9UJW7	ZNF229	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9UK10	ZNF225	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	Q9UK33	ZNF580	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917923|MGI:MGI:95457|PANTHER:PTN002811836|PomBase:SPAC4G8.13c|WB:WBGene00003015	9606	GO_Central		F
+UniProtKB	Q9UKD1	GMEB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	Q9UKI9	POU2F3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12624109		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9UKI9	POU2F3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:12624109		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9UKN5	PRDM4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q80V63	9606	ARUK-UCL		F
+UniProtKB	Q9UKN5	PRDM4	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q80V63|ensembl:ENSMUSP00000151931	9606	Ensembl		F
+UniProtKB	Q9UKT9	IKZF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:34155405		9606	UniProt		F
+UniProtKB	Q9UKT9	IKZF3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O08900|ensembl:ENSMUSP00000099430	9606	Ensembl		F
+UniProtKB	Q9UL17	TBX21	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JKD8|ensembl:ENSMUSP00000001484	9606	Ensembl		F
+UniProtKB	Q9ULX9	MAFF	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:12490281		9606	NTNU_SB	has_input(NCBI_Gene:2729)	F
+UniProtKB	Q9UM63	PLAGL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9671765		9606	NTNU_SB		F
+UniProtKB	Q9UM63	PLAGL1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001598857|UniProtKB:Q9UM63	9606	GO_Central		F
+UniProtKB	Q9UMQ3	BARX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:14744868		9606	NTNU_SB		F
+UniProtKB	Q9UMR3	TBX20	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9ES03|ensembl:ENSMUSP00000052591	9606	Ensembl		F
+UniProtKB	Q9UPG8	PLAGL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:15361364		9606	MGI		F
+UniProtKB	Q9UPW0	FOXJ3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22740631		9606	NTNU_SB	has_input(NCBI_Gene:1869)	F
+UniProtKB	Q9UPW6	SATB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:22825848		9606	NTNU_SB		F
+UniProtKB	Q9UPW6	SATB2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q546B3|ensembl:ENSMUSP00000110057	9606	Ensembl		F
+UniProtKB	Q9Y2D1	ATF5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16300731		9606	NTNU_SB	has_input(NCBI_Gene:896)	F
+UniProtKB	Q9Y2D1	ATF5	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:88096|PANTHER:PTN000315883|PomBase:SPAC25G10.03|UniProtKB:Q9Y2D1	9606	GO_Central		F
+UniProtKB	Q9Y2V3	RAX	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10625658		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9Y2Y9	KLF13	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JJZ6|ensembl:ENSMUSP00000067680	9606	Ensembl		F
+UniProtKB	Q9Y466	NR2E1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q64104|ensembl:ENSMUSP00000019938	9606	Ensembl		F
+UniProtKB	Q9Y467	SALL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:21362508		9606	NTNU_SB		F
+UniProtKB	Q9Y467	SALL2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:21362508		9606	NTNU_SB		F
+UniProtKB	Q9Y473	ZNF175	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:17170456		9606	NTNU_SB		F
+UniProtKB	Q9Y4Z2	NEUROG3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P70661	9606	UniProt		F
+UniProtKB	Q9Y4Z2	NEUROG3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70661|ensembl:ENSMUSP00000054054	9606	Ensembl		F
+UniProtKB	Q9Y4Z2	NEUROG3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O08718|ensembl:ENSRNOP00000000661	9606	Ensembl		F
+UniProtKB	Q9Y5A6	ZSCAN21	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:19549071		9606	NTNU_SB	occurs_at(SO:0001952)	F
+UniProtKB	Q9Y5Q3	MAFB	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P54841|ensembl:ENSMUSP00000096728	9606	Ensembl		F
+UniProtKB	Q9Y5R5	DMRT2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8BG36|ensembl:ENSMUSP00000059654	9606	Ensembl		F
+UniProtKB	Q9Y5R6	DMRT1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9QZ59|ensembl:ENSMUSP00000025755	9606	Ensembl		F
+UniProtKB	Q9Y5X4	NR2E3	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000315	IMP	PMID:22174013		9606	NTNU_SB	has_input(NCBI_Gene:2099)	F
+UniProtKB	Q9Y651	SOX21	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q811W0|ensembl:ENSMUSP00000127396	9606	Ensembl		F
+UniProtKB	Q9Y692	GMEB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000304	TAS	PMID:10386584		9606	ARUK-UCL		F
+UniProtKB	Q9Y692	GMEB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024830	9606	InterPro		F
+UniProtKB	Q9Y692	GMEB1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JL60|ensembl:ENSMUSP00000131331	9606	Ensembl		F
+UniProtKB	Q9Y6R6	ZNF780B	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916160|PANTHER:PTN004700594	9606	GO_Central		F
+UniProtKB	R9W7C9	PAX8	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P51974|ensembl:ENSRNOP00000033966	9606	Ensembl		F
+UniProtKB	W6CJ52	FOXC1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61572|ensembl:ENSMUSP00000052196	9606	Ensembl		F
+UniProtKB	X5D7D8	DLX2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P40764|ensembl:ENSMUSP00000024159	9606	Ensembl		F
+UniProtKB	X5D982	NDN	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P25233|ensembl:ENSMUSP00000045369	9606	Ensembl		F
+UniProtKB	X5D9A5	PITX1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P70314|ensembl:ENSMUSP00000021968	9606	Ensembl		F
+UniProtKB	X5DNR2	KLF13	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JJZ6|ensembl:ENSMUSP00000067680	9606	Ensembl		F
+UniProtKB	X5DQN9	ARNT2	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61324|ensembl:ENSMUSP00000082154	9606	Ensembl		F
+ComplexPortal	CPX-1956	nf-y_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:23332751		9606	ComplexPortal		F
+ComplexPortal	CPX-316	ctnnb1-lef1_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11751639		9606	ComplexPortal		F
+ComplexPortal	CPX-480	nfat-fos-jun_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:9510247		9606	ComplexPortal		F
+ComplexPortal	CPX-486	fos_jun_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:7816143		9606	ComplexPortal		F
+ComplexPortal	CPX-504	myb-cebpb_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0005543	IC	PMID:11792321		9606	ComplexPortal		F
+ComplexPortal	CPX-6016	isgf3_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:24065129		9606	ComplexPortal		F
+ComplexPortal	CPX-6401	atf1-atf1_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1655749		9606	ComplexPortal		F
+ComplexPortal	CPX-6405	atf1-creb1_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:1655749		9606	ComplexPortal		F
+ComplexPortal	CPX-6461	rfx_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:10938133		9606	ComplexPortal		F
+ComplexPortal	CPX-6474	atf3-jun_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0005547	IC	PMID:1406655		9606	ComplexPortal		F
+ComplexPortal	CPX-6542	atf4-crebzf_human	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:16343488		9606	ComplexPortal		F
+ComplexPortal	CPX-71	cebpa_human-1	enables	GO:0001228	DNA-binding transcription activator activity, RNA polymerase II-specific	ECO:0000314	IDA	PMID:11242107		9606	ComplexPortal		F

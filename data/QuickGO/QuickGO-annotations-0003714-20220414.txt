@@ -1,0 +1,519 @@
+﻿GENE PRODUCT DB	GENE PRODUCT ID	SYMBOL	QUALIFIER	GO TERM	GO NAME	ECO ID	GO EVIDENCE CODE	REFERENCE	WITH/FROM	TAXON ID	ASSIGNED BY	ANNOTATION EXTENSION	GO ASPECT
+UniProtKB	A0A024QZQ1	SIRT1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q923E4|ensembl:ENSMUSP00000112595	9606	Ensembl		F
+UniProtKB	A0A024QZY7	GMNN	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88513|ensembl:ENSMUSP00000006898	9606	Ensembl		F
+UniProtKB	A0A024R189	TBL1Y	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A024R338	SFMBT1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037604	9606	InterPro		F
+UniProtKB	A0A024RAY1	ATF7IP	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q7TT18|ensembl:ENSMUSP00000032335	9606	Ensembl		F
+UniProtKB	A0A024RBV9	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A024RDV2	hCG_32190	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8JZS6|ensembl:ENSMUSP00000113895	9606	Ensembl		F
+UniProtKB	A0A087WTX3	TRIB3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024106	9606	InterPro		F
+UniProtKB	A0A087WUE6	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	A0A087WWT6	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	A0A090N8E9	EZH2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61188|ensembl:ENSMUSP00000080419	9606	Ensembl		F
+UniProtKB	A0A0A0MSU1	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	A0A0B4J255	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	A0A0D9SEW5	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A0D9SF25	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A0D9SF63	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A0D9SFI2	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A0J9YX80	DEAF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	A0A140VKC4	MECP2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9Z2D6|ensembl:ENSMUSP00000033770	9606	Ensembl		F
+UniProtKB	A0A1B0GUU2	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A1B0GVH3	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A1B0GX92	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	A0A1W2PR48	TLE7	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	A0A2R8Y757	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A2R8YFW3	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A384ME24	A0A384ME24	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR017250	9606	InterPro		F
+UniProtKB	A0A384NYH5	ANKRD1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9CR42|ensembl:ENSMUSP00000157960	9606	Ensembl		F
+UniProtKB	A0A3B3ISK8	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	A0A494C153	TBL1Y	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A669KBL2	SFMBT2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037604	9606	InterPro		F
+UniProtKB	A0A6M8YDW1	MDIG	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CD15|ensembl:ENSMUSP00000125297	9606	Ensembl		F
+UniProtKB	A0A7I2SVS4	HDAC4	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q6NZM9|ensembl:ENSMUSP00000095249	9606	Ensembl		F
+UniProtKB	A0A804HJZ5	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	A0A804HK46	SFMBT2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037604	9606	InterPro		F
+UniProtKB	A0A804HLD5	SFMBT2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037604	9606	InterPro		F
+UniProtKB	A0PJI7	CIR	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040014	9606	InterPro		F
+UniProtKB	A1L1A3	A1L1A3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	A3KFK1	YY1AP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	A4PB67	A4PB67	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	A4PB68	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	A4PBF6	A4PBF6	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	A6NIX2	WTIP	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1341886|MGI:MGI:1352502|MGI:MGI:2141920|PANTHER:PTN001198456|UniProtKB:Q96IF1	9606	GO_Central		F
+UniProtKB	A6NIX2	WTIP	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q7TQJ8|ensembl:ENSMUSP00000047623	9606	Ensembl		F
+UniProtKB	A8K401	PHB	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P67778|ensembl:ENSMUSP00000119603	9606	Ensembl		F
+UniProtKB	A8K5V5	A8K5V5	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	B0QYQ2	TRIB3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024106	9606	InterPro		F
+UniProtKB	B2R6I9	B2R6I9	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	B2R8R5	B2R8R5	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037373	9606	InterPro		F
+UniProtKB	B2RAG9	B2RAG9	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q925J9	9606	UniProt		F
+UniProtKB	B2RBQ7	B2RBQ7	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013292	9606	InterPro		F
+UniProtKB	B2RCN4	B2RCN4	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	B3KQE3	B3KQE3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	B3KR45	B3KR45	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013292	9606	InterPro		F
+UniProtKB	B4DFE2	B4DFE2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	B4DFM9	B4DFM9	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	B4DJQ9	B4DJQ9	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	B4DMM9	B4DMM9	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024106	9606	InterPro		F
+UniProtKB	B4DP68	B4DP68	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	B4DU90	B4DU90	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	B4DV94	B4DV94	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	B4E0K4	B4E0K4	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	B4E1J0	B4E1J0	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	B5MDT7	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013292	9606	InterPro		F
+UniProtKB	B7Z392	B7Z392	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039774	9606	InterPro		F
+UniProtKB	B7Z475	B7Z475	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	B7Z8N8	B7Z8N8	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037496	9606	InterPro		F
+UniProtKB	B7Z9G1	B7Z9G1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037496	9606	InterPro		F
+UniProtKB	C9IYU9	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9J3H2	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9J5F9	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9J7E1	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9J903	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9J9G2	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	C9JBN1	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JCK0	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JCN9	HSBP1L1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR009643	9606	InterPro		F
+UniProtKB	C9JCW3	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JCW4	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JEC9	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JGY8	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	C9JLJ1	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JTW8	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	C9JWY1	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	D1LUZ5	RUNX1/CBFA2T2 fusion	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	D1LYX4	RUNX1/CBFA2T2 fusion	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	D3DX76	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013292	9606	InterPro		F
+UniProtKB	E5RG85	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RH30	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RH72	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RHJ8	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RI38	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RJ32	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RJB3	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RJE7	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E5RK76	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7EQ59	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7EQI9	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7EQW3	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7EQW7	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7ERJ9	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7ESA9	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7ETA8	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7EWJ9	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	E7EX23	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	F1D8P4	NR0B1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61066|ensembl:ENSMUSP00000026036	9606	Ensembl		F
+UniProtKB	F2Z2Z8	PBXIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	F8VRE5	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	F8VZR2	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	F8WCD3	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	F8WD35	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	F8WD62	YY1AP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	G3V1X5	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	G3V212	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	G3V219	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	H0Y403	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	H0YC25	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	H3BLY3	CIR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040014	9606	InterPro		F
+UniProtKB	H3BMZ0	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	H3BNA0	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	H3BNH2	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	H3BNI7	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	H3BNZ3	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	H3BP90	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	H3BQ88	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	H3BQL7	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	H3BSI4	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	H3BU07	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	H7C4U2	SCAI	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR022709	9606	InterPro		F
+UniProtKB	J3KR25	TRIB3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024106	9606	InterPro		F
+UniProtKB	J3QQU3	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	K7EJ43	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	K7ENV5	HSBP1L1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR009643	9606	InterPro		F
+UniProtKB	K7EQP5	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	K7ERZ4	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	M0QYC5	SIN3B	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039774	9606	InterPro		F
+UniProtKB	M0R0K9	TRIM28	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037373	9606	InterPro		F
+UniProtKB	M0R271	SIN3B	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039774	9606	InterPro		F
+UniProtKB	M0R2I3	TRIM28	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037373	9606	InterPro		F
+UniProtKB	M0R3C0	TRIM28	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037373	9606	InterPro		F
+UniProtKB	O00257	CBX4	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9315667		9606	PINC		F
+UniProtKB	O00422	SAP18	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0024491|PANTHER:PTN000317629	9606	GO_Central		F
+UniProtKB	O00422	SAP18	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR017250	9606	InterPro		F
+UniProtKB	O00422	SAP18	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9150135		9606	PINC		F
+UniProtKB	O14744	PRMT5	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8CIG8	9606	UniProt		F
+UniProtKB	O14776	TCERG1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:20956529		9606	BHF-UCL		F
+UniProtKB	O15379	HDAC3	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16569215		9606	UniProt		F
+UniProtKB	O15379	HDAC3	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18417529		9606	UniProt		F
+UniProtKB	O15379	HDAC3	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:12628926		9606	UniProt		F
+UniProtKB	O15379-2	HDAC3	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P56520	9606	AgBase		F
+UniProtKB	O43251	RBFOX2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:11875103		9606	UniProt	has_input(UniProtKB:P03372)	F
+UniProtKB	O43255	SIAH2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10207103		9606	PINC		F
+UniProtKB	O43439	CBFA2T2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1333833|PANTHER:PTN000822368|UniProtKB:O43439|UniProtKB:Q06455	9606	GO_Central		F
+UniProtKB	O43439	CBFA2T2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19026687		9606	UniProt		F
+UniProtKB	O43439	CBFA2T2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:23251453		9606	UniProt		F
+UniProtKB	O43439	CBFA2T2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	O43439	CBFA2T2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O70374|ensembl:ENSMUSP00000043087	9606	Ensembl		F
+UniProtKB	O60260	PRKN	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:23985028		9606	ParkinsonsUK-UCL	has_input(UniProtKB:P04637),occurs_at(SO:0001952)	F
+UniProtKB	O60907	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1336172|MGI:MGI:2441730|PANTHER:PTN000521099|UniProtKB:O60907|UniProtKB:Q9BZK7	9606	GO_Central		F
+UniProtKB	O60907	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	O60907	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12628926		9606	UniProt		F
+UniProtKB	O60907	TBL1X	enables	GO:0003714	transcription corepressor activity	ECO:0000316	IGI	PMID:15601853	UniProtKB:Q9BZK7	9606	UniProt		F
+UniProtKB	O75081	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1333833|PANTHER:PTN000822368|UniProtKB:O43439|UniProtKB:Q06455	9606	GO_Central		F
+UniProtKB	O75081	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:25974097		9606	UniProt		F
+UniProtKB	O75081	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:23251453		9606	UniProt		F
+UniProtKB	O75081	CBFA2T3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013292	9606	InterPro		F
+UniProtKB	O75182	SIN3B	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:107157|MGI:MGI:107158|PANTHER:PTN000269659|SGD:S000005364|UniProtKB:Q96ST3	9606	GO_Central		F
+UniProtKB	O75182	SIN3B	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR039774	9606	InterPro		F
+UniProtKB	O75182	SIN3B	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62141|ensembl:ENSMUSP00000004494	9606	Ensembl		F
+UniProtKB	O75376	NCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1337080|MGI:MGI:1349717|PANTHER:PTN000360524|UniProtKB:O75376|UniProtKB:Q9Y618	9606	GO_Central		F
+UniProtKB	O75376	NCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:20812024		9606	UniProt		F
+UniProtKB	O75376	NCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:7566114		9606	PINC		F
+UniProtKB	O75376	NCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:15695367		9606	MGI		F
+UniProtKB	O75376	NCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18052923		9606	BHF-UCL		F
+UniProtKB	O75376	NCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:12628926		9606	UniProt		F
+UniProtKB	O75381	PEX14	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:11863372		9606	UniProt		F
+UniProtKB	O75446	SAP30	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:9651585		9606	UniProt		F
+UniProtKB	O75496	GMNN	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88513|ensembl:ENSMUSP00000006898	9606	Ensembl		F
+UniProtKB	O75506	HSBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR009643	9606	InterPro		F
+UniProtKB	O75506	HSBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9649501		9606	PINC		F
+UniProtKB	O75629	CREG1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9710587		9606	PINC		F
+UniProtKB	O75925	PIAS1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10805787		9606	PINC		F
+UniProtKB	O94763	URI1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000387656|UniProtKB:O94763	9606	GO_Central		F
+UniProtKB	O94763	URI1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:15367675		9606	UniProt		F
+UniProtKB	O94763	URI1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12737519		9606	UniProt		F
+UniProtKB	O94763	URI1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:21730289		9606	UniProt		F
+UniProtKB	O94763	URI1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:9819440		9606	UniProt		F
+UniProtKB	O94776	MTA2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001328846|UniProtKB:Q13330	9606	GO_Central		F
+UniProtKB	O95551	TDP2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10764746		9606	PINC		F
+UniProtKB	P05549	TFAP2A	enables	GO:0140536	nuclear receptor corepressor activity	ECO:0000315	IMP	PMID:31146003		9606	ARUK-UCL	has_input(UniProtKB:P22736)	F
+UniProtKB	P06400	RB1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:19149898		9606	ARUK-UCL		F
+UniProtKB	P06733	ENO1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:11134351		9606	UniProt		F
+UniProtKB	P08246	ELANE	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:19506020		9606	UniProt		F
+UniProtKB	P09429	HMGB1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:11748232		9606	UniProt		F
+UniProtKB	P0DMV8	HSPA1A	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:9499401		9606	UniProt		F
+UniProtKB	P20749	BCL3	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16306601		9606	UniProt		F
+UniProtKB	P24385	CCND1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16569215		9606	UniProt		F
+UniProtKB	P24385	CCND1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18417529		9606	UniProt		F
+UniProtKB	P25685	DNAJB1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002786476|UniProtKB:P25685	9606	GO_Central		F
+UniProtKB	P25685	DNAJB1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:9499401		9606	UniProt		F
+UniProtKB	P27695	APEX1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:7961715		9606	PINC		F
+UniProtKB	P35232	PHB1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P67778|ensembl:ENSMUSP00000119603	9606	Ensembl		F
+UniProtKB	P35232	PHB1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18487222		9606	BHF-UCL		F
+UniProtKB	P46937	YAP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917649|PANTHER:PTN000427158|UniProtKB:P46937	9606	GO_Central		F
+UniProtKB	P46937	YAP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18158288		9606	UniProt		F
+UniProtKB	P48552	NRIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1315213|PANTHER:PTN000387065|UniProtKB:P48552	9606	GO_Central		F
+UniProtKB	P48552	NRIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CBD1|ensembl:ENSMUSP00000112959	9606	Ensembl		F
+UniProtKB	P48552	NRIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10364267		9606	UniProt		F
+UniProtKB	P50616	TOB1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1349721|PANTHER:PTN000426292	9606	GO_Central		F
+UniProtKB	P50616	TOB1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61471|ensembl:ENSMUSP00000036039	9606	Ensembl		F
+UniProtKB	P51532	SMARCA4	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:20418909		9606	UniProt		F
+UniProtKB	P51532	SMARCA4	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18487222		9606	BHF-UCL		F
+UniProtKB	P51608	MECP2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10773092		9606	ARUK-UCL		F
+UniProtKB	P51608	MECP2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9Z2D6|ensembl:ENSMUSP00000033770	9606	Ensembl		F
+UniProtKB	P51843	NR0B1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1352460|PANTHER:PTN002786571|UniProtKB:P51843|UniProtKB:Q15466	9606	GO_Central		F
+UniProtKB	P51843	NR0B1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61066|ensembl:ENSMUSP00000026036	9606	Ensembl		F
+UniProtKB	P51843	NR0B1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:19651776		9606	BHF-UCL		F
+UniProtKB	P51858	HDGF	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19162039		9606	BHF-UCL		F
+UniProtKB	P52926	HMGA2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:14627817		9606	GO_Central		F
+UniProtKB	P54198	HIRA	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9731536		9606	PINC		F
+UniProtKB	P54259	ATN1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0010825|MGI:MGI:104725|MGI:MGI:2683486|PANTHER:PTN001015306|UniProtKB:P54259	9606	GO_Central		F
+UniProtKB	P54259	ATN1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10973986		9606	UniProt		F
+UniProtKB	P56545	CTBP2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:20705609		9606	ARUK-UCL		F
+UniProtKB	P56545	CTBP2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR043322	9606	InterPro		F
+UniProtKB	P56545	CTBP2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P56546|ensembl:ENSMUSP00000130294	9606	Ensembl		F
+UniProtKB	P56705	WNT4	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P22724|ensembl:ENSMUSP00000036580	9606	Ensembl		F
+UniProtKB	P56705	WNT4	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:P22724	9606	UniProt		F
+UniProtKB	P61201	COPS2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P61202|ensembl:ENSMUSP00000106090	9606	Ensembl		F
+UniProtKB	P78543	BTG2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P27049|ensembl:ENSRNOP00000004408	9606	Ensembl		F
+UniProtKB	P80723	BASP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000575105|UniProtKB:P80723	9606	GO_Central		F
+UniProtKB	P80723	BASP1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:14701728		9606	UniProt		F
+UniProtKB	Q00839	HNRNPU	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002644654|UniProtKB:Q00839	9606	GO_Central		F
+UniProtKB	Q00839	HNRNPU	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:19617346		9606	UniProt		F
+UniProtKB	Q00839	HNRNPU	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:23811339		9606	UniProt		F
+UniProtKB	Q01130	SRSF2	enables	GO:0003714	transcription corepressor activity	ECO:0000303	NAS	PMID:15652350		9606	UniProt		F
+UniProtKB	Q02779	MAP3K10	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q66L42	9606	UniProt		F
+UniProtKB	Q03989	ARID5A	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:15941852		9606	UniProt		F
+UniProtKB	Q04724	TLE1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	Q04724	TLE1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10748198		9606	BHF-UCL		F
+UniProtKB	Q04725	TLE2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	Q04725	TLE2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19460168		9606	UniProt		F
+UniProtKB	Q04726	TLE3	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	Q04727	TLE4	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	Q04727	TLE4	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q62441|ensembl:ENSMUSP00000057527	9606	Ensembl		F
+UniProtKB	Q06455	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1333833|PANTHER:PTN000822368|UniProtKB:O43439|UniProtKB:Q06455	9606	GO_Central		F
+UniProtKB	Q06455	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:23251453		9606	UniProt		F
+UniProtKB	Q06455	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	Q06455	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10688654		9606	UniProt		F
+UniProtKB	Q07021	C1QBP	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000088834|UniProtKB:Q07021	9606	GO_Central		F
+UniProtKB	Q07021	C1QBP	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:15243141		9606	UniProt		F
+UniProtKB	Q08117	TLE5	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	Q08117	TLE5	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P63002|ensembl:ENSMUSP00000002518	9606	Ensembl		F
+UniProtKB	Q08117	TLE5	enables	GO:0003714	transcription corepressor activity	ECO:0000353	IPI	PMID:10660609	UniProtKB:Q04206	9606	BHF-UCL		F
+UniProtKB	Q08117	TLE5	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19460168		9606	UniProt		F
+UniProtKB	Q0VAI6	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	Q13227	GPS2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19858209		9606	UniProt		F
+UniProtKB	Q13227	GPS2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q921N8|ensembl:ENSMUSP00000072389	9606	Ensembl		F
+UniProtKB	Q13227	GPS2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:11931768		9606	UniProt		F
+UniProtKB	Q13263	TRIM28	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002816179|UniProtKB:Q13263	9606	GO_Central		F
+UniProtKB	Q13263	TRIM28	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037373	9606	InterPro		F
+UniProtKB	Q13263	TRIM28	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:8769649		9606	UniProt		F
+UniProtKB	Q13330	MTA1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001328846|UniProtKB:Q13330	9606	GO_Central		F
+UniProtKB	Q13330	MTA1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:21965678		9606	UniProt		F
+UniProtKB	Q13363	CTBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR043322	9606	InterPro		F
+UniProtKB	Q13363	CTBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16287852		9606	BHF-UCL		F
+UniProtKB	Q13363	CTBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19162039		9606	BHF-UCL		F
+UniProtKB	Q13510-2	ASAH1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:22927646		9606	UniProt		F
+UniProtKB	Q13547	HDAC1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O09106|ensembl:ENSMUSP00000099657	9606	Ensembl		F
+UniProtKB	Q13547	HDAC1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:15919722		9606	BHF-UCL		F
+UniProtKB	Q13547	HDAC1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:30599067		9606	UniProt		F
+UniProtKB	Q13573	SNW1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:14985122		9606	UniProt		F
+UniProtKB	Q13901	C1D	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O35473|ensembl:ENSMUSP00000000594	9606	Ensembl		F
+UniProtKB	Q14106	TOB2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1349721|PANTHER:PTN000426292	9606	GO_Central		F
+UniProtKB	Q14192	FHL2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O70433|ensembl:ENSMUSP00000008280	9606	Ensembl		F
+UniProtKB	Q14192	FHL2	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O70433	9606	BHF-UCL		F
+UniProtKB	Q14207	NPAT	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:17163457		9606	UniProt		F
+UniProtKB	Q14894	CRYM	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:11897713		9606	UniProt		F
+UniProtKB	Q14919	DRAP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1913806|PANTHER:PTN000028884|SGD:S000000961	9606	GO_Central		F
+UniProtKB	Q14BN2	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q15326	ZMYND11	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8R5C8	9606	UniProt		F
+UniProtKB	Q15327	ANKRD1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9CR42|ensembl:ENSMUSP00000157960	9606	Ensembl		F
+UniProtKB	Q15327	ANKRD1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:20599664		9606	BHF-UCL		F
+UniProtKB	Q15466	NR0B2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1352460|PANTHER:PTN002786571|UniProtKB:P51843|UniProtKB:Q15466	9606	GO_Central		F
+UniProtKB	Q15466	NR0B2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:14752053		9606	GO_Central		F
+UniProtKB	Q15466	NR0B2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:11030331		9606	GO_Central		F
+UniProtKB	Q15637	SF1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9660765		9606	PINC		F
+UniProtKB	Q15648	MED1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q925J9|ensembl:ENSMUSP00000103169	9606	Ensembl		F
+UniProtKB	Q15648	MED1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q925J9	9606	UniProt		F
+UniProtKB	Q15742	NAB2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:8668170		9606	PINC		F
+UniProtKB	Q15910	EZH2	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q61188	9606	ARUK-UCL		F
+UniProtKB	Q15910	EZH2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61188|ensembl:ENSMUSP00000080419	9606	Ensembl		F
+UniProtKB	Q16384	SSX1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:10072425		9606	GO_Central		F
+UniProtKB	Q1ED43	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q3SXZ0	SCAI	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR022709	9606	InterPro		F
+UniProtKB	Q3T8J9	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q460N3	PARP15	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN004461525|UniProtKB:Q460N3|UniProtKB:Q8IXQ6	9606	GO_Central		F
+UniProtKB	Q460N3	PARP15	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:16061477		9606	UniProt		F
+UniProtKB	Q460N5	PARP14	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN004461525|UniProtKB:Q460N3|UniProtKB:Q8IXQ6	9606	GO_Central		F
+UniProtKB	Q4KMQ8	CTBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR043322	9606	InterPro		F
+UniProtKB	Q53GL7	PARP10	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN004461525|UniProtKB:Q460N3|UniProtKB:Q8IXQ6	9606	GO_Central		F
+UniProtKB	Q53GT0	Q53GT0	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q59F53	Q59F53	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	Q59G03	Q59G03	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	Q5H9F3	BCORL1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1918708|PANTHER:PTN001190917|UniProtKB:Q6W2J9	9606	GO_Central		F
+UniProtKB	Q5SZJ8	BEND6	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:2444572|PANTHER:PTN002175966|UniProtKB:Q5SZJ8	9606	GO_Central		F
+UniProtKB	Q5SZJ8	BEND6	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037496	9606	InterPro		F
+UniProtKB	Q5SZJ8	BEND6	enables	GO:0003714	transcription corepressor activity	ECO:0000316	IGI	PMID:23571214	UniProtKB:Q06330	9606	MGI		F
+UniProtKB	Q5SZJ8	BEND6	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q6PFX2|ensembl:ENSMUSP00000052919	9606	Ensembl		F
+UniProtKB	Q5SZK0	BEND6	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037496	9606	InterPro		F
+UniProtKB	Q5T173	PBXIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	Q5VUG0	SFMBT2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037604	9606	InterPro		F
+UniProtKB	Q5VWP3	MLIP	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1916892|PANTHER:PTN002834612	9606	GO_Central		F
+UniProtKB	Q68DC6	CBFA2T2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289	9606	InterPro		F
+UniProtKB	Q69YN3	DKFZp686M1922	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	Q6I9R8	FHL2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O70433|ensembl:ENSMUSP00000008280	9606	Ensembl		F
+UniProtKB	Q6IAN0	DHRS7B	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q99J47|ensembl:ENSMUSP00000044924	9606	Ensembl		F
+UniProtKB	Q6IPZ3	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q6IT96	HDAC1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O09106|ensembl:ENSMUSP00000099657	9606	Ensembl		F
+UniProtKB	Q6PHZ4	GON4L	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q6PJG2	MIDEAS	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0261573|MGI:MGI:1859854|PANTHER:PTN001043031	9606	GO_Central		F
+UniProtKB	Q6VMQ6	ATF7IP	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q7TT18|ensembl:ENSMUSP00000032335	9606	Ensembl		F
+UniProtKB	Q6W2J9	BCOR	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1918708|PANTHER:PTN001190917|UniProtKB:Q6W2J9	9606	GO_Central		F
+UniProtKB	Q6W2J9	BCOR	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CGN4|ensembl:ENSMUSP00000111175	9606	Ensembl		F
+UniProtKB	Q6W2J9	BCOR	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10898795		9606	UniProt		F
+UniProtKB	Q6W2J9	BCOR	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:15878880		9606	UniProt		F
+UniProtKB	Q719H9	KCTD1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002684119|UniProtKB:Q719H9	9606	GO_Central		F
+UniProtKB	Q719H9	KCTD1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:19115315		9606	UniProt		F
+UniProtKB	Q71VC2	MTG8	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	Q71VC3	MTG8	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	Q7Z3K6	MIER3	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001328846|UniProtKB:Q13330	9606	GO_Central		F
+UniProtKB	Q7Z5L9	IRF2BP2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000775901|UniProtKB:Q7Z5L9|UniProtKB:Q8IU81	9606	GO_Central		F
+UniProtKB	Q7Z5L9	IRF2BP2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12799427		9606	MGI		F
+UniProtKB	Q86VZ6	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR030436	9606	InterPro		F
+UniProtKB	Q86VZ6	JAZF1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:15302918		9606	MGI		F
+UniProtKB	Q86X95	CIR1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001775381|UniProtKB:Q86X95	9606	GO_Central		F
+UniProtKB	Q86X95	CIR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR040014	9606	InterPro		F
+UniProtKB	Q86X95	CIR1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:9874765		9606	UniProt		F
+UniProtKB	Q8IU81	IRF2BP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18671972		9606	ARUK-UCL		F
+UniProtKB	Q8IU81	IRF2BP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000775901|UniProtKB:Q7Z5L9|UniProtKB:Q8IU81	9606	GO_Central		F
+UniProtKB	Q8IU81	IRF2BP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12799427		9606	MGI		F
+UniProtKB	Q8IUF8	RIOX2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CD15|ensembl:ENSMUSP00000125297	9606	Ensembl		F
+UniProtKB	Q8IX07	ZFPM1	enables	GO:0003714	transcription corepressor activity	ECO:0000316	IGI	PMID:15920471	UniProtKB:P15976	9606	BHF-UCL		F
+UniProtKB	Q8IX12	CCAR1	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:23887938		9606	UniProt		F
+UniProtKB	Q8IXQ6	PARP9	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN004461525|UniProtKB:Q460N3|UniProtKB:Q8IXQ6	9606	GO_Central		F
+UniProtKB	Q8IXQ6	PARP9	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:16061477		9606	UniProt		F
+UniProtKB	Q8IY57	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR038039	9606	InterPro		F
+UniProtKB	Q8IY57	YAF2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12706874		9606	UniProt		F
+UniProtKB	Q8IYM9	TRIM22	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:7797467		9606	PINC		F
+UniProtKB	Q8IZ40	RCOR2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0261573|MGI:MGI:1859854|PANTHER:PTN001043031	9606	GO_Central		F
+UniProtKB	Q8IZ40	RCOR2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8C796|ensembl:ENSMUSP00000063335	9606	Ensembl		F
+UniProtKB	Q8N108	MIER1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001328846|UniProtKB:Q13330	9606	GO_Central		F
+UniProtKB	Q8N2W9	PIAS4	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JM05|ensembl:ENSMUSP00000005064	9606	Ensembl		F
+UniProtKB	Q8N344	MIER2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001328846|UniProtKB:Q13330	9606	GO_Central		F
+UniProtKB	Q8N3Y7	SDR16C5	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16691198		9606	CAFA		F
+UniProtKB	Q8N488	RYBP	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10369680		9606	PINC		F
+UniProtKB	Q8N488	RYBP	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CCI5|ensembl:ENSMUSP00000098677	9606	Ensembl		F
+UniProtKB	Q8N6I1	EID2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1889651|PANTHER:PTN000399675	9606	GO_Central		F
+UniProtKB	Q8N6T7	SIRT6	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1354161|PANTHER:PTN000119157	9606	GO_Central		F
+UniProtKB	Q8N6T7	SIRT6	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P59941|ensembl:ENSMUSP00000048971	9606	Ensembl		F
+UniProtKB	Q8N7A2	Q8N7A2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q8N888	BCORP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1918708|PANTHER:PTN001190917|UniProtKB:Q6W2J9	9606	GO_Central		F
+UniProtKB	Q8N895	ZNF366	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002811316|UniProtKB:Q8N895	9606	GO_Central		F
+UniProtKB	Q8N895	ZNF366	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:17085477		9606	UniProt		F
+UniProtKB	Q8N8U2	CDYL2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000234743|UniProtKB:Q9Y232	9606	GO_Central		F
+UniProtKB	Q8N9R8	SCAI	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:2443716|PANTHER:PTN000478524|UniProtKB:Q8N9R8	9606	GO_Central		F
+UniProtKB	Q8N9R8	SCAI	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR016607|InterPro:IPR022709	9606	InterPro		F
+UniProtKB	Q8N9R8	SCAI	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8C8N2|ensembl:ENSMUSP00000037194	9606	Ensembl		F
+UniProtKB	Q8N9R8	SCAI	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:19350017		9606	UniProt		F
+UniProtKB	Q8NB12	SMYD1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:P97443|ensembl:ENSMUSP00000073911	9606	Ensembl		F
+UniProtKB	Q8TDD1	DDX54	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12466272		9606	UniProt		F
+UniProtKB	Q8TDR4	TCP10L	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000035656|UniProtKB:Q8TDR4	9606	GO_Central		F
+UniProtKB	Q8TDR4	TCP10L	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:14586771		9606	UniProt		F
+UniProtKB	Q8WUF5	PPP1R13L	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10336463		9606	PINC		F
+UniProtKB	Q8WUI4	HDAC7	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8C2B3|ensembl:ENSMUSP00000112110	9606	Ensembl		F
+UniProtKB	Q8WW38	ZFPM2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8CCH7|ensembl:ENSMUSP00000051335	9606	Ensembl		F
+UniProtKB	Q8WW38	ZFPM2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10438528		9606	BHF-UCL		F
+UniProtKB	Q92785	DPF2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:28533407		9606	ARUK-UCL		F
+UniProtKB	Q92793	CREBBP	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:21539536		9606	BHF-UCL	occurs_at(SO:0001952)	F
+UniProtKB	Q92800	EZH1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	PMID:19026781	UniProtKB:P70351	9606	ARUK-UCL		F
+UniProtKB	Q92802	N4BP2L2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:2687207|PANTHER:PTN002665597	9606	GO_Central		F
+UniProtKB	Q92802	N4BP2L2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8JZS6|ensembl:ENSMUSP00000113895	9606	Ensembl		F
+UniProtKB	Q92802	N4BP2L2	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8JZS6	9606	UniProt		F
+UniProtKB	Q96AQ6	PBXIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033589	9606	InterPro		F
+UniProtKB	Q96AQ6	PBXIP1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:10825160		9606	UniProt		F
+UniProtKB	Q96CK0	ZNF653	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12920234		9606	UniProt	has_input(UniProtKB:Q04752)	F
+UniProtKB	Q96D98	EID2B	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1889651|PANTHER:PTN000399675	9606	GO_Central		F
+UniProtKB	Q96EB6	SIRT1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:2135607|PANTHER:PTN000872223|UniProtKB:Q96EB6	9606	GO_Central		F
+UniProtKB	Q96EB6	SIRT1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q923E4|ensembl:ENSMUSP00000112595	9606	Ensembl		F
+UniProtKB	Q96EB6	SIRT1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12535671		9606	BHF-UCL		F
+UniProtKB	Q96EB6	SIRT1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q923E4	9606	BHF-UCL		F
+UniProtKB	Q96IF1	AJUBA	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1341886|MGI:MGI:1352502|MGI:MGI:2141920|PANTHER:PTN001198456|UniProtKB:Q96IF1	9606	GO_Central		F
+UniProtKB	Q96IF1	AJUBA	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18805794		9606	UniProt		F
+UniProtKB	Q96IF1	AJUBA	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q91XC0|ensembl:ENSMUSP00000056977	9606	Ensembl		F
+UniProtKB	Q96IZ0	PAWR	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:8943350		9606	PINC		F
+UniProtKB	Q96JN0	LCOR	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12535528		9606	ARUK-UCL	part_of(GO:0071392)	F
+UniProtKB	Q96L73	NSD1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O88491	9606	UniProt		F
+UniProtKB	Q96PN7	TRERF1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0261573|MGI:MGI:1859854|PANTHER:PTN001043031	9606	GO_Central		F
+UniProtKB	Q96QT6	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR042163	9606	InterPro		F
+UniProtKB	Q96QT6	PHF12	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:22048773		9606	MGI		F
+UniProtKB	Q96RU7	TRIB3	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR024106	9606	InterPro		F
+UniProtKB	Q96RU7	TRIB3	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8K4K2|ensembl:ENSMUSP00000041747	9606	Ensembl		F
+UniProtKB	Q96RU7	TRIB3	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8K4K2	9606	UniProt		F
+UniProtKB	Q96ST3	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:22783022		9606	ARUK-UCL		F
+UniProtKB	Q96ST3	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:107157|MGI:MGI:107158|PANTHER:PTN000269659|SGD:S000005364|UniProtKB:Q96ST3	9606	GO_Central		F
+UniProtKB	Q96ST3	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037969|InterPro:IPR039774	9606	InterPro		F
+UniProtKB	Q96ST3	SIN3A	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q60520|ensembl:ENSMUSP00000130221	9606	Ensembl		F
+UniProtKB	Q96T58	SPEN	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16287852		9606	BHF-UCL		F
+UniProtKB	Q99471	PFDN5	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9792694		9606	PINC		F
+UniProtKB	Q99708	RBBP8	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16287852		9606	BHF-UCL		F
+UniProtKB	Q99816	TSG101	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10888872		9606	PINC		F
+UniProtKB	Q99816	TSG101	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q61187|ensembl:ENSMUSP00000014546	9606	Ensembl		F
+UniProtKB	Q99967	CITED2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:9887100		9606	UniProt		F
+UniProtKB	Q99967	CITED2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:22735262		9606	BHF-UCL		F
+UniProtKB	Q99967	CITED2	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:17906695		9606	BHF-UCL		F
+UniProtKB	Q9BQ70	TCF25	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16574069		9606	GO_Central		F
+UniProtKB	Q9BQ87	TBL1Y	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1336172|MGI:MGI:2441730|PANTHER:PTN000521099|UniProtKB:O60907|UniProtKB:Q9BZK7	9606	GO_Central		F
+UniProtKB	Q9BQ87	TBL1Y	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	Q9BQG0	MYBBP1A	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:106181|PANTHER:PTN000996181	9606	GO_Central		F
+UniProtKB	Q9BQG0	MYBBP1A	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q7TPV4	9606	UniProt		F
+UniProtKB	Q9BQG0	MYBBP1A	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q7TPV4|ensembl:ENSMUSP00000044827	9606	Ensembl		F
+UniProtKB	Q9BTC8	MTA3	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN001328846|UniProtKB:Q13330	9606	GO_Central		F
+UniProtKB	Q9BZK7	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1336172|MGI:MGI:2441730|PANTHER:PTN000521099|UniProtKB:O60907|UniProtKB:Q9BZK7	9606	GO_Central		F
+UniProtKB	Q9BZK7	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR045183	9606	InterPro		F
+UniProtKB	Q9BZK7	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8BHJ5|ensembl:ENSMUSP00000142184	9606	Ensembl		F
+UniProtKB	Q9BZK7	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12628926		9606	UniProt		F
+UniProtKB	Q9BZK7	TBL1XR1	enables	GO:0003714	transcription corepressor activity	ECO:0000316	IGI	PMID:15601853	UniProtKB:O60907	9606	UniProt		F
+UniProtKB	Q9BZS1	FOXP3	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q99JB6|ensembl:ENSMUSP00000111405	9606	Ensembl		F
+UniProtKB	Q9GZV5	WWTR1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1917649|PANTHER:PTN000427158|UniProtKB:P46937	9606	GO_Central		F
+UniProtKB	Q9GZV5	WWTR1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9EPK5|ensembl:ENSMUSP00000113040	9606	Ensembl		F
+UniProtKB	Q9H0D2	ZNF541	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0261573|MGI:MGI:1859854|PANTHER:PTN001043031	9606	GO_Central		F
+UniProtKB	Q9H1B7	IRF2BPL	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000775901|UniProtKB:Q7Z5L9|UniProtKB:Q8IU81	9606	GO_Central		F
+UniProtKB	Q9H2X6	HIPK2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1314872|PANTHER:PTN002780562|UniProtKB:Q9H2X6	9606	GO_Central		F
+UniProtKB	Q9H2X6	HIPK2	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:9748262		9606	PINC		F
+UniProtKB	Q9H2X6	HIPK2	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9QZR5|ensembl:ENSMUSP00000124133	9606	Ensembl		F
+UniProtKB	Q9H2X6	HIPK2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12874272		9606	UniProt		F
+UniProtKB	Q9H4R4	NCOR1P1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1337080|MGI:MGI:1349717|PANTHER:PTN000360524|UniProtKB:O75376|UniProtKB:Q9Y618	9606	GO_Central		F
+UniProtKB	Q9H5U2	Q9H5U2	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q9H808	TLE6	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0001139|MGI:MGI:104633|MGI:MGI:104636|MGI:MGI:95806|PANTHER:PTN000850324|UniProtKB:Q04724|UniProtKB:Q04725|UniProtKB:Q08117|WB:WBGene00006773	9606	GO_Central		F
+UniProtKB	Q9H986	Q9H986	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q9HBM6	TAF9B	enables	GO:0003714	transcription corepressor activity	ECO:0000305	IC	PMID:12837753	GO:0000122	9606	BHF-UCL		F
+UniProtKB	Q9HBV9	CBFA2T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	Q9HCD5	NCOA5	enables	GO:0003714	transcription corepressor activity	ECO:0000303	NAS	PMID:25755249		9606	ARUK-UCL		F
+UniProtKB	Q9NPF5	DMAP1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1913483|PANTHER:PTN000304415	9606	GO_Central		F
+UniProtKB	Q9NPF5	DMAP1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9JI44|ensembl:ENSMUSP00000099748	9606	Ensembl		F
+UniProtKB	Q9NPI1	BRD7	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16265664		9606	UniProt		F
+UniProtKB	Q9NPI1	BRD7	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:O88665	9606	UniProt		F
+UniProtKB	Q9NPI1	BRD7	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:O88665|ensembl:ENSMUSP00000034085	9606	Ensembl		F
+UniProtKB	Q9NQR1	KMT5A	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18408754		9606	UniProt		F
+UniProtKB	Q9NRC8	SIRT7	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1354161|PANTHER:PTN000119157	9606	GO_Central		F
+UniProtKB	Q9NVW2	RLIM	enables	GO:0003714	transcription corepressor activity	ECO:0000303	NAS	PMID:11013082		9606	UniProt		F
+UniProtKB	Q9NXJ9	Q9NXJ9	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR033277	9606	InterPro		F
+UniProtKB	Q9NZU5	LMCD1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1353635|PANTHER:PTN000654905	9606	GO_Central		F
+UniProtKB	Q9NZU5	LMCD1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q8VEE1	9606	UniProt		F
+UniProtKB	Q9NZU5	LMCD1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q8VEE1|ensembl:ENSMUSP00000032376	9606	Ensembl		F
+UniProtKB	Q9P2K3	RCOR3	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0261573|MGI:MGI:1859854|PANTHER:PTN001043031	9606	GO_Central		F
+UniProtKB	Q9P2R6	RERE	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0010825|MGI:MGI:104725|MGI:MGI:2683486|PANTHER:PTN001015306|UniProtKB:P54259	9606	GO_Central		F
+UniProtKB	Q9P2R6	RERE	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q80TZ9|ensembl:ENSMUSP00000101307	9606	Ensembl		F
+UniProtKB	Q9UBC3	DNMT3B	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:17303076		9606	UniProt		F
+UniProtKB	Q9UBC3	DNMT3B	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:18567530		9606	UniProt		F
+UniProtKB	Q9UBK9	UXT	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000331275|UniProtKB:Q9UBK9	9606	GO_Central		F
+UniProtKB	Q9UBK9	UXT	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:21730289		9606	UniProt		F
+UniProtKB	Q9UBK9	UXT	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR003994	9606	InterPro		F
+UniProtKB	Q9UDR5	AASS	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9VLX0	9606	FlyBase		F
+UniProtKB	Q9UER7	DAXX	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000298848|UniProtKB:Q9UER7|ZFIN:ZDB-GENE-010110-3	9606	GO_Central		F
+UniProtKB	Q9UER7	DAXX	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:17081986		9606	CAFA	has_input(UniProtKB:P04150)	F
+UniProtKB	Q9UER7	DAXX	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12140263		9606	UniProt		F
+UniProtKB	Q9UGL1	KDM5B	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12657635		9606	UniProt		F
+UniProtKB	Q9UGP4	LIMD1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1341886|MGI:MGI:1352502|MGI:MGI:2141920|PANTHER:PTN001198456|UniProtKB:Q96IF1	9606	GO_Central		F
+UniProtKB	Q9UGP4	LIMD1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9QXD8	9606	UniProt		F
+UniProtKB	Q9UGP4	LIMD1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9QXD8|ensembl:ENSMUSP00000026269	9606	Ensembl		F
+UniProtKB	Q9UHJ3	SFMBT1	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:23592795		9606	UniProt		F
+UniProtKB	Q9UHJ3	SFMBT1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR037604	9606	InterPro		F
+UniProtKB	Q9UIV1	CNOT7	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:23386060		9606	UniProt		F
+UniProtKB	Q9UKL0	RCOR1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	FB:FBgn0261573|MGI:MGI:1859854|PANTHER:PTN001043031	9606	GO_Central		F
+UniProtKB	Q9UKL3	CASP8AP2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000398070|UniProtKB:Q9UKL3	9606	GO_Central		F
+UniProtKB	Q9UKL3	CASP8AP2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:12477726		9606	UniProt		F
+UniProtKB	Q9UKV0	HDAC9	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q99N13	9606	BHF-UCL		F
+UniProtKB	Q9ULU4	ZMYND8	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:27477906		9606	UniProt		F
+UniProtKB	Q9ULU4	ZMYND8	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:D5LMF5	9606	BHF-UCL		F
+UniProtKB	Q9UMX1	SUFU	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10559945		9606	PINC		F
+UniProtKB	Q9UMX1	SUFU	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:10564661		9606	UniProt		F
+UniProtKB	Q9UQ80	PA2G4	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:15073182		9606	MGI		F
+UniProtKB	Q9Y230	RUVBL2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:11080158		9606	UniProt	has_input(GO:1990907)	F
+UniProtKB	Q9Y232	CDYL	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000234743|UniProtKB:Q9Y232	9606	GO_Central		F
+UniProtKB	Q9Y232	CDYL	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:19061646		9606	UniProt		F
+UniProtKB	Q9Y3T9	NOC2L	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000976013|UniProtKB:Q9Y3T9	9606	GO_Central		F
+UniProtKB	Q9Y3T9	NOC2L	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:16322561		9606	UniProt		F
+UniProtKB	Q9Y4E5	ZNF451	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN002812576|UniProtKB:Q9Y4E5	9606	GO_Central		F
+UniProtKB	Q9Y4E5	ZNF451	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:24324267		9606	UniProt		F
+UniProtKB	Q9Y618	NCOR2	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1337080|MGI:MGI:1349717|PANTHER:PTN000360524|UniProtKB:O75376|UniProtKB:Q9Y618	9606	GO_Central		F
+UniProtKB	Q9Y618	NCOR2	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:20812024		9606	UniProt		F
+UniProtKB	Q9Y618	NCOR2	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:18052923		9606	BHF-UCL		F
+UniProtKB	Q9Y618	NCOR2	enables	GO:0003714	transcription corepressor activity	ECO:0000315	IMP	PMID:12628926		9606	UniProt		F
+UniProtKB	Q9Y6B2	EID1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	MGI:MGI:1889651|PANTHER:PTN000399675	9606	GO_Central		F
+UniProtKB	Q9Y6B2	EID1	enables	GO:0003714	transcription corepressor activity	ECO:0000265	IEA	GO_REF:0000107	UniProtKB:Q9DCR4|ensembl:ENSMUSP00000129413	9606	Ensembl		F
+UniProtKB	Q9Y6B2	EID1	enables	GO:0003714	transcription corepressor activity	ECO:0000250	ISS	GO_REF:0000024	UniProtKB:Q9DCR4	9606	UniProt		F
+UniProtKB	Q9Y6F7	CDY2A	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000234743|UniProtKB:Q9Y232	9606	GO_Central		F
+UniProtKB	Q9Y6F8	CDY1	enables	GO:0003714	transcription corepressor activity	ECO:0000318	IBA	PMID:21873635	PANTHER:PTN000234743|UniProtKB:Q9Y232	9606	GO_Central		F
+UniProtKB	Q9Y6K1	DNMT3A	enables	GO:0003714	transcription corepressor activity	ECO:0000304	TAS	PMID:19786833		9606	ARUK-UCL		F
+UniProtKB	S4R2Z4	UXT	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR003994	9606	InterPro		F
+UniProtKB	W8FK78	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FK92	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FKX0	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FP49	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FP57	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FP62	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FSP9	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FSQ2	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FSQ5	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FSQ8	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FW28	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FW32	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	W8FW37	RUNX1T1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	X5C3Z9	RUNX1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	X5C9T0	RUNX1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	X5CT67	RUNX1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR013289|InterPro:IPR013290	9606	InterPro		F
+UniProtKB	X5D7T7	CTBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR043322	9606	InterPro		F
+UniProtKB	X5D8Y5	CTBP1	enables	GO:0003714	transcription corepressor activity	ECO:0000256	IEA	GO_REF:0000002	InterPro:IPR043322	9606	InterPro		F
+ComplexPortal	CPX-514	cmyc_bin1_human	enables	GO:0003714	transcription corepressor activity	ECO:0000314	IDA	PMID:8782822		9606	ComplexPortal		F
