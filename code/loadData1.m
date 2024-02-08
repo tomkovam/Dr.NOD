@@ -35,7 +35,7 @@ if (~exist(saveFileData, 'file'))
     matGencodeGeneTissue_isCandidate_pM_only = false(nGencodeGenes, nTissues);
     matGencodeGeneTissue_isUpregulated = false(nGencodeGenes, nTissues);
     %%
-    [~, tableGencodeGenes] = loadGenes(false);
+    [~, tableGencodeGenes] = loadGenes(false, sProperties);
     tableGencodeGenes.nMutations = NaN*ones(nGencodeGenes, 1);
     tableGencodeGenes.nMutationsHighCADD = NaN*ones(nGencodeGenes, 1);
     tableGencodeGenes.nMutSamples = NaN*ones(nGencodeGenes, 1);
@@ -205,7 +205,7 @@ if (~exist(saveFileData, 'file'))
         for iGene = find(isCandidate)'
             geneName = tableGenesNasserExpressed.geneName{iGene};
             saveForOneGeneVisualisation(tissueName, biosampleABC, geneName, pM(iGene), pE(iGene), qCombined(iGene), tableSamples, matCNV_genesSamples, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, ...
-                tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, exclusionType);
+                tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, sProperties.exclusionType);
         end
     end
     toc

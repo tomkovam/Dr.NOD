@@ -59,6 +59,10 @@ if (runAgain || ~exist(saveFileData, 'file'))
     tableSamplesPCAWG.aliquot_id_RNA(isOK2) = tableSampleSheet_tumourRNA.aliquot_id(indexIntoSheet(isOK2));
     tableSamplesPCAWG.has_RNA_specimenMatched(isOK2) = true;
     %% Expression
+    if (~exist(INFILE2, 'file') && exist([INFILE2, '.gz'], 'file'))
+        gunzip([INFILE2, '.gz']);
+    end
+    %%
     tableExpression = readtable(INFILE2);
     tableExpressionSamples = table();
     tableExpressionSamples.aliquot_id_RNA = cellfun(@(x) strrep(x(end-35:end), '_', '-'), tableExpression.Properties.VariableNames(2:end)', 'UniformOutput', false); % Those starting with 0 had x added at the beginning --> which we need to remove

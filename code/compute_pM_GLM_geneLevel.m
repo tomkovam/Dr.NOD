@@ -42,5 +42,16 @@ try
     stats.univariableCutoff = univariableCutoff;
     %stats.mdl = mdl; % Too large
 catch
+    %tmp = tableDataForBMM(:,tablePredictors.isUsed);
     warning('Badly scaled data or some other issues.');
+    pM = NaN*nMutSamplesInEnhancersPerGene;
+    stats.explainedDevaince = NaN;
+    stats.explainedVariance = NaN;
+    stats.coefTest = NaN;
+    stats.tablePredictors = NaN;
+    stats.expected_mf = NaN;
+    stats.observed_mf = NaN;
+    stats.foldChange = NaN*nMutSamplesInEnhancersPerGene;
+    stats.log2FC = NaN;
+    stats.univariableCutoff = NaN;
 end

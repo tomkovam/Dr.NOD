@@ -7,12 +7,15 @@ if (runAgain || ~exist(saveFileData, 'file'))
     fprintf('Computing %s...\n', saveFileData);    
     %% First, we load the input file
     inputFileName = [sProperties.PCAWG_CNV_DIR, 'gene_CNV_calls_perTissue/CNV_',tissueName,'.txt'];   % PCAWG/CNV/
+    if (~exist(inputFileName, 'file') && exist([inputFileName, '.gz'], 'file'))
+        gunzip([inputFileName, '.gz']);
+    end
     try
         tableCNV_oneTissue = readtable(inputFileName, 'ReadVariableNames', false, 'delimiter', '\t');
         tableCNV_oneTissue.Properties.VariableNames = {'geneIndex', 'geneName', 'aliquot_id', 'CNV_total', 'CNV_major', 'CNV_minor'};
         tableSamplesWithCNV = readtable([sProperties.PCAWG_CNV_DIR, 'CNV_samples_perTissue/samplesWithCNV_',tissueName,'.txt'], 'ReadVariableNames', false);  % PCAWG/CNV/
         tableSamplesWithCNV = tableSamplesWithCNV.Var1;
-        fprintf('%s %s: %s CNV rows, %d samples\n', tissueName, biosampleABC, num2sepNumStr(size(tableCNV_oneTissue, 1)));
+        fprintf('%s %s: %s CNV rows\n', tissueName, biosampleABC, num2sepNumStr(size(tableCNV_oneTissue, 1)));
     catch
         fprintf('File %s not found.\n', inputFileName);
         return
