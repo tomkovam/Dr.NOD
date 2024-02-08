@@ -22,11 +22,31 @@ save/mainORIGINAL
 save/TODELETE2evaluateBMM
 save/TODELETEevaluateBMM
 
+saveAll/annotatedEnhancers
+saveAll/dataCancer
+saveAll/dataMutations
+saveAll/mutationsMatrices
+saveAll/PCAWG
+saveAll/pValuePerGene
+saveAll/samples
+saveAll/tableMutations_FunSeq2
+saveAll/evaluateBMM
+saveAll/evaluateBMM_genes
+saveAll/evaluateBMM_genes999
+saveAll/evaluateBMM_max1kbp
+saveAll/evaluateBMM_maxInf
+saveAll/evaluateBMM_maxInf_mfInf
+saveAll/evaluateModel
+saveAll/mainORIGINAL
+saveAll/TODELETE2evaluateBMM
+saveAll/TODELETEevaluateBMM
 results
 
 data/per_base_territories_20kb_line_numbers.bed.txt
 save/dataPCAWG_fpkm_uq.mat
 save/genes.mat
+saveAll/dataPCAWG_fpkm_uq.mat
+saveAll/genes.mat
 *.asv
 data/genes/CGC_Census_allTue Aug 10 20_28_04 2021.txt
 data/genes/PCAWG_TableS1_compendium_mutational_drivers_formatted.xlsx

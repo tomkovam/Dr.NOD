@@ -1,6 +1,6 @@
 % scriptRunAnalysis
 clear; clc; close all; addpath(genpath('code/')); rng(1);
-imagesPath = 'results/mainFigures/'; createDir(imagesPath);
+imagesPath = 'results/mainFiguresTest/'; createDir(imagesPath);
 sColours = getColours();
 %% Loading data
 [tableTissues, sProperties, nTissues] = loadParameters;
@@ -28,19 +28,25 @@ if (false)
     writetable(dataSupTables.tableMutationGenePairs(dataSupTables.tableMutationGenePairs.iTissue > 1 & dataSupTables.tableMutationGenePairs.isHighCADD & ~dataSupTables.tableMutationGenePairs.isExcluded,dataSupTables.lstColsMutationGenePairs), [imagesPath, 'SupplementaryTable4.xlsx']);
 end
 %% Main and supplementary figures
-plotFigure6(imagesPath, sColours, tableTissues_data1, dataSupTables, tableMutations_candidate);
-if (false)
-    plotFigure1(imagesPath, sColours, sResults, dataSupTables.lstGenesStrongSupport);
-    plotFigure2(imagesPath, sColours, tableTissuesWithPancancer, tableTissues_data3, tableABC, sResCrossTissues, sResCrossCADD, sResPanCancerCrossCADD, tableMutations_candidate, lstMinCADD_PHRED, sProperties, cTrinucleotides);
-    plotFigure3(imagesPath, sColours, tableMutations_candidate, tableTissues_data1, sResults, sProperties);
-    plotFigure4(imagesPath, sColours, tableGencodeGenes, tableTissues_data1, dataDepMap, sProperties);
-    plotFigure6(imagesPath, sColours, tableTissuesWithPancancer_data4, tableTissues_data4, dataTFBS, tableMutations_candidate, tableTissues_data1);
-    plotFigure7(dataSupTables.tableMutationGenePairs, imagesPath, sColours, tableTissues_data1);
-    plotSupFigure1(imagesPath, dataCutoffs);
-    plotSupFigure2(imagesPath, sColours, dataDepMap);
-    plotSupFigure_sensitivityCADD(imagesPath, sResPanCancerCrossCADD, lstMinCADD_PHRED, tableGencodeGenes);
-    plotSupFigure_crossCADD(imagesPath, tableTissues_data3, sResCrossCADD, lstMinCADD_PHRED);
-end
+plotFigure1(imagesPath, sColours, sResults, dataSupTables.lstGenesStrongSupport);
+plotFigure2(imagesPath, sColours, tableTissuesWithPancancer, tableTissues_data3, tableABC, sResCrossTissues, sResCrossCADD, sResPanCancerCrossCADD, tableMutations_candidate, lstMinCADD_PHRED, sProperties, cTrinucleotides);
+plotFigure3(imagesPath, sColours, tableMutations_candidate, tableTissues_data1, sResults, sProperties);
+plotFigure4(imagesPath, sColours, tableGencodeGenes, tableTissues_data1, dataDepMap, sProperties);
+plotFigure6(imagesPath, sColours, tableTissuesWithPancancer_data4, tableTissues_data4, dataTFBS, tableMutations_candidate, tableTissues_data1);
+plotFigure7(dataSupTables.tableMutationGenePairs, imagesPath, sColours, tableTissues_data1);
+% plotFigure6(imagesPath, sColours, tableTissues_data1, dataSupTables, tableMutations_candidate);
+% if (false)
+%     plotFigure1(imagesPath, sColours, sResults, dataSupTables.lstGenesStrongSupport);
+%     plotFigure2(imagesPath, sColours, tableTissuesWithPancancer, tableTissues_data3, tableABC, sResCrossTissues, sResCrossCADD, sResPanCancerCrossCADD, tableMutations_candidate, lstMinCADD_PHRED, sProperties, cTrinucleotides);
+%     plotFigure3(imagesPath, sColours, tableMutations_candidate, tableTissues_data1, sResults, sProperties);
+%     plotFigure4(imagesPath, sColours, tableGencodeGenes, tableTissues_data1, dataDepMap, sProperties);
+%     plotFigure6(imagesPath, sColours, tableTissuesWithPancancer_data4, tableTissues_data4, dataTFBS, tableMutations_candidate, tableTissues_data1);
+%     plotFigure7(dataSupTables.tableMutationGenePairs, imagesPath, sColours, tableTissues_data1);
+%     plotSupFigure1(imagesPath, dataCutoffs);
+%     plotSupFigure2(imagesPath, sColours, dataDepMap);
+%     plotSupFigure_sensitivityCADD(imagesPath, sResPanCancerCrossCADD, lstMinCADD_PHRED, tableGencodeGenes);
+%     plotSupFigure_crossCADD(imagesPath, tableTissues_data3, sResCrossCADD, lstMinCADD_PHRED);
+% end
 %% List of used matlab code/function files
 % [fList,pList] = matlab.codetools.requiredFilesAndProducts('scriptRunAnalysis.m');
 % writetable(cell2table(fList'), 'usedFiles2.txt');
