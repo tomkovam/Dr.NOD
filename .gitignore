@@ -42,6 +42,11 @@ saveAll/TODELETE2evaluateBMM
 saveAll/TODELETEevaluateBMM
 results
 
+saveTest/
+imagesTest/
+data/PCAWG_test/CNV/gene_CNV_calls_perTissue/*.txt
+data/PCAWG_test/expression/joint_fpkm_uq.txt
+
 data/per_base_territories_20kb_line_numbers.bed.txt
 save/dataPCAWG_fpkm_uq.mat
 save/genes.mat
@@ -58,3 +63,4 @@ ARCHIVE
 *.gtf.txt
 data/genes/HousekeepingGenes.xlsx
 data/genes/Housekeeping_GenesHuman.csv
+scriptPrepareTestData.m
