@@ -1,7 +1,7 @@
-function [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType, tableSamples, tableMutations, tissueName, biosampleABC, verbose)
+function [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType, sProperties, tableSamples, tableMutations, tissueName, biosampleABC, verbose)
 % Annotated exclued samples (such as POLE-MUT and MSI/MMRd samples) and mutations and annotates high-CADD mutations.
 
-saveFileData = ['save/samples/tableSamples_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/samples/tableSamples_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     tic
     %%

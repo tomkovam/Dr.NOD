@@ -17,10 +17,10 @@ levelOutputArgumentsOrig = levelOutputArguments;
 
 if (levelOutputArguments <= 2) % To speed it up, we first try to read directly from the precomputed files, assuming that they already exist.
     try
-        [tableGenes_pValues, stats] = computePValuePerGene(runAgain, suffix, minCADD_PHRED, exclusionType);
-        saveFileData = ['save/dataCancer/dataCancer_',suffix,'.mat'];
+        [tableGenes_pValues, stats] = computePValuePerGene(runAgain, suffix, minCADD_PHRED, exclusionType, sProperties);
+        saveFileData = [sProperties.DIRECTORY_SAVE, '/dataCancer/dataCancer_',suffix,'.mat'];
         load(saveFileData, 'tableGenesNasserExpressed', 'tableGencodeGenes');
-        [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType);
+        [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType, sProperties);
     catch
         levelOutputArguments = 3;
     end
@@ -28,8 +28,8 @@ end
 
 if (levelOutputArguments == 2) % To speed it up, we first try to read directly from the precomputed files, assuming that they already exist.
     try
-        [tableGenes_pValues_hyperUE, stats_hyperUE] = computePValuePerGene_hypermutatedEnhancersOnly(runAgain, suffix, minCADD_PHRED, exclusionType);
-        saveFileData = ['save/dataCancer/dataCancer_',suffix,'.mat'];
+        [tableGenes_pValues_hyperUE, stats_hyperUE] = computePValuePerGene_hypermutatedEnhancersOnly(runAgain, suffix, minCADD_PHRED, exclusionType, sProperties);
+        saveFileData = [sProperties.DIRECTORY_SAVE, '/dataCancer/dataCancer_',suffix,'.mat'];
         load(saveFileData, 'matMutationsEnhancers', 'matUniqueEnhancersGenes', 'matExpressionGenesSamples');
     catch
         levelOutputArguments = 3;
@@ -45,10 +45,10 @@ if (levelOutputArguments > 2) % If the files did not exist, or if the user requi
         matExpressionGenesSamples, ~, ~, matMutationsEnhancers, matCNV_genesSamples] = ...
         loadCancerData(runAgain, tissueName, biosampleABC, enhancerAnalysis, doSave, verbose, tissueNameSV, sProperties);
     %
-    [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType, tableSamples, tableMutations, tissueName, biosampleABC, verbose);
+    [tableSamples, tableMutations] = excludeSamples(runAgain, suffix, minCADD_PHRED, exclusionType, sProperties, tableSamples, tableMutations, tissueName, biosampleABC, verbose);
     nSamples = size(tableSamples, 1);
     [matGenesSamplesNMut_SNVs_highCADD, matGenesSamplesNMut_SNVs, matGenesSamplesNMut_INDEL, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL] = ...
-        computeMutationMatrices(runAgain, suffix, minCADD_PHRED, tableMutations, matMutationsEnhancers, nSamples, tableUniqueEnhancers, matUniqueEnhancersGenes, doSave);
+        computeMutationMatrices(runAgain, suffix, minCADD_PHRED, tableMutations, matMutationsEnhancers, nSamples, tableUniqueEnhancers, matUniqueEnhancersGenes, doSave, sProperties);
     %
     tableGenesNasserExpressed.nPositionsInEnhancers = matUniqueEnhancersGenes'*tableUniqueEnhancers.nPositions; % Number of positions in all unique enhancers regulating the given gene (I have checked it gives the same results as the previous slower implementation)
     %
@@ -56,7 +56,7 @@ if (levelOutputArguments > 2) % If the files did not exist, or if the user requi
         annotateEnhancersByGenomicFeatures(runAgain, suffix, minCADD_PHRED, biosampleABC, enhancerAnalysis, tableSamples, tableUniqueEnhancers, tableGenesNasserExpressed, matUniqueEnhancersGenes, sProperties);
     %
     [tableGenes_pValues, stats] = computePValuePerGene(runAgain, suffix, minCADD_PHRED, exclusionType, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, matGenesSamplesNMut_INDEL, matCNV_genesSamples, ...
-        matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotides, tableSamples, tableUniqueEnhancers, verbose);
+        matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotides, tableSamples, tableUniqueEnhancers, verbose, sProperties);
     %
     tableGenes_pValues_hyperUE = NaN;
     stats_hyperUE = NaN;
@@ -65,7 +65,7 @@ if (levelOutputArguments > 2) % If the files did not exist, or if the user requi
     if (levelOutputArgumentsOrig>1)
         [tableGenes_pValues_hyperUE, stats_hyperUE, tableUE_annotations_hyperUE, ~, ~, matUESamplesIsMut_SNVs_highCADD_hyperUE] = ...
             computePValuePerGene_hypermutatedEnhancersOnly(runAgain, suffix, minCADD_PHRED, exclusionType, matExpressionGenesSamples, matCNV_genesSamples, ...
-            matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotides, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL, tableUE_annotations, tableUE_mean_trinucleotdies, tableSamples, verbose);
+            matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotides, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL, tableUE_annotations, tableUE_mean_trinucleotdies, tableSamples, verbose, sProperties);
     end
     % Add minimal and maximal positions to the unique enhancers:
     tmp = grpstats(tableUniqueEnhancers_regions(:,{'iUniqueEnhancer', 'pos0', 'pos1'}), 'iUniqueEnhancer', {'min', 'max'});
@@ -81,9 +81,9 @@ typeNames = {'SNVs_highCADD', 'SNVs_highCADD_INDELs'};
 for iType = 1:length(typeNames)
     typeName = typeNames{iType};
     if (levelOutputArguments <= 2)
-        [pM, statsOne] = compute_pValue_pM(runAgain, typeName, tissueName, biosampleABC, enhancerAnalysis, minCADD_PHRED, exclusionType);
+        [pM, statsOne] = compute_pValue_pM(runAgain, typeName, tissueName, biosampleABC, enhancerAnalysis, minCADD_PHRED, exclusionType, sProperties);
     else
-        [pM, statsOne] = compute_pValue_pM(runAgain, typeName, tissueName, biosampleABC, enhancerAnalysis, minCADD_PHRED, exclusionType, tableGenes_pValues, tableSamples, tableGenes_annotations, tableGenes_mean_trinucleotides);
+        [pM, statsOne] = compute_pValue_pM(runAgain, typeName, tissueName, biosampleABC, enhancerAnalysis, minCADD_PHRED, exclusionType, sProperties, tableGenes_pValues, tableSamples, tableGenes_annotations, tableGenes_mean_trinucleotides);
     end
     tableGenes_pValues.(['pM_fullModel_',typeName]) = pM;
     tableGenes_pValues.(['eM_fullModel_', typeName]) = statsOne.foldChange;

@@ -1,13 +1,13 @@
-function plotGene_boxplot(tissueName, biosampleABC, geneName, sColours, printTissue, exclusionType)
+function plotGene_boxplot(tissueName, biosampleABC, geneName, sColours, printTissue, sProperties)
 %%
-if (~exist('exclusionType', 'var') || strcmp(exclusionType, 'excludePOLE_MSI'))
+if (strcmp(sProperties.exclusionType, 'excludePOLE_MSI'))
     suffix = '';
 else
-    suffix = ['_', exclusionType];
+    suffix = ['_', sProperties.exclusionType];
 end
 %%
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_qCombined', 'gene_pE', ...
+load([sProperties.DIRECTORY_SAVE, '/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_qCombined', 'gene_pE', ...
     'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression', 'CNVperSample');
 
 %%

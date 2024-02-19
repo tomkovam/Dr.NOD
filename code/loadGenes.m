@@ -5,10 +5,10 @@ function [tableGenesNasser, tableGencodeGenes, tableChrSizes, tableCGC, tableDri
 % The tableGencodeGenes is the list of all genes for which there is PCAWG expression calls.
 
 if (~exist('tableDriverMutationsPCAWG', 'var'))
-    [~, ~, ~, ~, ~, ~, tableDriverMutationsPCAWG] = loadDataPCAWG();
+    [~, ~, ~, ~, ~, ~, tableDriverMutationsPCAWG] = loadDataPCAWG(runAgain, sProperties.expressionType, sProperties);
 end
 
-saveFileData = 'save/genes.mat';
+saveFileData = [sProperties.DIRECTORY_SAVE, '/genes.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     tic
     fprintf('Computing %s...\n', saveFileData);

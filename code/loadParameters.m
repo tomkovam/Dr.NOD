@@ -1,7 +1,12 @@
-function [tableTissues, sProperties, nTissues] = loadParameters()
+function [tableTissues, sProperties, nTissues] = loadParameters(inputPropertiesFile)
 %% Loads main parameters of the entire analysis
 
-sProperties = readPropertiesFile('inputParametersTest.properties');
+if (~exist('inputPropertiesFile', 'var'))
+    inputPropertiesFile = 'inputParametersTest.properties';
+end
+
+sProperties = readPropertiesFile(inputPropertiesFile);
+sProperties.inputPropertiesFile = inputPropertiesFile;
 sProperties.datasetDepMap = 'Achilles_gene_dependency';
 sProperties.minCADD_PHRED = 10;
 sProperties.mutTypeName = 'SNVs_highCADD';

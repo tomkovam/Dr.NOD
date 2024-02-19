@@ -5,7 +5,7 @@ enhancerAnalysis = sProperties.enhancerAnalysis;
 minCADD_PHRED = sProperties.minCADD_PHRED;
 exclusionType = sProperties.exclusionType;
 
-saveFileData = ['save/tableMutations_FunSeq2/tableMutations_FunSeq2_context50_',tissueName,'_', biosampleABC, '_', enhancerAnalysis, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/tableMutations_FunSeq2/tableMutations_FunSeq2_context50_',tissueName,'_', biosampleABC, '_', enhancerAnalysis, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     t0 = tic;
     %% 

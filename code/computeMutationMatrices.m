@@ -1,10 +1,10 @@
 function [matGenesSamplesNMut_SNVs_highCADD, matGenesSamplesNMut_SNVs, matGenesSamplesNMut_INDEL, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL, matUESamplesIsMut_SNVs] = ...
-    computeMutationMatrices(runAgain, suffix, minCADD_PHRED, tableMutations, matMutationsEnhancers, nSamples, tableUniqueEnhancers, matUniqueEnhancersGenes, doSave)
+    computeMutationMatrices(runAgain, suffix, minCADD_PHRED, tableMutations, matMutationsEnhancers, nSamples, tableUniqueEnhancers, matUniqueEnhancersGenes, doSave, sProperties)
 %% Annotates enhancers with counts of samples that have a mutation in the enhancer
 % Note that matGenesSamplesNMut_SNVs is the number of SNV-mutated UE per every gene and sample 
 % (not the total number of all mutations in the regulatory space - this will differ in cases when one regulatory space has multiple mutations in the same sample!)
 
-fileNameMutationMatrices = ['save/mutationsMatrices/mutationsMatrices_', suffix, '_', num2str(minCADD_PHRED),'.mat'];
+fileNameMutationMatrices = [sProperties.DIRECTORY_SAVE, '/mutationsMatrices/mutationsMatrices_', suffix, '_', num2str(minCADD_PHRED),'.mat'];
 if (~runAgain && exist(fileNameMutationMatrices, 'file'))
     fprintf('Loading a %s...\n', fileNameMutationMatrices);
     load(fileNameMutationMatrices, 'matGenesSamplesNMut_SNVs_highCADD', 'matGenesSamplesNMut_SNVs', 'matGenesSamplesNMut_INDEL', 'matUESamplesIsMut_SNVs_highCADD', 'matUESamplesIsMut_INDEL', 'matUESamplesIsMut_SNVs');

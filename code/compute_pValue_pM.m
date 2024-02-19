@@ -1,8 +1,8 @@
-function [pM, statsOne] = compute_pValue_pM(runAgain, typeName, tissueName, biosampleABC, enhancerAnalysis, minCADD_PHRED, exclusionType, tableGenes_pValues, tableSamples, tableGenes_annotations, tableGenes_mean_trinucleotdies)
+function [pM, statsOne] = compute_pValue_pM(runAgain, typeName, tissueName, biosampleABC, enhancerAnalysis, minCADD_PHRED, exclusionType, sProperties, tableGenes_pValues, tableSamples, tableGenes_annotations, tableGenes_mean_trinucleotdies)
 %% Computes the pM p-values (for scoreM) for each gene, i.e., whether the regulatory space of the gene is more mutated than expected (taking high-CADD mutations into consideration only)
 
 suffix = [tissueName, '_', biosampleABC, '_', enhancerAnalysis, '_', typeName];
-fileNamePValuePerGene = ['save/pValuePerGene/pValuePerGene_pM_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
+fileNamePValuePerGene = [sProperties.DIRECTORY_SAVE, '/pValuePerGene/pValuePerGene_pM_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat'];
 if (~runAgain && exist(fileNamePValuePerGene, 'file'))
     fprintf('Loading %s...\n', fileNamePValuePerGene);
     load(fileNamePValuePerGene, 'pM', 'statsOne');

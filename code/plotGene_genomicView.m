@@ -8,7 +8,7 @@ else
 end
 %%
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'expressionPerSample', 'sampleGroup',  ...
+load([sProperties.DIRECTORY_SAVE, '/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'expressionPerSample', 'sampleGroup',  ...
     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'isMutPerEnhancer', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');
 
 %%

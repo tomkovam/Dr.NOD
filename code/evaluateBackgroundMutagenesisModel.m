@@ -18,7 +18,7 @@ if (plotFigures)
     imagesPath = ['results/evaluation/', 'eval_', num2str(minCADD_PHRED), '_', num2str(maxPredictors), '_', num2str(1e4*qtlMF),'/']; createDir(imagesPath);
 end
 
-fileNameEvaluation = ['save/evaluateModel/evaluation_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '_max', num2str(maxPredictors), '_', num2str(1e4*qtlMF), '.mat']; createDir(fileparts(fileNameEvaluation));
+fileNameEvaluation = [sProperties.DIRECTORY_SAVE, '/evaluateModel/evaluation_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '_max', num2str(maxPredictors), '_', num2str(1e4*qtlMF), '.mat']; createDir(fileparts(fileNameEvaluation));
 if (runAgain || ~exist(fileNameEvaluation, 'file'))
     t1 = tic;
     fprintf('Computing pM %s...\n', suffix);

@@ -1,9 +1,9 @@
 function [tableGenes_pValues, stats] = computePValuePerGene(runAgain, suffix, minCADD_PHRED, exclusionType, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, matGenesSamplesNMut_INDEL, matCNV_genesSamples, ...
-    matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotdies, tableSamples, tableUniqueEnhancers, verbose)
+    matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotdies, tableSamples, tableUniqueEnhancers, verbose, sProperties)
 % Computes p-value that enhancers of that gene are being more mutated than expected and p-value of expression being different between samples with a
 % mutation in one of the enhancers vs WT.
 
-fileNamePValuePerGene = ['save/pValuePerGene/pValuePerGene_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat']; 
+fileNamePValuePerGene = [sProperties.DIRECTORY_SAVE, '/pValuePerGene/pValuePerGene_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '.mat']; 
 if (~runAgain && exist(fileNamePValuePerGene, 'file'))
     fprintf('Loading %s...\n', fileNamePValuePerGene);
     load(fileNamePValuePerGene, 'tableGenes_pValues', 'stats');

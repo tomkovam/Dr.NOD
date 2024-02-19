@@ -1,14 +1,14 @@
-function [xAltRelative, yAltRelative] = plotGene_boxplot_forLogos(tissueName, biosampleABC, geneName, sColours, iSampleMutated, exclusionType)
+function [xAltRelative, yAltRelative] = plotGene_boxplot_forLogos(tissueName, biosampleABC, geneName, sColours, iSampleMutated, sProperties)
 
 
-if (~exist('exclusionType', 'var') || strcmp(exclusionType, 'excludePOLE_MSI'))
+if (strcmp(sProperties.exclusionType, 'excludePOLE_MSI'))
     suffix = '';
 else
-    suffix = ['_', exclusionType];
+    suffix = ['_', sProperties.exclusionType];
 end
 
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
+load([sProperties.DIRECTORY_SAVE, '/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_pE', 'gene_qCombined', 'expressionPerSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression');
 
 fontSize = 10;
 

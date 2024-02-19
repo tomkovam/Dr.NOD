@@ -7,7 +7,7 @@ else
 end
 %%
 % Created in saveForOneGeneVisualisation.m
-load(['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_qCombined', ...
+load([sProperties.DIRECTORY_SAVE, '/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix], 'gene_pM', 'gene_qCombined', ...
     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');
 
 % gunzip -c /share/hormozdiarilab/Codes/Regulatory_Elements/data/genes/GENCODE/gencode.v19.annotation.gtf.gz | awk '{if ($1 == "chr7" && $4>=148560000 && $5<=148640000) {print}}' > EZH2b.gencode.v19.annotation.gtf.txt

@@ -22,7 +22,7 @@ else
     INFILE5 = sProperties.GENES_DRIVERS_PCAWG_S3;                                   % [DIR_DATA_ORIG, 'genes/TableS3_panorama_driver_mutations_ICGC_samples.controlled.txt'];
 end
 
-saveFileData = ['save/dataPCAWG_',expressionType,'.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/dataPCAWG_',expressionType,'.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     tic
     %%

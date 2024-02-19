@@ -44,7 +44,7 @@ for iExample = 1:length(lstGenes)
     plotGene_genomicView(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, true, false, sProperties);
 
     myGeneralSubplot(nR,nC,iS,xS,yS,xB,yB,xM,yM); iS = iS + 1;
-    plotGene_boxplot(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, false);
+    plotGene_boxplot(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, false, sProperties);
 end
 
 

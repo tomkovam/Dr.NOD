@@ -2,8 +2,10 @@
 clear; clc; close all; addpath(genpath('code/')); rng(1);
 imagesPath = 'results/mainFiguresBlood/'; createDir(imagesPath);
 %% A more detailed analysis of the DLBCL (lymphoma) subground of blood cancers
+%% Input file with all the parameters
+inputPropertiesFile = 'inputParameters.properties';
 %%
-[tableTissues, sProperties] = loadParameters;
+[tableTissues, sProperties] = loadParameters(inputPropertiesFile);
 runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
 %%
 nTissues = size(tableTissues, 1);
@@ -203,7 +205,7 @@ tableTrinucleotides = readtable(sProperties.TABLE_TRINUCLEOTIDES); % 'data/table
 for iGene = find(isCandidate | ismember(tableGenesNasserExpressed.geneName, {'BCL7A', 'BCL6', 'CXCR4', 'BCL2', 'HIST1H2BG', 'SGK1', 'EBF1', 'IRF1'}))'
     geneName = tableGenesNasserExpressed.geneName{iGene};
     saveForOneGeneVisualisation(tissueName, biosampleABC, geneName, pM(iGene), pE(iGene), qCombined(iGene), tableSamples, matCNV_genesSamples, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, ...
-        tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, exclusionType);
+        tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, exclusionType, sProperties);
 end
 %%
 sColours = getColours();
@@ -440,7 +442,7 @@ for iDirection = 4%1:4
 
         myGeneralSubplot(nR,nC,iS,.5,yS,xB,yB,xM,yM); hold on; iS = iS + 1;
         isOK = tableMutations_candidate.chrNumeric == tableMutations_candidate.chrNumeric(iRow) & tableMutations_candidate.pos1 == tableMutations_candidate.pos1(iRow) & strcmp(tableMutations_candidate.alt, tableMutations_candidate.alt{iRow});
-        [xAltRelative2, yAltRelative2] = plotGene_boxplot_forLogos(tableTissues.tissue{iTissue}, biosampleABC, geneName, sColours, tableMutations_candidate.iSample(isOK), exclusionType);
+        [xAltRelative2, yAltRelative2] = plotGene_boxplot_forLogos(tableTissues.tissue{iTissue}, biosampleABC, geneName, sColours, tableMutations_candidate.iSample(isOK), sProperties);
         [yAltRelative2, iMax] = max(yAltRelative2);
         xAltRelative2 = xAltRelative2(iMax);
         if (iDirection < 3)
@@ -521,7 +523,7 @@ for iExample = 1:length(lstGenes)
     plot(tMC_toPlot.pos1(isOK), zeros(sum(isOK), 1), 'or', 'MarkerFaceColor', (1+[1,0,0])/2);
 
     myGeneralSubplot(nR,nC,iS,xS,yS,xB,yB,xM,yM); iS = iS + 1;
-    plotGene_boxplot(tissueName, biosampleABC, geneName, sColours, false, exclusionType); drawnow;
+    plotGene_boxplot(tissueName, biosampleABC, geneName, sColours, false, exclusionType, sProperties); drawnow;
 end
 mySaveAs(fig, imagesPath, 'SupFig_DLBCL_TFBS_genomicView', true, true);
 savefig([imagesPath, 'SupFig_DLBCL_TFBS_genomicView.fig']);

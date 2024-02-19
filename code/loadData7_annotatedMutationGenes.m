@@ -1,7 +1,7 @@
 function [dataSupTables, tableGencodeGenes, tableMutations_candidate] = loadData7_annotatedMutationGenes(tableGencodeGenes, tableMutations_candidate, matGeneGencodeIsCandidateMut, dataDepMap, sProperties)
 %% Annotates genes and candidate mutations with literature, closest gene per candidate mutation, promoter/close/distant candidate mutations etc.
 
-saveFileData = ['save/main/data7_annotatedMutationGenes_',sProperties.exclusionType,'.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data7_annotatedMutationGenes_',sProperties.exclusionType,'.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %%

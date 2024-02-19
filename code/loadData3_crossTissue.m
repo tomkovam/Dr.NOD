@@ -1,12 +1,11 @@
-function [tableABC, sResTissues, tableTissues] = loadData3_crossTissue()
+function [tableABC, sResTissues, tableTissues] = loadData3_crossTissue(sProperties, tableTissues)
 %% Loads the cross-tissue analysis data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/main/data3_crossTissue.mat';
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data3_crossTissue.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %%
     fprintf('Computing %s...\n', saveFileData);
-    [tableTissues, sProperties] = loadParameters;
     runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; 
     %%
     nTissues = size(tableTissues, 1);

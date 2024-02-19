@@ -1,12 +1,11 @@
-function [tableGencodeGenes, tableTissuesWithPancancer, sResults, tableMutations_candidate, matGeneGencodeIsCandidateMut, tableTissues] = loadData1()
+function [tableGencodeGenes, tableTissuesWithPancancer, sResults, tableMutations_candidate, matGeneGencodeIsCandidateMut, tableTissues] = loadData1(sProperties, tableTissues)
 %% Loads the main data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/main/data1.mat';
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data1.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %% 
     fprintf('Computing %s...\n', saveFileData);
-    [tableTissues, sProperties] = loadParameters;
     runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
     %%
     nTissues = size(tableTissues, 1);
@@ -205,7 +204,7 @@ if (~exist(saveFileData, 'file'))
         for iGene = find(isCandidate)'
             geneName = tableGenesNasserExpressed.geneName{iGene};
             saveForOneGeneVisualisation(tissueName, biosampleABC, geneName, pM(iGene), pE(iGene), qCombined(iGene), tableSamples, matCNV_genesSamples, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, ...
-                tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, sProperties.exclusionType);
+                tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, sProperties.exclusionType, sProperties);
         end
     end
     toc

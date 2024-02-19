@@ -1,119 +1,149 @@
-function plotFigure6(imagesPath, sColours, tableTissues_data1, dataSupTables, tableMutations_candidate)
-%% Here, we take the stringent QC together, and annotate the target genes accordingly, and then plot a list of target genes in each tissue and our confidence in them
-%%
-tmp = dataSupTables.tableGencodeGenesCandidates(:,{'geneSymbol', 'sizeEffectE', 'pE', 'sizeEffectM', 'pM', 'qCombined', 'tissuePrint', 'isDriver', 'isONCOGENE', 'isTSG', 'isUP', 'iTissue', 'literatureEvidenceOncogene', 'literatureEvidenceTSG'});
-tmp.abs_sizeEffectE = abs(tmp.sizeEffectE);
-tmp = sortrows(tmp,'abs_sizeEffectE','descend');
-tmp.literatureEvidence = max([tmp.literatureEvidenceOncogene, tmp.literatureEvidenceTSG], [], 2);
-%%
-fprintf('In fact, the absolute size effects are larger in blood (median %.1f) than in solid cancers (median %.1f), and the top %d targets with the largest size effects are also in blood (including MYC).\n', ...
-    median(tmp.abs_sizeEffectE(tmp.iTissue==1)), median(tmp.abs_sizeEffectE(tmp.iTissue>1)), find(tmp.iTissue>1, 1, 'first')-1);
-%%
-tmp2 = unique(tableMutations_candidate.candidateGenes(tableMutations_candidate.iTissue==1));
-tmp3 = tmp2(contains(tmp2, ' '));
-tmp = sortrows(tmp,'pE','ascend'); % qCombined
-lstGenesPotentialFalsePositives_group2_blood = [];
-for iRow = 1:length(tmp3)
-    lstGenes = strsplit(tmp3{iRow}, ' ');
-    tmp4 = tmp(ismember(tmp.geneSymbol, lstGenes),:)
-    tmp4.geneSymbol(tmp4.pE>tmp4.pE(1))
-    lstGenesPotentialFalsePositives_group2_blood = [lstGenesPotentialFalsePositives_group2_blood; tmp4.geneSymbol(tmp4.pE>tmp4.pE(1))];
-end
-lstGenesPotentialFalsePositives_group2_blood = unique(lstGenesPotentialFalsePositives_group2_blood);
-lstGenesPotentialFalsePositives_group1_blood = {'ZNF876P', 'WEE1', 'AICDA', 'BCAT1', 'C12orf77', 'PPM1F', 'TOP3B', 'PRAMENP'}; % computed in scriptBloodLymphomas.m
-%%
-fig = createMaximisedFigure(2); hold on;
-isOK = tmp.iTissue>1;
-yValues = tmp.abs_sizeEffectE(isOK); 
-xValues = tmp.literatureEvidence(isOK); xValues(xValues>2) = 2;
-labels = tmp.geneSymbol(isOK);
-boxchart(xValues, yValues);
-p = ranksum(yValues(xValues==0), yValues(xValues==2));
-yVal = 1.8;
-plot([0,2], yVal*[1,1], '.-k', 'LineWidth', 2);
-plot(0*[1,1], yVal + [-.02,0], '-k', 'LineWidth', 2);
-plot(2*[1,1], yVal + [-.02,0], '-k', 'LineWidth', 2);
-text(1, yVal, sprintf('{\\itp = %s}', getPValueAsText(p)), 'HorizontalAlignment', 'center', 'VerticalAlignment', 'bottom', 'FontSize', 16);
-set(gca, 'XTick', 0:2, 'XTickLabel', {'no evidence', 'evidence level 1', 'evidence level 2-4'}, 'FontSize', 16);
-yVal = 0.1;
-for iValue = [0,1,2]
-    text(iValue, yVal, sprintf('(%d genes)', sum(xValues==iValue)), 'HorizontalAlignment', 'center', 'FontSize', 14);
-end
-ylabel('Expression size effect');
-mySaveAs(fig, imagesPath, 'SupFig_expressionSizeEffect');
+function plotFigure6(imagesPath, sColours, tableTissuesWithPancancer_data4, tableTissues_data4, dataTFBS, tableMutations_candidate, tableTissues_data1, sProperties)
 
-cutoff_value = quantile(yValues(xValues==0), 1/3);
-%%
-tmp.potentialFalsePositive = 0*tmp.sizeEffectE;
-tmp.potentialFalsePositive(ismember(tmp.geneSymbol, [{'HCG15', 'CPOX', 'CLTC'}, lstGenesPotentialFalsePositives_group1_blood])) = 1; % Genes in flanking regions have also regulatory mutation count higher than expected by the background mutagenesis model.
-tmp.potentialFalsePositive(ismember(tmp.geneSymbol, [{'ZFP62', 'CCNB1IP1', 'ALOXE3'}, lstGenesPotentialFalsePositives_group2_blood'])) = 2; % Genes that share regulatory driver mutations (always the gene with the highest scoreE is kept).
-tmp.potentialFalsePositive(tmp.abs_sizeEffectE <= cutoff_value) = 3;
-tmp = sortrows(tmp,'geneSymbol','ascend'); % qCombined
 
-tmp(tmp.potentialFalsePositive==3 & tmp.iTissue==1, {'geneSymbol', 'tissuePrint'})
+tableMotifs = dataTFBS.tableMotifs;
+tableMutations_candidate.tissuePrint = tableTissues_data4.tissuePrint(tableMutations_candidate.iTissue);
+
 %%
-tmp(tmp.potentialFalsePositive==3 & tmp.iTissue>1, {'geneSymbol', 'tissuePrint'})
+isOK = ~tableMutations_candidate.isIndel & ~tableMutations_candidate.isExcluded & tableMutations_candidate.iTissue>1;
+tableMutations_candidate = tableMutations_candidate(isOK,:);
+% tableMutations_candidate = tableMutations_candidate(tableMutations_candidate.isOK,:);
+lstTypes = {'MOTIF_any', 'MOTIFBR', 'MOTIFG'};
+lstTypesPrint = {'break or gain', 'break', 'gain'};
 %%
-isOK = tmp.iTissue>1 & tmp.isUP & tmp.potentialFalsePositive >= 0;
-fprintf('Solid cancer driver-upregulated targets with oncogenic evidence: %.0f %% (%d/%d)\n', 100*mean(tmp.literatureEvidenceOncogene(isOK)>0), sum(tmp.literatureEvidenceOncogene(isOK)>0), sum(isOK));
-isOK = tmp.iTissue>1 & tmp.isUP & tmp.potentialFalsePositive == 0;
-fprintf('Solid cancer driver-upregulated targets with oncogenic evidence: %.0f %% (%d/%d)\n', 100*mean(tmp.literatureEvidenceOncogene(isOK)>0), sum(tmp.literatureEvidenceOncogene(isOK)>0), sum(isOK));
-% %% Solid - in the terms of the percentage of CDGs, the third type of filtering helps in driver-downregulated, but doesn't make a difference in driver-upregulated.
-% isOK = tmp.iTissue>1 & tmp.potentialFalsePositive >= 0;% & ~tmp.isUP;
-% fprintf('Solid cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
-% isOK = tmp.iTissue>1 & tmp.potentialFalsePositive == 0;% & ~tmp.isUP;
-% fprintf('Solid cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
-%% Blood - in the terms of the percentage of CDGs, the third type of filtering helps in driver-downregulated, but doesn't make a difference in driver-upregulated.
-isOK = tmp.iTissue==1 & tmp.potentialFalsePositive >= 0;% & ~tmp.isUP;
-fprintf('Blood cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
-isOK = tmp.iTissue==1 & tmp.potentialFalsePositive == 0;% & ~tmp.isUP;
-fprintf('Blood cancer CDGs: %.0f %% (%d/%d)\n', 100*mean(tmp.isDriver(isOK)), sum(tmp.isDriver(isOK)>0), sum(isOK));
-%%
-tmp(tmp.iTissue==1 & tmp.potentialFalsePositive>0 & tmp.isDriver,:)
-tmp(tmp.potentialFalsePositive>0 & tmp.iTissue==1, :)
-%% Fig 5
-nTissues = size(tableTissues_data1, 1);
-fontSize = 16;
-fig = createMaximisedFigure(3); axes('Position', [.02, .05, .95, .88]); hold on;
+fig = createMaximisedFigure(5, [0 0 30 30]);
+fontSize = 12;
+nR = 4; nC = 3; xS = 0.85; yS = 0.8; xB = 0.1; yB = 0.05; xM = -0.03; yM = 0.012;
+%
+for iType = 1:3
+    myGeneralSubplot(nR,nC,iType,xS,yS,xB,yB,xM,yM); hold on;
+    plotTFBS_barPlot(tableTissuesWithPancancer_data4, lstTypes{iType}, lstTypesPrint{iType});
+end
+% axPos1 = get(gca, 'Position');
+%
+%         nR = 4; nC = 5; iS = 1; xS = 0.7; yS = 0.8; xB = 0.1; yB = 0.05; xM = -0.03; yM = 0.05;
+
+nR = 6; nC = 9; iS = 2*nC + 1; yS = 0.7;  xM = -0.03;
+
+cListRows = cell(2,1);
+% cListRows{1} = [143, 89, 336, 218, 119, 283]; % GAIN-UP | 119 TRIM41 breast (nice and ok upregulation) | ID3: 331 (nice but no expression) | 62 (nice but not as impressive upregulation) | 42 MRRF breast (nice but not well knonw) | 68 PRKACA (alt in motif) | 314 BCAR1 ovary (alt in motif) | 90 SLC20A1 breast (alt in motif) | 144 IER3 CRC (alt in motif)
+% cListRows{2} = [103, 147, 283, 301, 68, 267]; % BREAK-UP | 314, 147, 263, 103, 145 (nice but outside context) | 263 CCND1 not great match, not great upregulation | 145 IKBKB good match, not huge upregulation
+
+cListRows{1} = [143, 336, 301, 89, 218, 119]; % GAIN-UP | 62-PPM1D | 119 TRIM41 breast (nice and ok upregulation) | ID3: 331 (nice but no expression) | 62 (nice but not as impressive upregulation) | 42 MRRF breast (nice but not well knonw) | 68 PRKACA (alt in motif) | 314 BCAR1 ovary (alt in motif) | 90 SLC20A1 breast (alt in motif) | 144 IER3 CRC (alt in motif)
+cListRows{2} = [256, 147, 283, 103, 68, 267]; % BREAK-UP | 314, 147, 263, 103, 145 (nice but outside context) | 263 CCND1 not great match, not great upregulation | 145 IKBKB good match, not huge upregulation
+
+
+
+% cListRows{2} = [6, 164, 185, 345, 3, 226]; 
+% cListRows{2} = [68, 257, 229, 288, 99]; 
+% Good: 68 PRKACA, 229 ACD, 6 CDON, 345 ZNF37BP ovary, 
+% BREAK-DOWN: 267, 269 (both CLTC lung)
+% GAINs in regulatory regions of upregulated genes:
+%     motifPrefix    nMOTIFBR_UP    nMOTIFG_UP    nMOTIFBR_DOWN    nMOTIFG_DOWN    isPositiveRegulator    isNegativeRegulator    isPositiveRegulator_prefix    isNegativeRegulator_prefix
+%     ___________    ___________    __________    _____________    ____________    ___________________    ___________________    __________________________    __________________________
+%     {'ARID3A'}          0             1               0               1                 true                   false                     true                          false           
+%     {'ETS'   }          4             3               0               0                 false                  false                     true                          true            
+%     {'GATA'  }          2             5               0               0                 false                  false                     true                          true            
+%     {'HNF4'  }          3             2               1               0                 false                  false                     true                          true            
+%     {'LHX3'  }          0             1               0               0                 true                   false                     true                          false           
+%     {'NFATC2'}          0             1               0               0                 true                   true                      true                          true            
+%     {'RAD21' }          3             1               0               0                 false                  false                     false                         false           
+% BREAKs in regulatory regions of upregulated genes:
+%     motifPrefix    nMOTIFBR_UP    nMOTIFG_UP    nMOTIFBR_DOWN    nMOTIFG_DOWN    isPositiveRegulator    isNegativeRegulator    isPositiveRegulator_prefix    isNegativeRegulator_prefix
+%     ___________    ___________    __________    _____________    ____________    ___________________    ___________________    __________________________    __________________________
+%     {'E2F'   }          4             0               0               0                 false                  false                     true                          true            
+%     {'HDAC2' }          5             0               0               0                 true                   true                      true                          true            
+%     {'IRF'   }          4             1               1               0                 false                  false                     true                          true            
+%     {'MYC'   }          2             0               0               0                 true                   true                      true                          true            
+% BREAKs in regulatory regions of downregulated genes:
+%     motifPrefix    nMOTIFBR_UP    nMOTIFG_UP    nMOTIFBR_DOWN    nMOTIFG_DOWN    isPositiveRegulator    isNegativeRegulator    isPositiveRegulator_prefix    isNegativeRegulator_prefix
+%     ___________    ___________    __________    _____________    ____________    ___________________    ___________________    __________________________    __________________________
+%     {'ZNF143'}          1             0               1               0                 true                   false                     true                          false           
+
+
 for iDirection = 1:2
-    for iTissue = 2:nTissues
-        if (iDirection == 1)
-            lstGenes = find(tmp.iTissue == iTissue & tmp.isUP);
-            yVal = 0;
-        else
-            lstGenes = find(tmp.iTissue == iTissue & ~tmp.isUP);
-            yVal = 15.5;
-        end
-        text(iTissue, yVal, tableTissues_data1.tissuePrint{iTissue}, 'FontSize', fontSize);
-        for jGene = 1:length(lstGenes)
-            iGene = lstGenes(jGene);
-            if (tmp.literatureEvidenceOncogene(iGene)>2)
-                colour = sColours.ONCOGENE;
-            elseif (tmp.literatureEvidenceOncogene(iGene)>0)
-                colour = (1+sColours.ONCOGENE)/2;
-            elseif (tmp.literatureEvidenceTSG(iGene)>0)
-                colour = (1+sColours.TSG)/2;
+    for iRow = cListRows{iDirection}
+        iTissue = tableMutations_candidate.iTissue(iRow);
+        geneName = tableMutations_candidate.candidateGenes{iRow};
+        if (contains(geneName, ' '))
+            if (contains(geneName, 'PARP2'))
+                geneName = 'PARP2';
+            elseif (contains(geneName, 'TRIM41'))
+                geneName = 'TRIM41';
             else
-                colour = .5*[1,1,1];
-            end
-            text(iTissue, yVal + jGene, tmp.geneSymbol{iGene}, 'FontAngle', 'italic', 'Color', colour, 'FontSize', fontSize);
-            if (tmp.potentialFalsePositive(iGene)>0)
-                text(iTissue-.08, yVal + jGene, '?');
+                tmp2 = strsplit(geneName, ' ');
+                geneName = tmp2{end};
             end
         end
+        myGeneralSubplot(nR,nC,iS,.6+xS,yS,xB,yB,xM,yM); hold on; iS = iS + 2;
+        yAltRelative1 = plotTFBS_logos(tableMutations_candidate, tableMotifs, iRow, iDirection==1, geneName);
+        axPos1 = get(gca, 'Position');
+
+        myGeneralSubplot(nR,nC,iS,.5,yS,xB,yB,xM,yM); hold on; iS = iS + 1;
+        [xAltRelative2, yAltRelative2] = plotGene_boxplot_forLogos(tableTissues_data4.tissue{iTissue}, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, tableMutations_candidate.iSample(iRow), sProperties);
+        axPos2 = get(gca, 'Position');
+
+        xa = [axPos1(1) + axPos1(3), axPos2(1) + axPos2(3)*xAltRelative2 - 0.005];
+        ya = [axPos1(2) + axPos1(4)*yAltRelative1, axPos1(2) + axPos1(4)*yAltRelative2];
+        annotation('arrow',xa,ya, 'Color', sColours.mutated, 'LineWidth', 1.5)
     end
 end
-xlim([1.5, nTissues+.7]); ylim([0, 17]);
-text(1.5, 0, 'a', 'FontSize', 26);
-text(1.5, 15.5, 'b', 'FontSize', 26);
-% LEGEND
-xVal = 7; yVal = 11; yShift = .7;
-text(xVal, yVal, 'Oncogene (strong evidence)', 'Color', sColours.ONCOGENE, 'FontSize', fontSize); yVal= yVal + yShift;
-text(xVal, yVal, 'Oncogene (weak evidence)', 'Color', (1+sColours.ONCOGENE)/2, 'FontSize', fontSize); yVal= yVal + yShift;
-text(xVal, yVal, 'Tumour-suppressor gene', 'Color', (1+sColours.TSG)/2, 'FontSize', fontSize); yVal= yVal + yShift;
-text(xVal, yVal, '? = low confidence', 'FontSize', fontSize); yVal= yVal + .5; % possible false positive
-annotation('rectangle',[.73, .22, .26, .17]);
-%
-set(gca, 'YDir', 'reverse');
-axis off
-mySaveAs(fig, imagesPath, 'Fig5', true, true);
+% 68, 314, 52, 144
+
+try
+    fontSizeAnnotation = 14;
+    dim = [.07 .55 .05 .05]; str = 'TFBS gain'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+    dim = [.07 .40 .05 .05]; str = 'TFBS gain'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+    dim = [.07 .23 .05 .05]; str = 'TFBS break'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+    dim = [.07 .08 .05 .05]; str = 'TFBS break'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeAnnotation, 'EdgeColor','none', 'Rotation', 90, 'HorizontalAlignment', 'center');
+catch
+    % In Matlab<2022a, class TextBox does not have property Rotation.
+end
+
+
+fontSizeLetters = 26;
+dim = [.005 .99 .01 .01]; str = 'a'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
+dim = [.36 .99 .01 .01]; str = 'b'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
+dim = [.67 .99 .01 .01]; str = 'c'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
+dim = [.005 .66 .01 .01]; str = 'd'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
+dim = [.005 .35 .01 .01]; str = 'e'; annotation('textbox',dim,'String',str, 'FontSize', fontSizeLetters, 'EdgeColor','none', 'FontWeight','bold');
+
+mySaveAs(fig, imagesPath, 'Fig6', true, true);
+savefig([imagesPath, 'Fig6.fig']);
+%%
+    function plotTFBS_barPlot(tableTissuesWithPancancer, motifType, motifTypePrint)
+        matValues = [tableTissuesWithPancancer.(['pControlMutations_motifChange_',motifType]), tableTissuesWithPancancer.(['pCandidateDriverMutations_motifChange_',motifType])];
+        xValues = (1:size(tableTissuesWithPancancer, 1))';
+        yValues = max(matValues, [], 2);
+        hB = bar(matValues, 'EdgeColor', 'flat', 'FaceColor', 'flat');
+        hB(1).CData = sColours.gray;
+        hB(2).CData = sColours.darkRed;
+        %text(xValues, 3 + yValues, tableTissuesWithPancancer.pFisherCDG_text, 'HorizontalAlignment', 'center', 'FontSize', 14);
+        text(xValues, 3 + yValues, strcat(num2str(tableTissuesWithPancancer.(['enrichment_motifChange_',motifType]), '%.1fx')), 'HorizontalAlignment', 'center', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
+        text(xValues, 5 + yValues, arrayfun(@getPValueStarsAsText, tableTissuesWithPancancer.(['pValue_motifChange_',motifType]), 'UniformOutput', false), 'HorizontalAlignment', 'center', 'FontSize', fontSize-2, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
+        % text(xValues, 2 + yValues, strcat({'FC: '}, num2str(tableTissuesWithPancancer.enrichmentCDG, '%-.1f')), 'HorizontalAlignment', 'center', 'FontSize', 14, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
+        %text(xValues, 1 + yValues, strcat({'n = '}, num2str(tableTissuesWithPancancer.nSamplesWGSandRNA, '%-d')), 'HorizontalAlignment', 'center', 'FontSize', fontSize-8, 'Color', .5*[1,1,1]); % {'n = '} insetad of 'n = ' will keep the space in there!
+
+        maxVal = max(5 + yValues); yGap = maxVal/20;
+        yVal = 0.2*yGap + maxVal;        ylim([0, yVal]);
+        yVal1 = 1.5*yGap + maxVal;
+        yVal2 = 3*yGap + maxVal;
+        yVal3 = 4.5*yGap + maxVal;
+        
+        text(xValues+.3, yVal1+0*xValues, arrayfun(@num2sepNumStr, round(tableTissuesWithPancancer.nControlMutations/1e3), 'UniformOutput', false), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', sColours.gray); % {'n = '} insetad of 'n = ' will keep the space in there!
+        text(xValues+.3, yVal2+0*xValues, num2str(tableTissuesWithPancancer.nCandidateDriverMutations, '%d'), 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color',  sColours.darkRed); % {'n = '} insetad of 'n = ' will keep the space in there!
+            
+        if (strcmp(motifType, 'MOTIF_any'))
+            text(0, yVal1, 'Control \times 10^3', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', sColours.gray); 
+            text(0, yVal2, 'Cand. driver', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color',  sColours.darkRed);
+            text(0, yVal3, 'Mutations', 'HorizontalAlignment', 'right', 'FontSize', fontSize-2, 'Color', 'k'); 
+        end
+
+        set(gca, 'XTick', xValues, 'XTickLabel', strrep(tableTissuesWithPancancer.tissuePrint, 'wo Blood', 'Solid'), 'XTickLabelRotation', 45, 'FontSize', fontSize, 'TickLength', [0 0]);
+        ylabel(['TFBS ', motifTypePrint, ' (%)']);
+        legend({'Control', 'Driver'}, 'Location', 'NorthWest', 'FontSize', fontSize-2); legend boxoff 
+        box off; xlim([0, xValues(end)+1]);
+    end
+%%
+
+end

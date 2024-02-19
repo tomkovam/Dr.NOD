@@ -1,5 +1,5 @@
 function saveForOneGeneVisualisation(tissueName, biosampleABC, geneName, gene_pM, gene_pE, gene_qCombined, tableSamples, matCNV_genesSamples, matExpressionGenesSamples, matGenesSamplesNMut_SNVs_highCADD, ...
-    tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, exclusionType)
+    tableMutations, matMutationsEnhancers, iGene, tableGencodeGenes, tableGenesNasserExpressed, matUniqueEnhancersGenes, tableUniqueEnhancers, tableUE_annotations_hyperUE, tableTrinucleotides, exclusionType, sProperties)
 
 CNVperSample=matCNV_genesSamples(iGene, :)';
 expressionPerSample = matExpressionGenesSamples(iGene, :)';
@@ -59,7 +59,7 @@ if (strcmp(exclusionType, 'excludePOLE_MSI'))
 else
     suffix = ['_', exclusionType];
 end
-saveFileData = ['save/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix, '.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/oneGene/oneGene_', tissueName, '_', biosampleABC, '_', geneName, suffix, '.mat'];
 createDir(fileparts(saveFileData));
 save(saveFileData, 'gene_pM', 'gene_pE', 'gene_qCombined', 'isMutatedSample', 'expressionPerSample', 'CNVperSample', 'nSamples', 'sampleGroup', 'sampleGroupInclWoExpression', ...
     'gene_pos0', 'gene_pos1', 'gene_TSS', 'gene_strand', 'gene_nUEs', 'tableMutationsThisGene', 'isMutPerEnhancer', 'tableUniqueEnhancers_oneGene', 'tableUE_annotations_hyperUE_oneGene');

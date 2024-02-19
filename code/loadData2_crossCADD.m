@@ -1,12 +1,11 @@
-function [sResCrossCADD, sResPanCancerCrossCADD, lstMinCADD_PHRED, tableTissues] = loadData2_crossCADD()
+function [sResCrossCADD, sResPanCancerCrossCADD, lstMinCADD_PHRED, tableTissues] = loadData2_crossCADD(sProperties, tableTissues)
 %% Loads the cross-CADD analysis data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/main/data2_crossCADD.mat';
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data2_crossCADD.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %%
     fprintf('Computing %s...\n', saveFileData);
-    [tableTissues, sProperties] = loadParameters;
     runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
     %%
     lstMinCADD_PHRED = 0:2:18; 

@@ -1,12 +1,11 @@
-function [tableMutations_candidate, tableTissues, tableTissuesWithPancancer] = loadData4_TFBS(tableMutations_candidate)
+function [tableMutations_candidate, tableTissues, tableTissuesWithPancancer] = loadData4_TFBS(sProperties, tableTissues, tableMutations_candidate)
 %% Loads the TFBS analysis data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/main/data4_TFBS.mat';
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data4_TFBS.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %% 
     fprintf('Computing %s...\n', saveFileData);
-    [tableTissues, sProperties] = loadParameters;
     runAgain = sProperties.runAgain; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
     %%
     nTissues = size(tableTissues, 1);

@@ -1,11 +1,10 @@
-function cTrinucleotides = loadTrinucleotides()
+function cTrinucleotides = loadTrinucleotides(sProperties, tableTissues)
 
-saveFileData = 'save/main/data8_trinucleotides.mat';
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data8_trinucleotides.mat'];
 if (~exist(saveFileData, 'file'))
     tic
     %%
     fprintf('Computing %s...\n', saveFileData);
-    [tableTissues, sProperties] = loadParameters;
     runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
     
     nTissues = size(tableTissues, 1);

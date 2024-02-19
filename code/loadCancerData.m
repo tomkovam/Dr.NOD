@@ -11,7 +11,7 @@ end
 expressionType = sProperties.expressionType; % 'fpkm_uq'; Note that this parameter is not part of the save-names (.mat files), so when changed, it needs to be saved to new files.
 
 suffix = [tissueName, '_', biosampleABC, '_', enhancerAnalysis];
-saveFileData = ['save/dataCancer/dataCancer_',suffix,'.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/dataCancer/dataCancer_',suffix,'.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     t1 = tic;
     %%

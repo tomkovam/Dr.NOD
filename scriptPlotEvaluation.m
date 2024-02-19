@@ -6,8 +6,10 @@ univariableCutoff = 0.001;
 maxPredictors = 20;
 qtlMF = 0.99;
 imagesPath = ['results/evaluation/', 'eval_summary_', num2str(maxPredictors), '_', num2str(1e4*qtlMF),'/']; createDir(imagesPath);
+%% Input file with all the parameters
+inputPropertiesFile = 'inputParameters.properties';
 %%
-[tableTissues, sProperties] = loadParameters;
+[tableTissues, sProperties] = loadParameters(inputPropertiesFile);
 runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
 %%
 lstMinCADD_PHRED = [0, 10]; 

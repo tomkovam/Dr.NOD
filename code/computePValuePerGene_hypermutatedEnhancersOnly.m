@@ -1,11 +1,11 @@
 function [tableGenes_pValues_hyperUE, stats_hyperUE, tableUE_annotations_hyperUE, tmpUE, statsUE, matUESamplesIsMut_SNVs_highCADD_hyperUE, matUESamplesIsMut_SNVs_highCADD_INDEL_hyperUE] = computePValuePerGene_hypermutatedEnhancersOnly(runAgain, suffix, minCADD_PHRED, exclusionType, matExpressionGenesSamples, matCNV_genesSamples, ...
-    matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotdies, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL, tableUE_annotations, tableUE_mean_trinucleotdies, tableSamples, verbose)
+    matUniqueEnhancersGenes, tableGenesNasserExpressed, tableGenes_annotations, tableGenes_mean_trinucleotdies, matUESamplesIsMut_SNVs_highCADD, matUESamplesIsMut_INDEL, tableUE_annotations, tableUE_mean_trinucleotdies, tableSamples, verbose, sProperties)
 %% Recomputes the y-axis (expression) p-values with only samples mutated in hypermutated enhancers (by a fullModel of background mutagenesis, computer per enhancer)
 % Used only for plotting the genome-view examples
 
 alpha_hyperUE = 0.05;
 
-fileNamePValuePerGene = ['save/pValuePerGene/pValuePerGene_hyperUE_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '_', num2str(alpha_hyperUE), '.mat'];
+fileNamePValuePerGene = [sProperties.DIRECTORY_SAVE, '/pValuePerGene/pValuePerGene_hyperUE_', suffix, '_', num2str(minCADD_PHRED), '_', exclusionType, '_', num2str(alpha_hyperUE), '.mat'];
 if (~runAgain && exist(fileNamePValuePerGene, 'file'))
     fprintf('Loading %s...\n', fileNamePValuePerGene);
     load(fileNamePValuePerGene, 'tableGenes_pValues_hyperUE', 'stats_hyperUE', 'tableUE_annotations_hyperUE', 'tmpUE', 'statsUE', 'matUESamplesIsMut_SNVs_highCADD_hyperUE', 'matUESamplesIsMut_SNVs_highCADD_INDEL_hyperUE');

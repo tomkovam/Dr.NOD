@@ -36,7 +36,7 @@ for iExample = 1
         iS = iS + 2;
 
         myGeneralSubplot(nR,nC,iS,xS,yS,xB,yB,xM,yM); iS = iS + 1;
-        plotGene_boxplot(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, true);
+        plotGene_boxplot(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, true, sProperties);
 
         myGeneralSubplot(nR,nC,iS,xS,yS,xB,yB,xM,yM); iS = iS + 1;
         plotGene_survivalKaplanMeier(geneName, tissueName, sColours, sProperties);    
@@ -59,7 +59,7 @@ for iExample = 1:6
     end
     iTissue = find(strcmp(tableTissues_data1.tissue, tissueName));
     myGeneralSubplot(nR,nC,iS,xS,yS,xB,yB,xM,yM); iS = iS + 1;
-    plotGene_boxplot(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, true);
+    plotGene_boxplot(tissueName, tableTissues_data1.biosampleABC{iTissue}, geneName, sColours, true, sProperties);
     if (iExample == 3)
         iS = iS + 1;
     end

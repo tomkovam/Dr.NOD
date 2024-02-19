@@ -1,7 +1,7 @@
 function [matSV_genesSamples_minDistance, matSV_genesSamples_nameSVs, sample_has_SV] = loadPCAWG_SV_oneProject(runAgain, suffix, tissueName, biosampleABC, tableGenesNasserExpressed, tableGencodeGenes, tableSamples, sProperties, doSave)
 %% Loads structural (SV) data
 
-saveFileData = ['save/PCAWG/PCAWG_SV_',suffix,'.mat'];
+saveFileData = [sProperties.DIRECTORY_SAVE, '/PCAWG/PCAWG_SV_',suffix,'.mat'];
 if (runAgain || ~exist(saveFileData, 'file'))
     %% 
     fprintf('Computing %s...\n', saveFileData);    

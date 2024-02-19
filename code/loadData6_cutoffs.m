@@ -1,12 +1,11 @@
-function dataCutoffs = loadData6_cutoffs()
+function dataCutoffs = loadData6_cutoffs(sProperties, tableTissues)
 %% Loads the pM&pE cut-off analysis data (and runs the analysis if not precomputed).
 
-saveFileData = 'save/main/data6_cutoffs.mat'; 
+saveFileData = [sProperties.DIRECTORY_SAVE, '/main/data6_cutoffs.mat']; 
 if (~exist(saveFileData, 'file'))
     tic
     %%
     fprintf('Computing %s...\n', saveFileData);
-    [tableTissues, sProperties] = loadParameters;
     runAgain = sProperties.runAgain; tailDirection = sProperties.tailDirection; xTestName = sProperties.name_scoreM; yTestName = sProperties.name_scoreE; mutTypeName = sProperties.mutTypeName; nGencodeGenes = sProperties.nGencodeGenes;
     %%
     nTissues = size(tableTissues, 1);

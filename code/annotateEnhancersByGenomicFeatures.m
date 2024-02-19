@@ -2,7 +2,7 @@ function [tableGenes_annotations, tableGenes_mean_trinucleotdies, nSamplesInFlan
     annotateEnhancersByGenomicFeatures(runAgain, suffix, minCADD_PHRED, biosampleABC, enhancerAnalysis, tableSamples, tableUniqueEnhancers, tableGenesNasserExpressed, matUniqueEnhancersGenes, sProperties)
 %% Prepares predictors for the background mutagenesis model. In particular, annotates enhancers with a number of genomic features, including GC content, replication timing, theoretical CADD mutations with PHRED at least minCADD_PHRED etc.
 
-fileNameBMM = ['save/annotatedEnhancers/annotatedEnhancers_', suffix, '_', num2str(minCADD_PHRED),'.mat'];
+fileNameBMM = [sProperties.DIRECTORY_SAVE, '/annotatedEnhancers/annotatedEnhancers_', suffix, '_', num2str(minCADD_PHRED),'.mat'];
 if (~runAgain && exist(fileNameBMM, 'file'))
     fprintf('Loading %s...\n', fileNameBMM);
     load(fileNameBMM, 'tableGenes_annotations', 'tableGenes_mean_trinucleotdies', 'nSamplesInFlanks', 'tableUE_annotations', 'tableUE_mean_trinucleotdies'); 
